@@ -320,7 +320,7 @@
         "correl": "",
         "expiry": "",
         "broker": "28f999c6149902c4",
-        "x": 700,
+        "x": 800,
         "y": 420,
         "wires": []
     },
@@ -345,8 +345,8 @@
         "topic": "",
         "payload": "YepYep",
         "payloadType": "str",
-        "x": 210,
-        "y": 420,
+        "x": 130,
+        "y": 400,
         "wires": [
             [
                 "48b46f40e4ff3876"
@@ -365,11 +365,92 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
+        "x": 500,
         "y": 420,
         "wires": [
             [
                 "f3f3fafed626ed19"
+            ]
+        ]
+    },
+    {
+        "id": "ca30d4dd0d957dde",
+        "type": "ha-button",
+        "z": "4c8d6de6577322fb",
+        "name": "AlexButtonName",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "26ec5cd84cdf971f",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "x": 120,
+        "y": 480,
+        "wires": [
+            [
+                "64c4ed4efb6dd61d"
+            ]
+        ]
+    },
+    {
+        "id": "373b59702f4f13a7",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "64c4ed4efb6dd61d",
+        "type": "change",
+        "z": "4c8d6de6577322fb",
+        "name": "AlexButtonPressed",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "AlexButtonPressed",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 480,
+        "wires": [
+            [
+                "373b59702f4f13a7",
+                "48b46f40e4ff3876"
             ]
         ]
     }
