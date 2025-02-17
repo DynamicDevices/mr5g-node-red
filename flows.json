@@ -254,48 +254,6 @@
         "wires": []
     },
     {
-        "id": "f1129310d87f2057",
-        "type": "api-current-state",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "server": "",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "",
-        "state_type": "str",
-        "blockInputOverrides": true,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 460,
-        "y": 520,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "5e75ef29ce831ab3",
         "type": "ha-button",
         "z": "4c8d6de6577322fb",
@@ -333,41 +291,6 @@
         ]
     },
     {
-        "id": "574bd9d3c54a0216",
-        "type": "ha-button",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 290,
-        "y": 520,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "e7363f487bb5639f",
         "type": "debug",
         "z": "4c8d6de6577322fb",
@@ -398,7 +321,7 @@
         "expiry": "",
         "broker": "28f999c6149902c4",
         "x": 700,
-        "y": 400,
+        "y": 420,
         "wires": []
     },
     {
@@ -422,7 +345,27 @@
         "topic": "",
         "payload": "YepYep",
         "payloadType": "str",
-        "x": 250,
+        "x": 210,
+        "y": 420,
+        "wires": [
+            [
+                "48b46f40e4ff3876"
+            ]
+        ]
+    },
+    {
+        "id": "48b46f40e4ff3876",
+        "type": "function",
+        "z": "4c8d6de6577322fb",
+        "name": "append count",
+        "func": "var c = flow.get(\"msgcount\")|0;\nmsg.payload = msg.payload + String(c);\nflow.set(\"msgcount\", c + 1);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
         "y": 420,
         "wires": [
             [
