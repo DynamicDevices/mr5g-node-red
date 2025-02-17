@@ -139,6 +139,37 @@
         "debugEnabled": false
     },
     {
+        "id": "28f999c6149902c4",
+        "type": "mqtt-broker",
+        "name": "mdxyz",
+        "broker": "mosquitto.doesliverpool.xyz",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
         "id": "a022198d7bc69037",
         "type": "server-events",
         "z": "4c8d6de6577322fb",
@@ -195,8 +226,8 @@
                 "valueType": "entityState"
             }
         ],
-        "x": 210,
-        "y": 320,
+        "x": 250,
+        "y": 340,
         "wires": [
             [
                 "e7363f487bb5639f"
@@ -293,7 +324,7 @@
                 "valueType": "entity"
             }
         ],
-        "x": 280,
+        "x": 220,
         "y": 260,
         "wires": [
             [
@@ -330,8 +361,8 @@
                 "valueType": "entity"
             }
         ],
-        "x": 210,
-        "y": 420,
+        "x": 290,
+        "y": 520,
         "wires": [
             []
         ]
@@ -351,5 +382,50 @@
         "x": 560,
         "y": 340,
         "wires": []
+    },
+    {
+        "id": "f3f3fafed626ed19",
+        "type": "mqtt out",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "topic": "doesliverpool/coffeemessage",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "28f999c6149902c4",
+        "x": 700,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8b475f325107ceb4",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "YepYep",
+        "payloadType": "str",
+        "x": 250,
+        "y": 420,
+        "wires": [
+            []
+        ]
     }
 ]
