@@ -170,6 +170,59 @@
         "sessionExpiry": ""
     },
     {
+        "id": "c69cb3d384026bda",
+        "type": "ha-entity-config",
+        "server": "e0f05cf68b19d533",
+        "deviceConfig": "4f6e4706c65a1ceb",
+        "name": "ggg",
+        "version": 6,
+        "entityType": "number",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "min_value",
+                "value": ""
+            },
+            {
+                "property": "max_value",
+                "value": ""
+            },
+            {
+                "property": "step_value",
+                "value": ""
+            },
+            {
+                "property": "mode",
+                "value": "auto"
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
         "id": "a022198d7bc69037",
         "type": "server-events",
         "z": "4c8d6de6577322fb",
@@ -453,5 +506,125 @@
                 "48b46f40e4ff3876"
             ]
         ]
+    },
+    {
+        "id": "a421d6212ebe1aca",
+        "type": "ha-button",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "x": 170,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5616480acaba2b30",
+        "type": "ha-switch",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "version": 0,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 2,
+        "entityConfig": "",
+        "enableInput": false,
+        "outputOnStateChange": false,
+        "outputProperties": [
+            {
+                "property": "outputType",
+                "propertyType": "msg",
+                "value": "state change",
+                "valueType": "str"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 170,
+        "y": 620,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "392a2cbdc383fa16",
+        "type": "ha-number",
+        "z": "4c8d6de6577322fb",
+        "name": "NDnumber",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "c69cb3d384026bda",
+        "exposeAsEntityConfig": "",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "previousValue",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "previousValue"
+            }
+        ],
+        "x": 380,
+        "y": 560,
+        "wires": [
+            [
+                "d310eac7e529951c"
+            ]
+        ]
+    },
+    {
+        "id": "d310eac7e529951c",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 560,
+        "wires": []
     }
 ]
