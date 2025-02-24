@@ -1346,11 +1346,11 @@
         "topic": "",
         "payload": "you never know",
         "payloadType": "str",
-        "x": 340,
+        "x": 280,
         "y": 180,
         "wires": [
             [
-                "02da3032c24c877a"
+                "90682de01209e2cd"
             ]
         ]
     },
@@ -1382,7 +1382,7 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 590,
+        "x": 670,
         "y": 180,
         "wires": [
             []
@@ -1411,6 +1411,25 @@
         "payloadType": "str",
         "x": 380,
         "y": 220,
+        "wires": [
+            [
+                "02da3032c24c877a"
+            ]
+        ]
+    },
+    {
+        "id": "90682de01209e2cd",
+        "type": "template",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Station1 Station2\n\nWelcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\nWhen you are done reading this, poke the \nNext button with your index finger\n",
+        "output": "str",
+        "x": 500,
+        "y": 160,
         "wires": [
             [
                 "02da3032c24c877a"
