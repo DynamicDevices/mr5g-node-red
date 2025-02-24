@@ -1459,7 +1459,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"id\":21,\t   \"component\": \"text\",\t   \"node_id\": \"ghghgh\",\t   \"server_id\": \"whatever\",\t   \"config\": {\t       \"name\": \"mything\",\t       \"area\": \"devtext\"\t   }\t}",
+        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"id\":21,\t   \"component\": \"text\",\t   \"node_id\": \"ghghgh\",\t   \"server_id\": \"whatever\",\t   \"config\": {\t       \"name\": \"mything\",\t       \"device\": \"devtext\"\t   }\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
