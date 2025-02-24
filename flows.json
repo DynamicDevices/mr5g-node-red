@@ -1382,10 +1382,12 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 750,
+        "x": 670,
         "y": 180,
         "wires": [
-            []
+            [
+                "bfd248d07afa4e77"
+            ]
         ]
     },
     {
