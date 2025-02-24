@@ -1711,7 +1711,7 @@
             {
                 "property": "econfig",
                 "propertyType": "msg",
-                "value": "name",
+                "value": "mode",
                 "valueType": "config"
             }
         ],
