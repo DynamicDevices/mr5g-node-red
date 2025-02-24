@@ -1002,5 +1002,34 @@
                 "3fc01a3c8daa37a1"
             ]
         ]
+    },
+    {
+        "id": "2c651b58284b22f1",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Testing text again\\nnew line",
+        "payloadType": "str",
+        "x": 170,
+        "y": 900,
+        "wires": [
+            [
+                "015cec314d84f62b"
+            ]
+        ]
     }
 ]
