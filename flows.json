@@ -1857,11 +1857,11 @@
         "syntax": "mustache",
         "template": "Welcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\n",
         "output": "str",
-        "x": 450,
+        "x": 430,
         "y": 160,
         "wires": [
             [
-                "be4df33592b6880d"
+                "7af2c3a4c7d1b643"
             ]
         ]
     },
@@ -1924,8 +1924,8 @@
         "event": "station_text",
         "data": "(msg.payload)",
         "dataType": "jsonata",
-        "x": 770,
-        "y": 140,
+        "x": 810,
+        "y": 160,
         "wires": [
             []
         ]
@@ -1943,8 +1943,27 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 640,
-        "y": 200,
+        "x": 760,
+        "y": 240,
         "wires": []
+    },
+    {
+        "id": "7af2c3a4c7d1b643",
+        "type": "template",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{ \"a\":{{payload}} }",
+        "output": "str",
+        "x": 600,
+        "y": 200,
+        "wires": [
+            [
+                "be4df33592b6880d"
+            ]
+        ]
     }
 ]
