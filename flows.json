@@ -910,7 +910,7 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 490,
+        "x": 510,
         "y": 1160,
         "wires": [
             [
@@ -1701,12 +1701,20 @@
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "previousValue"
+            },
+            {
+                "property": "config",
+                "propertyType": "msg",
+                "value": "name",
+                "valueType": "config"
             }
         ],
-        "x": 370,
+        "x": 390,
         "y": 100,
         "wires": [
-            []
+            [
+                "8fdea8b209440596"
+            ]
         ]
     },
     {
@@ -1721,7 +1729,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
+        "x": 720,
         "y": 100,
         "wires": []
     },
