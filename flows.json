@@ -409,8 +409,8 @@
                 "valueType": "jsonata"
             }
         ],
-        "x": 180,
-        "y": 260,
+        "x": 160,
+        "y": 320,
         "wires": [
             []
         ]
@@ -498,7 +498,7 @@
             }
         ],
         "x": 380,
-        "y": 240,
+        "y": 320,
         "wires": [
             [
                 "c2b08d6dfb1d0214"
@@ -1240,8 +1240,7 @@
         "y": 100,
         "wires": [
             [
-                "1d80565f80606721",
-                "2aa3e6090e489e83"
+                "1d80565f80606721"
             ]
         ]
     },
@@ -1327,10 +1326,39 @@
         "wires": []
     },
     {
-        "id": "2aa3e6090e489e83",
-        "type": "ha-text",
+        "id": "dd30e78413397b87",
+        "type": "inject",
         "z": "4c8d6de6577322fb",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "you never know",
+        "payloadType": "str",
+        "x": 340,
+        "y": 180,
+        "wires": [
+            [
+                "02da3032c24c877a"
+            ]
+        ]
+    },
+    {
+        "id": "02da3032c24c877a",
+        "type": "ha-text",
+        "z": "4c8d6de6577322fb",
+        "name": "texttestt",
         "version": 1,
         "debugenabled": false,
         "inputs": 1,
@@ -1354,10 +1382,39 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 570,
+        "x": 590,
         "y": 180,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "b16d2ebc004a5c71",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "You do not know",
+        "payloadType": "str",
+        "x": 380,
+        "y": 220,
+        "wires": [
+            [
+                "02da3032c24c877a"
+            ]
         ]
     }
 ]
