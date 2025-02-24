@@ -1234,7 +1234,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "Station1 Station2\n\nWelcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\nWhen you are done reading this, poke the \nNext button with your index finger\n",
+        "template": "Station1 Station2\nWelcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n",
         "output": "str",
         "x": 400,
         "y": 100,
