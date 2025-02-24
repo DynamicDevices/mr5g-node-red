@@ -461,6 +461,51 @@
         "sessionExpiry": ""
     },
     {
+        "id": "d33f582efe871e24",
+        "type": "ha-entity-config",
+        "server": "e0f05cf68b19d533",
+        "deviceConfig": "4f6e4706c65a1ceb",
+        "name": "S1",
+        "version": 6,
+        "entityType": "text",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "mode",
+                "value": "text"
+            },
+            {
+                "property": "min_length",
+                "value": ""
+            },
+            {
+                "property": "max_length",
+                "value": ""
+            },
+            {
+                "property": "pattern",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
         "id": "e3304df6ff54a174",
         "type": "ha-switch",
         "z": "4c8d6de6577322fb",
@@ -977,7 +1022,7 @@
         "debugenabled": false,
         "inputs": 1,
         "outputs": 1,
-        "entityConfig": "6f324aa6935d2242",
+        "entityConfig": "d33f582efe871e24",
         "exposeAsEntityConfig": "",
         "mode": "set",
         "value": "payload",
