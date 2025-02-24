@@ -1595,5 +1595,57 @@
                 "1d80565f80606721"
             ]
         ]
+    },
+    {
+        "id": "a9cabec2860260b0",
+        "type": "ha-text",
+        "z": "4c8d6de6577322fb",
+        "name": "Station1",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "bd5d61c3f5eb6196",
+        "exposeAsEntityConfig": "",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "previousValue",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "previousValue"
+            }
+        ],
+        "x": 600,
+        "y": 60,
+        "wires": [
+            [
+                "88988dc61bfc568b"
+            ]
+        ]
+    },
+    {
+        "id": "88988dc61bfc568b",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 60,
+        "wires": []
     }
 ]
