@@ -1234,7 +1234,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "Station1 Station2\nWelcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n",
+        "template": "Station1 Station2\nWelcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\nWelcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\nWelcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n",
         "output": "str",
         "x": 400,
         "y": 100,
@@ -1382,8 +1382,8 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 670,
-        "y": 180,
+        "x": 630,
+        "y": 160,
         "wires": [
             [
                 "bfd248d07afa4e77"
@@ -1411,8 +1411,8 @@
         "topic": "",
         "payload": "You do not know",
         "payloadType": "str",
-        "x": 280,
-        "y": 360,
+        "x": 260,
+        "y": 300,
         "wires": [
             [
                 "02da3032c24c877a"
@@ -1440,8 +1440,8 @@
         "topic": "",
         "payload": "you never know",
         "payloadType": "str",
-        "x": 280,
-        "y": 320,
+        "x": 260,
+        "y": 260,
         "wires": [
             [
                 "02da3032c24c877a"
@@ -1459,8 +1459,8 @@
         "syntax": "mustache",
         "template": "----This is the payload: {{payload}} !\n\nHere is a a few more lines of text\nand so it goes",
         "output": "str",
-        "x": 480,
-        "y": 200,
+        "x": 440,
+        "y": 220,
         "wires": [
             [
                 "02da3032c24c877a"
@@ -1507,7 +1507,7 @@
         "syntax": "mustache",
         "template": "--bofdddfom--This is the payload: \nabcdg123458\nABCD Here is a a few more lines of text\nand so it goes",
         "output": "str",
-        "x": 480,
+        "x": 440,
         "y": 160,
         "wires": [
             [
@@ -1588,7 +1588,7 @@
         "topic": "",
         "payload": "ShortWords",
         "payloadType": "str",
-        "x": 410,
+        "x": 230,
         "y": 40,
         "wires": [
             [
@@ -1603,11 +1603,11 @@
         "name": "Station1",
         "version": 1,
         "debugenabled": false,
-        "inputs": 0,
+        "inputs": 1,
         "outputs": 1,
         "entityConfig": "bd5d61c3f5eb6196",
         "exposeAsEntityConfig": "",
-        "mode": "listen",
+        "mode": "get",
         "value": "payload",
         "valueType": "msg",
         "outputProperties": [
@@ -1625,7 +1625,7 @@
             }
         ],
         "x": 600,
-        "y": 60,
+        "y": 40,
         "wires": [
             [
                 "88988dc61bfc568b"
@@ -1645,7 +1645,36 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 760,
-        "y": 60,
+        "y": 40,
         "wires": []
+    },
+    {
+        "id": "e971690732d78b4f",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 440,
+        "y": 40,
+        "wires": [
+            [
+                "a9cabec2860260b0"
+            ]
+        ]
     }
 ]
