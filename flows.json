@@ -924,7 +924,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "This is some test textAnd we are doing lots of text, writing it upmaking a few silly lines hereeven though it's not JSON at all",
+        "payload": "{\"d\":\"This is some test text\\nAnd we are doing lots of text, writing it upmaking a few silly lines hereeven though it's not JSON at all\"}",
         "payloadType": "json",
         "x": 190,
         "y": 840,
