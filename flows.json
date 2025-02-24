@@ -1791,7 +1791,7 @@
                 "valueType": "config"
             }
         ],
-        "x": 330,
+        "x": 290,
         "y": 100,
         "wires": [
             [
@@ -1813,7 +1813,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
+        "x": 540,
         "y": 100,
         "wires": []
     },
@@ -1838,7 +1838,7 @@
         "topic": "",
         "payload": "S1 S3",
         "payloadType": "str",
-        "x": 170,
+        "x": 150,
         "y": 100,
         "wires": [
             [
@@ -1857,224 +1857,13 @@
         "syntax": "mustache",
         "template": "Welcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\n",
         "output": "str",
-        "x": 470,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "aa2f5fe853848cc6",
-        "type": "inject",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "props": [
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"id\":24,\"type\":\"fire_event\",\"event_type\":\"station_text\",\"event_data\":{\"device_id\":\"my-device-id\",\"type\":\"text\",\"text\":\"bunch of stuff\"}}",
-        "payloadType": "json",
-        "x": 110,
-        "y": 200,
+        "x": 450,
+        "y": 160,
         "wires": [
             [
-                "1156ad4308373486"
+                "be4df33592b6880d"
             ]
         ]
-    },
-    {
-        "id": "e6c40566033bbcdb",
-        "type": "debug",
-        "z": "4c8d6de6577322fb",
-        "name": "debug 13",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "2dc23fea459c26db",
-        "type": "ha-api",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "server": "e0f05cf68b19d533",
-        "version": 1,
-        "debugenabled": false,
-        "protocol": "websocket",
-        "method": "get",
-        "path": "",
-        "data": "(msg.payload)",
-        "dataType": "jsonata",
-        "responseType": "json",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "results"
-            }
-        ],
-        "x": 330,
-        "y": 280,
-        "wires": [
-            [
-                "1071667653f3943a"
-            ]
-        ]
-    },
-    {
-        "id": "2e8667c6e19dfa8f",
-        "type": "inject",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"id\":18,\"type\":\"subscribe_events\"}",
-        "payloadType": "json",
-        "x": 110,
-        "y": 280,
-        "wires": [
-            [
-                "2dc23fea459c26db"
-            ]
-        ]
-    },
-    {
-        "id": "1071667653f3943a",
-        "type": "debug",
-        "z": "4c8d6de6577322fb",
-        "name": "debug 14",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 580,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "1156ad4308373486",
-        "type": "ha-api",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "server": "e0f05cf68b19d533",
-        "version": 1,
-        "debugenabled": false,
-        "protocol": "websocket",
-        "method": "get",
-        "path": "",
-        "data": "(msg.payload)",
-        "dataType": "jsonata",
-        "responseType": "json",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "results"
-            }
-        ],
-        "x": 350,
-        "y": 200,
-        "wires": [
-            [
-                "e6c40566033bbcdb"
-            ]
-        ]
-    },
-    {
-        "id": "95a887bd977e180f",
-        "type": "ha-fire-event",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "server": "e0f05cf68b19d533",
-        "version": 0,
-        "event": "station_text",
-        "data": "(msg.payload)",
-        "dataType": "jsonata",
-        "x": 370,
-        "y": 360,
-        "wires": [
-            [
-                "e974a513fa7b2827"
-            ]
-        ]
-    },
-    {
-        "id": "5d93dfce94112b4b",
-        "type": "inject",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "props": [
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"device_id\":\"my-device-id\",\"type\":\"text\",\"text\":\"bunch of stuff\"}",
-        "payloadType": "json",
-        "x": 110,
-        "y": 360,
-        "wires": [
-            [
-                "95a887bd977e180f"
-            ]
-        ]
-    },
-    {
-        "id": "e974a513fa7b2827",
-        "type": "debug",
-        "z": "4c8d6de6577322fb",
-        "name": "debug 15",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 580,
-        "y": 360,
-        "wires": []
     },
     {
         "id": "bed601439137ba06",
@@ -2123,6 +1912,39 @@
         "statusType": "auto",
         "x": 480,
         "y": 420,
+        "wires": []
+    },
+    {
+        "id": "665b5e101a797e54",
+        "type": "ha-fire-event",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 0,
+        "event": "station_text",
+        "data": "(msg.payload)",
+        "dataType": "jsonata",
+        "x": 770,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "be4df33592b6880d",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 200,
         "wires": []
     }
 ]
