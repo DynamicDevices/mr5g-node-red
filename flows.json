@@ -906,35 +906,6 @@
         "wires": []
     },
     {
-        "id": "cde78cfa99124738",
-        "type": "inject",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "props": [
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"d\":\"This is some test text\\nAnd we are doing lots of text, writing it upmaking a few silly lines hereeven though it's not JSON at all\"}",
-        "payloadType": "json",
-        "x": 160,
-        "y": 980,
-        "wires": [
-            [
-                "015cec314d84f62b"
-            ]
-        ]
-    },
-    {
         "id": "997f8a4feccd4d34",
         "type": "inject",
         "z": "4c8d6de6577322fb",
@@ -1073,8 +1044,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 960,
+        "x": 320,
+        "y": 1000,
         "wires": [
             [
                 "015cec314d84f62b"
@@ -1121,7 +1092,7 @@
         "syntax": "mustache",
         "template": "This is the payload: {{payload}} !\n\nHere is a a few more lines of text\nand so it goes",
         "output": "str",
-        "x": 470,
+        "x": 300,
         "y": 920,
         "wires": [
             [
@@ -1142,8 +1113,71 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 720,
+        "x": 580,
         "y": 920,
         "wires": []
+    },
+    {
+        "id": "923f48b8c687f994",
+        "type": "ha-text",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 1,
+        "entityConfig": "a0413381ff7cd93f",
+        "exposeAsEntityConfig": "",
+        "mode": "set",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "previousValue",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "previousValue"
+            }
+        ],
+        "x": 530,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f11f4078110edd79",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Testing text again\\nnew line",
+        "payloadType": "str",
+        "x": 330,
+        "y": 780,
+        "wires": [
+            [
+                "923f48b8c687f994"
+            ]
+        ]
     }
 ]
