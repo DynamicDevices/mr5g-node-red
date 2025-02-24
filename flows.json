@@ -926,7 +926,7 @@
         "topic": "",
         "payload": "{\"d\":\"This is some test text\\nAnd we are doing lots of text, writing it upmaking a few silly lines hereeven though it's not JSON at all\"}",
         "payloadType": "json",
-        "x": 190,
+        "x": 130,
         "y": 840,
         "wires": [
             [
@@ -1060,5 +1060,109 @@
                 "015cec314d84f62b"
             ]
         ]
+    },
+    {
+        "id": "024bbde4df5a50bd",
+        "type": "function",
+        "z": "4c8d6de6577322fb",
+        "name": "function 1",
+        "func": "msg.payload = \"Hi there  \\\n\\\nThis is a large amount of text\\\nin a large area that we can write up \\\n\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 820,
+        "wires": [
+            [
+                "015cec314d84f62b"
+            ]
+        ]
+    },
+    {
+        "id": "eaee9700f5216543",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 780,
+        "wires": [
+            [
+                "c476c084bccf0b3c"
+            ]
+        ]
+    },
+    {
+        "id": "495a6d57ecb867f8",
+        "type": "template",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !\n\nHere is a a few more lines of text\nand so it goes",
+        "output": "str",
+        "x": 580,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c476c084bccf0b3c",
+        "type": "ui_template",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 480,
+        "y": 780,
+        "wires": [
+            [
+                "b12ffd84a9ed4032"
+            ]
+        ]
+    },
+    {
+        "id": "b12ffd84a9ed4032",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 780,
+        "wires": []
     }
 ]
