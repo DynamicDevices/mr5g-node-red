@@ -1686,7 +1686,7 @@
         "debugenabled": false,
         "inputs": 1,
         "outputs": 1,
-        "entityConfig": "bd5d61c3f5eb6196",
+        "entityConfig": "a0413381ff7cd93f",
         "exposeAsEntityConfig": "",
         "mode": "set",
         "value": "payload",
