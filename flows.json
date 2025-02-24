@@ -1012,7 +1012,7 @@
         "y": 100,
         "wires": [
             [
-                "aea0dc05f58a4979"
+                "18053b9ca4d13ec7"
             ]
         ]
     },
@@ -1056,7 +1056,7 @@
         "syntax": "mustache",
         "template": "Welcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\n",
         "output": "str",
-        "x": 490,
+        "x": 510,
         "y": 100,
         "wires": [
             [
@@ -1089,7 +1089,7 @@
                 "valueType": "jsonata"
             }
         ],
-        "x": 190,
+        "x": 270,
         "y": 420,
         "wires": [
             [
@@ -1109,7 +1109,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
+        "x": 540,
         "y": 420,
         "wires": []
     },
@@ -1123,7 +1123,7 @@
         "event": "station_text",
         "data": "{\"text\":msg.payload, \"name\":msg.name, \"entityConfig\":msg.entityConfig }",
         "dataType": "jsonata",
-        "x": 730,
+        "x": 750,
         "y": 100,
         "wires": [
             []
@@ -1169,11 +1169,11 @@
                 "valueType": "config"
             }
         ],
-        "x": 350,
+        "x": 330,
         "y": 180,
         "wires": [
             [
-                "1b7782146989d8cc"
+                "18053b9ca4d13ec7"
             ]
         ]
     },
@@ -1224,5 +1224,21 @@
                 "665b5e101a797e54"
             ]
         ]
+    },
+    {
+        "id": "18053b9ca4d13ec7",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 240,
+        "wires": []
     }
 ]
