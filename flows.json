@@ -1350,7 +1350,7 @@
         "y": 160,
         "wires": [
             [
-                "1aa66ac30734487a"
+                "efa5477fce11b234"
             ]
         ]
     },
@@ -1409,8 +1409,8 @@
         "topic": "",
         "payload": "You do not know",
         "payloadType": "str",
-        "x": 300,
-        "y": 300,
+        "x": 280,
+        "y": 360,
         "wires": [
             [
                 "02da3032c24c877a"
@@ -1438,27 +1438,8 @@
         "topic": "",
         "payload": "you never know",
         "payloadType": "str",
-        "x": 300,
-        "y": 260,
-        "wires": [
-            [
-                "02da3032c24c877a"
-            ]
-        ]
-    },
-    {
-        "id": "1aa66ac30734487a",
-        "type": "template",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "Station1 Station2\n\nWelcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\nWhen you are done reading this, poke the \nNext button with your index finger\n",
-        "output": "str",
-        "x": 480,
-        "y": 160,
+        "x": 280,
+        "y": 320,
         "wires": [
             [
                 "02da3032c24c877a"
@@ -1506,10 +1487,29 @@
         "payload": "you never know",
         "payloadType": "str",
         "x": 260,
-        "y": 200,
+        "y": 220,
         "wires": [
             [
                 "8ecb63e096b5bbc7"
+            ]
+        ]
+    },
+    {
+        "id": "efa5477fce11b234",
+        "type": "template",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "-bingo---This is the payload: {{payload}} !\n\nHere is a a few more lines of text\nand so it goes",
+        "output": "str",
+        "x": 480,
+        "y": 160,
+        "wires": [
+            [
+                "02da3032c24c877a"
             ]
         ]
     }
