@@ -389,7 +389,7 @@
         "type": "ha-entity-config",
         "server": "e0f05cf68b19d533",
         "deviceConfig": "4f6e4706c65a1ceb",
-        "name": "S1",
+        "name": "S2",
         "version": 6,
         "entityType": "text",
         "haConfig": [
@@ -1008,7 +1008,7 @@
                 "valueType": "config"
             }
         ],
-        "x": 250,
+        "x": 330,
         "y": 100,
         "wires": [
             [
@@ -1035,9 +1035,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "S1 S3",
+        "payload": "S2",
         "payloadType": "str",
-        "x": 110,
+        "x": 190,
         "y": 100,
         "wires": [
             [
@@ -1056,8 +1056,8 @@
         "syntax": "mustache",
         "template": "Welcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\n",
         "output": "str",
-        "x": 430,
-        "y": 160,
+        "x": 490,
+        "y": 100,
         "wires": [
             [
                 "665b5e101a797e54"
@@ -1123,29 +1123,106 @@
         "event": "station_text",
         "data": "{\"text\":msg.payload, \"name\":msg.name, \"entityConfig\":msg.entityConfig }",
         "dataType": "jsonata",
-        "x": 650,
-        "y": 160,
+        "x": 730,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "99c70395e5540155",
+        "type": "ha-text",
+        "z": "4c8d6de6577322fb",
+        "name": "S2",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 1,
+        "entityConfig": "6f324aa6935d2242",
+        "exposeAsEntityConfig": "",
+        "mode": "set",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "previousValue",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "previousValue"
+            },
+            {
+                "property": "name",
+                "propertyType": "msg",
+                "value": "name",
+                "valueType": "config"
+            },
+            {
+                "property": "entityConfig",
+                "propertyType": "msg",
+                "value": "entityConfig",
+                "valueType": "config"
+            }
+        ],
+        "x": 350,
+        "y": 180,
         "wires": [
             [
-                "be4df33592b6880d"
+                "1b7782146989d8cc"
             ]
         ]
     },
     {
-        "id": "be4df33592b6880d",
-        "type": "debug",
+        "id": "65f609a91e61dfc5",
+        "type": "inject",
         "z": "4c8d6de6577322fb",
-        "name": "debug 13",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 760,
-        "y": 240,
-        "wires": []
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "S3",
+        "payloadType": "str",
+        "x": 190,
+        "y": 180,
+        "wires": [
+            [
+                "99c70395e5540155"
+            ]
+        ]
+    },
+    {
+        "id": "1b7782146989d8cc",
+        "type": "template",
+        "z": "4c8d6de6577322fb",
+        "name": "S2",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the display case of stuff we've done\n\n\n",
+        "output": "str",
+        "x": 490,
+        "y": 180,
+        "wires": [
+            [
+                "665b5e101a797e54"
+            ]
+        ]
     }
 ]
