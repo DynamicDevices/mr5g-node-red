@@ -889,11 +889,11 @@
         "name": "",
         "version": 1,
         "debugenabled": false,
-        "inputs": 1,
+        "inputs": 0,
         "outputs": 1,
         "entityConfig": "b8acaaa854c1dd5a",
         "exposeAsEntityConfig": "",
-        "mode": "set",
+        "mode": "listen",
         "value": "payload",
         "valueType": "msg",
         "outputProperties": [
@@ -910,7 +910,7 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 510,
+        "x": 490,
         "y": 1160,
         "wires": [
             [
@@ -930,7 +930,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 640,
+        "x": 700,
         "y": 1200,
         "wires": []
     },
@@ -974,9 +974,7 @@
         "x": 200,
         "y": 1200,
         "wires": [
-            [
-                "af05a71066a19284"
-            ]
+            []
         ]
     },
     {
