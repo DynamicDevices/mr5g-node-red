@@ -771,11 +771,11 @@
         "name": "texttestt",
         "version": 1,
         "debugenabled": false,
-        "inputs": 0,
+        "inputs": 1,
         "outputs": 1,
         "entityConfig": "a0413381ff7cd93f",
         "exposeAsEntityConfig": "",
-        "mode": "listen",
+        "mode": "set",
         "value": "payload",
         "valueType": "msg",
         "outputProperties": [
@@ -867,5 +867,34 @@
         "x": 480,
         "y": 840,
         "wires": []
+    },
+    {
+        "id": "cde78cfa99124738",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "This is some test text",
+        "payloadType": "str",
+        "x": 100,
+        "y": 800,
+        "wires": [
+            [
+                "015cec314d84f62b"
+            ]
+        ]
     }
 ]
