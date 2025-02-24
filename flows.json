@@ -1894,7 +1894,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t  \"id\": 19,\t  \"type\": \"get_states\"\t}",
+        "data": "{\t  \"id\": 24,\t  \"type\": \"fire_event\",\t  \"event_type\": \"station_text\",\t  \"event_data\": {\t    \"device_id\": \"my-device-id\",\t    \"type\": \"text\",\t    \"text\": \"bunch of stuff\"\t  }\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
@@ -1905,7 +1905,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 270,
+        "x": 330,
         "y": 220,
         "wires": [
             [
@@ -1920,11 +1920,11 @@
         "name": "",
         "props": [
             {
-                "p": "payload"
-            },
-            {
                 "p": "topic",
                 "vt": "str"
+            },
+            {
+                "p": "payload"
             }
         ],
         "repeat": "",
@@ -1932,9 +1932,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
+        "payload": "{\"id\":24,\"type\":\"fire_event\",\"event_type\":\"station_text\",\"event_data\":{\"device_id\":\"my-device-id\",\"type\":\"text\",\"text\":\"bunch of stuff\"}}",
+        "payloadType": "json",
+        "x": 110,
         "y": 200,
         "wires": [
             [
@@ -1954,8 +1954,111 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 420,
+        "x": 520,
         "y": 220,
+        "wires": []
+    },
+    {
+        "id": "3a28009351e342e5",
+        "type": "ha-api",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t  \"id\": 24,\t  \"type\": \"fire_event\",\t  \"event_type\": \"station_text\",\t  \"event_data\": {\t    \"device_id\": \"my-device-id\",\t    \"type\": \"text\",\t    \"text\": \"bunch of stuff\"\t  }\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 210,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2dc23fea459c26db",
+        "type": "ha-api",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{msg.payload}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 390,
+        "y": 300,
+        "wires": [
+            [
+                "1071667653f3943a"
+            ]
+        ]
+    },
+    {
+        "id": "2e8667c6e19dfa8f",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"id\":19,\"type\":\"get_config\"}",
+        "payloadType": "json",
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "2dc23fea459c26db"
+            ]
+        ]
+    },
+    {
+        "id": "1071667653f3943a",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 300,
         "wires": []
     }
 ]
