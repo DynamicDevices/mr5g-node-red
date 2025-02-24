@@ -1426,7 +1426,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "Station1 Station2\n\nWelcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\nWhen you are done reading this, poke the \nNext button with your index finger\n",
+        "template": "Station1 Station2\n\nWelcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\nWhen you are done reading this, poke the \nNext button with your index finger\n\n\nThis is the payload: {{payload}} !\n\nHere is a a few more lines of text\nand so it goes",
         "output": "str",
         "x": 500,
         "y": 160,
