@@ -1711,7 +1711,7 @@
             {
                 "property": "econfig",
                 "propertyType": "msg",
-                "value": "entity_config",
+                "value": "entity",
                 "valueType": "config"
             }
         ],
