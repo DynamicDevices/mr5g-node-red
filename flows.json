@@ -410,7 +410,7 @@
             }
         ],
         "x": 160,
-        "y": 360,
+        "y": 400,
         "wires": [
             []
         ]
@@ -442,7 +442,7 @@
             }
         ],
         "x": 390,
-        "y": 400,
+        "y": 440,
         "wires": [
             [
                 "e7363f487bb5639f"
@@ -465,7 +465,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 640,
-        "y": 360,
+        "y": 400,
         "wires": []
     },
     {
@@ -498,7 +498,7 @@
             }
         ],
         "x": 380,
-        "y": 360,
+        "y": 400,
         "wires": [
             [
                 "c2b08d6dfb1d0214"
@@ -518,7 +518,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 640,
-        "y": 400,
+        "y": 440,
         "wires": []
     },
     {
@@ -536,7 +536,7 @@
         "expiry": "",
         "broker": "28f999c6149902c4",
         "x": 800,
-        "y": 460,
+        "y": 480,
         "wires": []
     },
     {
@@ -561,7 +561,7 @@
         "payload": "YepYep",
         "payloadType": "str",
         "x": 130,
-        "y": 440,
+        "y": 480,
         "wires": [
             [
                 "48b46f40e4ff3876"
@@ -581,7 +581,7 @@
         "finalize": "",
         "libs": [],
         "x": 500,
-        "y": 460,
+        "y": 500,
         "wires": [
             [
                 "f3f3fafed626ed19"
@@ -823,7 +823,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 200,
-        "y": 400,
+        "y": 440,
         "wires": [
             [
                 "e3304df6ff54a174"
@@ -1346,8 +1346,8 @@
         "topic": "",
         "payload": "you never know",
         "payloadType": "str",
-        "x": 280,
-        "y": 180,
+        "x": 260,
+        "y": 160,
         "wires": [
             [
                 "1aa66ac30734487a"
@@ -1382,7 +1382,7 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 670,
+        "x": 750,
         "y": 180,
         "wires": [
             []
@@ -1409,8 +1409,8 @@
         "topic": "",
         "payload": "You do not know",
         "payloadType": "str",
-        "x": 320,
-        "y": 260,
+        "x": 300,
+        "y": 300,
         "wires": [
             [
                 "02da3032c24c877a"
@@ -1439,7 +1439,7 @@
         "payload": "you never know",
         "payloadType": "str",
         "x": 300,
-        "y": 220,
+        "y": 260,
         "wires": [
             [
                 "02da3032c24c877a"
@@ -1462,6 +1462,54 @@
         "wires": [
             [
                 "02da3032c24c877a"
+            ]
+        ]
+    },
+    {
+        "id": "8ecb63e096b5bbc7",
+        "type": "template",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !\n\nHere is a a few more lines of text\nand so it goes",
+        "output": "str",
+        "x": 480,
+        "y": 200,
+        "wires": [
+            [
+                "02da3032c24c877a"
+            ]
+        ]
+    },
+    {
+        "id": "7c6bbbcd40f79ba7",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "you never know",
+        "payloadType": "str",
+        "x": 260,
+        "y": 200,
+        "wires": [
+            [
+                "8ecb63e096b5bbc7"
             ]
         ]
     }
