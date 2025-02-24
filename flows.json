@@ -1031,5 +1031,34 @@
                 "015cec314d84f62b"
             ]
         ]
+    },
+    {
+        "id": "942b0f30f7b481ad",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "you never know",
+        "payloadType": "str",
+        "x": 340,
+        "y": 920,
+        "wires": [
+            [
+                "015cec314d84f62b"
+            ]
+        ]
     }
 ]
