@@ -1930,7 +1930,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 350,
+        "x": 330,
         "y": 280,
         "wires": [
             [
@@ -1957,7 +1957,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "{\"id\":18,\"type\":\"subscribe_events\",\"event_type\":\"station_text\"}",
+        "payload": "{\"id\":18,\"type\":\"subscribe_events\"}",
         "payloadType": "json",
         "x": 110,
         "y": 280,
