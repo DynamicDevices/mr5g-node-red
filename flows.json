@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "3b09bd15e699321e",
+        "type": "tab",
+        "label": "Programatic",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "e0f05cf68b19d533",
         "type": "server",
         "name": "Home Assistant (MR5G)",
@@ -296,43 +304,6 @@
                 "property": "options",
                 "value": [
                     "option1"
-                ]
-            }
-        ],
-        "resend": false,
-        "debugEnabled": false
-    },
-    {
-        "id": "be77e3a6884158eb",
-        "type": "ha-entity-config",
-        "server": "bf5874816710d0c7",
-        "deviceConfig": "",
-        "name": "test select",
-        "version": "6",
-        "entityType": "select",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "test select"
-            },
-            {
-                "property": "icon",
-                "value": ""
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "entity_picture",
-                "value": ""
-            },
-            {
-                "property": "options",
-                "value": [
-                    "def",
-                    "abc",
-                    "132"
                 ]
             }
         ],
@@ -1101,7 +1072,7 @@
         "syntax": "mustache",
         "template": "Welcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\n",
         "output": "str",
-        "x": 510,
+        "x": 570,
         "y": 100,
         "wires": [
             [
@@ -1134,8 +1105,8 @@
                 "valueType": "jsonata"
             }
         ],
-        "x": 270,
-        "y": 420,
+        "x": 210,
+        "y": 640,
         "wires": [
             [
                 "e47d6c75f547bc6a"
@@ -1154,8 +1125,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 540,
-        "y": 420,
+        "x": 460,
+        "y": 640,
         "wires": []
     },
     {
@@ -1168,7 +1139,7 @@
         "event": "station_text",
         "data": "{\"text\":msg.payload, \"name\":msg.name, \"entityConfig\":msg.entityConfig }",
         "dataType": "jsonata",
-        "x": 750,
+        "x": 810,
         "y": 100,
         "wires": [
             []
@@ -1262,8 +1233,8 @@
         "syntax": "mustache",
         "template": "This is the display case of stuff we've done\n\n\n",
         "output": "str",
-        "x": 490,
-        "y": 180,
+        "x": 570,
+        "y": 140,
         "wires": [
             [
                 "665b5e101a797e54"
@@ -1283,8 +1254,136 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 500,
-        "y": 240,
+        "x": 520,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "fae44c52bd2af656",
+        "type": "function",
+        "z": "4c8d6de6577322fb",
+        "name": "function 2",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 380,
+        "wires": [
+            [
+                "7c55438c1014e74c"
+            ]
+        ]
+    },
+    {
+        "id": "7c55438c1014e74c",
+        "type": "function",
+        "z": "4c8d6de6577322fb",
+        "name": "function 3",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 380,
+        "wires": [
+            [
+                "37c677280b46bb67"
+            ]
+        ]
+    },
+    {
+        "id": "37c677280b46bb67",
+        "type": "function",
+        "z": "4c8d6de6577322fb",
+        "name": "function 4",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "da5b2202abb78551",
+        "type": "change",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a852dea629635d8",
+        "type": "inject",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 140,
+        "wires": [
+            [
+                "e5e11237d3c0164e"
+            ]
+        ]
+    },
+    {
+        "id": "e5e11237d3c0164e",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 140,
         "wires": []
     }
 ]
