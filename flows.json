@@ -1106,7 +1106,7 @@
         "y": 780,
         "wires": [
             [
-                "c476c084bccf0b3c"
+                "495a6d57ecb867f8"
             ]
         ]
     },
@@ -1121,28 +1121,8 @@
         "syntax": "mustache",
         "template": "This is the payload: {{payload}} !\n\nHere is a a few more lines of text\nand so it goes",
         "output": "str",
-        "x": 580,
-        "y": 740,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c476c084bccf0b3c",
-        "type": "ui_template",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "format": "<div ng-bind-html=\"msg.payload\"></div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 480,
-        "y": 780,
+        "x": 500,
+        "y": 760,
         "wires": [
             [
                 "b12ffd84a9ed4032"
