@@ -1240,7 +1240,8 @@
         "y": 100,
         "wires": [
             [
-                "1d80565f80606721"
+                "1d80565f80606721",
+                "2aa3e6090e489e83"
             ]
         ]
     },
@@ -1324,5 +1325,39 @@
         "x": 760,
         "y": 100,
         "wires": []
+    },
+    {
+        "id": "2aa3e6090e489e83",
+        "type": "ha-text",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 1,
+        "entityConfig": "a0413381ff7cd93f",
+        "exposeAsEntityConfig": "",
+        "mode": "set",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "previousValue",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "previousValue"
+            }
+        ],
+        "x": 570,
+        "y": 180,
+        "wires": [
+            []
+        ]
     }
 ]
