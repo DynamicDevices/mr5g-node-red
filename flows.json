@@ -1551,6 +1551,81 @@
         ]
     },
     {
+        "id": "b141d7dbcc7fe4b9",
+        "type": "ha-api",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t  \"id\": 19,\t  \"type\": \"get_config\"\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 470,
+        "y": 520,
+        "wires": [
+            [
+                "560f10e926f43592"
+            ]
+        ]
+    },
+    {
+        "id": "4121ca3ec5ac8250",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 520,
+        "wires": [
+            [
+                "b141d7dbcc7fe4b9"
+            ]
+        ]
+    },
+    {
+        "id": "560f10e926f43592",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 520,
+        "wires": []
+    },
+    {
         "id": "4a852dea629635d8",
         "type": "inject",
         "z": "3b09bd15e699321e",
