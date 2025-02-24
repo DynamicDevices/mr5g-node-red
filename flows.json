@@ -2050,9 +2050,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "a bunch of stuff",
-        "payloadType": "str",
-        "x": 140,
+        "payload": "{\"device_id\":\"my-device-id\",\"type\":\"text\",\"text\":\"bunch of stuff\"}",
+        "payloadType": "json",
+        "x": 110,
         "y": 360,
         "wires": [
             [
