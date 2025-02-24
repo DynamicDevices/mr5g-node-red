@@ -1707,6 +1707,12 @@
                 "propertyType": "msg",
                 "value": "name",
                 "valueType": "config"
+            },
+            {
+                "property": "econfig",
+                "propertyType": "msg",
+                "value": "entity_config",
+                "valueType": "config"
             }
         ],
         "x": 390,
