@@ -1560,7 +1560,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t   \"type\":\"nodered/entity\",\t   \"id\":21,\t   \"component\": \"text\",\t   \"node_id\": \"ghghgh\",\t   \"server_id\": \"whatever\",\t   \"state\": \"abcd\"\t}\t",
+        "data": "{\t   \"type\":\"nodered/entity\",\t   \"id\":21,\t   \"node_id\": \"ghghgh\",\t   \"server_id\": \"whatever\",\t   \"state\": \"abcd\"\t}\t",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
