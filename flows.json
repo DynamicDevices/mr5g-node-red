@@ -33,7 +33,7 @@
     {
         "id": "4f6e4706c65a1ceb",
         "type": "ha-device-config",
-        "name": "",
+        "name": "devtest",
         "hwVersion": "",
         "manufacturer": "Node-RED",
         "model": "",
@@ -217,6 +217,86 @@
             {
                 "property": "mode",
                 "value": "auto"
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "a0413381ff7cd93f",
+        "type": "ha-entity-config",
+        "server": "e0f05cf68b19d533",
+        "deviceConfig": "4f6e4706c65a1ceb",
+        "name": "texttest",
+        "version": 6,
+        "entityType": "text",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "mode",
+                "value": "text"
+            },
+            {
+                "property": "min_length",
+                "value": ""
+            },
+            {
+                "property": "max_length",
+                "value": ""
+            },
+            {
+                "property": "pattern",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "b8acaaa854c1dd5a",
+        "type": "ha-entity-config",
+        "server": "e0f05cf68b19d533",
+        "deviceConfig": "4f6e4706c65a1ceb",
+        "name": "selecttest",
+        "version": 6,
+        "entityType": "select",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "options",
+                "value": [
+                    "option1"
+                ]
             }
         ],
         "resend": false,
@@ -673,6 +753,94 @@
         "type": "debug",
         "z": "4c8d6de6577322fb",
         "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "015cec314d84f62b",
+        "type": "ha-text",
+        "z": "4c8d6de6577322fb",
+        "name": "texttestt",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "a0413381ff7cd93f",
+        "exposeAsEntityConfig": "",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "previousValue",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "previousValue"
+            }
+        ],
+        "x": 310,
+        "y": 780,
+        "wires": [
+            [
+                "c529e9e965507cb4"
+            ]
+        ]
+    },
+    {
+        "id": "af05a71066a19284",
+        "type": "ha-select",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "b8acaaa854c1dd5a",
+        "exposeAsEntityConfig": "",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "previousValue",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "previousValue"
+            }
+        ],
+        "x": 530,
+        "y": 780,
+        "wires": [
+            [
+                "28b7353f78cf40ba"
+            ]
+        ]
+    },
+    {
+        "id": "28b7353f78cf40ba",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 6",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -680,8 +848,24 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
-        "y": 700,
+        "x": 700,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "c529e9e965507cb4",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 840,
         "wires": []
     }
 ]
