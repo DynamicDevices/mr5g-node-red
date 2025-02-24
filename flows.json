@@ -1503,7 +1503,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "--boom--This is the payload: {{payload}} !\n\nHere is a a few more lines of text\nand so it goes Welcome to your questwalk tour",
+        "template": "--boffom--This is the payload: {{payload}} !\n\nHere is a a few more lines of text\nand so it goes",
         "output": "str",
         "x": 480,
         "y": 160,
