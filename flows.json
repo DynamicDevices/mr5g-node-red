@@ -430,6 +430,37 @@
         "debugEnabled": false
     },
     {
+        "id": "4a56c15046029a88",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
         "id": "a022198d7bc69037",
         "type": "server-events",
         "z": "4c8d6de6577322fb",
@@ -1760,11 +1791,12 @@
                 "valueType": "config"
             }
         ],
-        "x": 390,
+        "x": 330,
         "y": 100,
         "wires": [
             [
-                "8fdea8b209440596"
+                "8fdea8b209440596",
+                "aea0dc05f58a4979"
             ]
         ]
     },
@@ -1781,7 +1813,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
+        "x": 600,
         "y": 100,
         "wires": []
     },
@@ -1806,12 +1838,49 @@
         "topic": "",
         "payload": "S1 S3",
         "payloadType": "str",
-        "x": 230,
+        "x": 170,
         "y": 100,
         "wires": [
             [
                 "dcea0cc832058d30"
             ]
         ]
+    },
+    {
+        "id": "aea0dc05f58a4979",
+        "type": "template",
+        "z": "4c8d6de6577322fb",
+        "name": "S1",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Welcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\n",
+        "output": "str",
+        "x": 470,
+        "y": 140,
+        "wires": [
+            [
+                "4f4a71736a55635d"
+            ]
+        ]
+    },
+    {
+        "id": "4f4a71736a55635d",
+        "type": "mqtt out",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "topic": "tttt",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4a56c15046029a88",
+        "x": 630,
+        "y": 140,
+        "wires": []
     }
 ]
