@@ -279,8 +279,8 @@
                 "valueType": "entityState"
             }
         ],
-        "x": 250,
-        "y": 340,
+        "x": 230,
+        "y": 320,
         "wires": [
             [
                 "e7363f487bb5639f"
@@ -626,5 +626,79 @@
         "x": 580,
         "y": 560,
         "wires": []
+    },
+    {
+        "id": "85cd30c82311a8cc",
+        "type": "poll-state",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "60",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "switch.nodered_25a36e10a1e235f4",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 270,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "17178a993cd42f7b",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 320,
+        "wires": [
+            [
+                "e3304df6ff54a174"
+            ]
+        ]
     }
 ]
