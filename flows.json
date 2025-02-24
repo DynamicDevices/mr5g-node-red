@@ -1459,7 +1459,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t   \"type\":\"get_config\",\t   \"id\":20\t}",
+        "data": "{\t   \"type\":\"get_config\",\t   \"id\":20,\t   \"component\": \"text\",\t   \"node_id\": \"ghghgh\",\t   \"config\": {\t       \"name\": \"mything\"\t   }\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
