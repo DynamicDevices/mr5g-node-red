@@ -1703,15 +1703,15 @@
                 "valueType": "previousValue"
             },
             {
-                "property": "config",
+                "property": "name",
                 "propertyType": "msg",
                 "value": "name",
                 "valueType": "config"
             },
             {
-                "property": "econfig",
+                "property": "entityConfig",
                 "propertyType": "msg",
-                "value": "",
+                "value": "entityConfig",
                 "valueType": "config"
             }
         ],
@@ -1736,7 +1736,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
+        "x": 560,
         "y": 100,
         "wires": []
     },
