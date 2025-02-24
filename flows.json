@@ -1860,28 +1860,8 @@
         "x": 470,
         "y": 140,
         "wires": [
-            [
-                "4f4a71736a55635d"
-            ]
+            []
         ]
-    },
-    {
-        "id": "4f4a71736a55635d",
-        "type": "mqtt out",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "topic": "tttt",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "4a56c15046029a88",
-        "x": 630,
-        "y": 140,
-        "wires": []
     },
     {
         "id": "aa2f5fe853848cc6",
@@ -1924,7 +1904,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 500,
+        "x": 560,
         "y": 200,
         "wires": []
     },
@@ -1950,7 +1930,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 510,
+        "x": 350,
         "y": 280,
         "wires": [
             [
@@ -1977,7 +1957,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "{\"id\":19,\"type\":\"get_config\"}",
+        "payload": "{\"id\":18,\"type\":\"subscribe_events\",\"event_type\":\"station_text\"}",
         "payloadType": "json",
         "x": 110,
         "y": 280,
@@ -2025,7 +2005,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 310,
+        "x": 350,
         "y": 200,
         "wires": [
             [
