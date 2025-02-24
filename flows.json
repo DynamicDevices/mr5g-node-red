@@ -388,7 +388,7 @@
         "id": "6f324aa6935d2242",
         "type": "ha-entity-config",
         "server": "e0f05cf68b19d533",
-        "deviceConfig": "",
+        "deviceConfig": "4f6e4706c65a1ceb",
         "name": "S1",
         "version": 6,
         "entityType": "text",
@@ -1781,7 +1781,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
+        "x": 580,
         "y": 100,
         "wires": []
     },
