@@ -792,8 +792,8 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 310,
-        "y": 780,
+        "x": 370,
+        "y": 840,
         "wires": [
             [
                 "c529e9e965507cb4"
@@ -807,11 +807,11 @@
         "name": "",
         "version": 1,
         "debugenabled": false,
-        "inputs": 0,
+        "inputs": 1,
         "outputs": 1,
         "entityConfig": "b8acaaa854c1dd5a",
         "exposeAsEntityConfig": "",
-        "mode": "listen",
+        "mode": "set",
         "value": "payload",
         "valueType": "msg",
         "outputProperties": [
@@ -828,8 +828,8 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 530,
-        "y": 780,
+        "x": 510,
+        "y": 980,
         "wires": [
             [
                 "28b7353f78cf40ba"
@@ -848,8 +848,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 780,
+        "x": 680,
+        "y": 980,
         "wires": []
     },
     {
@@ -864,7 +864,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
+        "x": 520,
         "y": 840,
         "wires": []
     },
@@ -889,11 +889,40 @@
         "topic": "",
         "payload": "This is some test text",
         "payloadType": "str",
-        "x": 100,
-        "y": 800,
+        "x": 180,
+        "y": 840,
         "wires": [
             [
                 "015cec314d84f62b"
+            ]
+        ]
+    },
+    {
+        "id": "997f8a4feccd4d34",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Option111",
+        "payloadType": "str",
+        "x": 240,
+        "y": 980,
+        "wires": [
+            [
+                "af05a71066a19284"
             ]
         ]
     }
