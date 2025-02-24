@@ -364,8 +364,8 @@
                 "valueType": "jsonata"
             }
         ],
-        "x": 260,
-        "y": 160,
+        "x": 200,
+        "y": 180,
         "wires": [
             []
         ]
@@ -651,7 +651,7 @@
             }
         ],
         "x": 170,
-        "y": 620,
+        "y": 580,
         "wires": [
             [],
             []
@@ -829,7 +829,7 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 370,
+        "x": 430,
         "y": 840,
         "wires": [
             [
@@ -901,7 +901,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 520,
+        "x": 580,
         "y": 840,
         "wires": []
     },
@@ -912,11 +912,11 @@
         "name": "",
         "props": [
             {
-                "p": "payload"
-            },
-            {
                 "p": "topic",
                 "vt": "str"
+            },
+            {
+                "p": "payload"
             }
         ],
         "repeat": "",
@@ -924,9 +924,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "This is some test text",
-        "payloadType": "str",
-        "x": 180,
+        "payload": "This is some test textAnd we are doing lots of text, writing it upmaking a few silly lines hereeven though it's not JSON at all",
+        "payloadType": "json",
+        "x": 190,
         "y": 840,
         "wires": [
             [
