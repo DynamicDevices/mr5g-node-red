@@ -1663,7 +1663,7 @@
         "payload": "ShortWordsrrrrrr",
         "payloadType": "str",
         "x": 160,
-        "y": 460,
+        "y": 520,
         "wires": [
             [
                 "1d80565f80606721"
@@ -1699,7 +1699,7 @@
             }
         ],
         "x": 520,
-        "y": 460,
+        "y": 520,
         "wires": [
             [
                 "88988dc61bfc568b"
@@ -1719,7 +1719,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 680,
-        "y": 460,
+        "y": 520,
         "wires": []
     },
     {
@@ -1744,7 +1744,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 360,
-        "y": 460,
+        "y": 520,
         "wires": [
             [
                 "a9cabec2860260b0"
@@ -1884,36 +1884,6 @@
         "wires": []
     },
     {
-        "id": "d29afbf442eef003",
-        "type": "ha-api",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "server": "e0f05cf68b19d533",
-        "version": 1,
-        "debugenabled": false,
-        "protocol": "websocket",
-        "method": "get",
-        "path": "",
-        "data": "{\t  \"id\": 24,\t  \"type\": \"fire_event\",\t  \"event_type\": \"station_text\",\t  \"event_data\": {\t    \"device_id\": \"my-device-id\",\t    \"type\": \"text\",\t    \"text\": \"bunch of stuff\"\t  }\t}",
-        "dataType": "jsonata",
-        "responseType": "json",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "results"
-            }
-        ],
-        "x": 330,
-        "y": 220,
-        "wires": [
-            [
-                "e6c40566033bbcdb"
-            ]
-        ]
-    },
-    {
         "id": "aa2f5fe853848cc6",
         "type": "inject",
         "z": "4c8d6de6577322fb",
@@ -1938,7 +1908,7 @@
         "y": 200,
         "wires": [
             [
-                "d29afbf442eef003"
+                "1156ad4308373486"
             ]
         ]
     },
@@ -1954,37 +1924,9 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 520,
-        "y": 220,
+        "x": 500,
+        "y": 200,
         "wires": []
-    },
-    {
-        "id": "3a28009351e342e5",
-        "type": "ha-api",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "server": "e0f05cf68b19d533",
-        "version": 1,
-        "debugenabled": false,
-        "protocol": "websocket",
-        "method": "get",
-        "path": "",
-        "data": "{\t  \"id\": 24,\t  \"type\": \"fire_event\",\t  \"event_type\": \"station_text\",\t  \"event_data\": {\t    \"device_id\": \"my-device-id\",\t    \"type\": \"text\",\t    \"text\": \"bunch of stuff\"\t  }\t}",
-        "dataType": "jsonata",
-        "responseType": "json",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "results"
-            }
-        ],
-        "x": 210,
-        "y": 360,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "2dc23fea459c26db",
@@ -2008,8 +1950,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 390,
-        "y": 300,
+        "x": 510,
+        "y": 280,
         "wires": [
             [
                 "1071667653f3943a"
@@ -2057,8 +1999,38 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
-        "y": 300,
+        "x": 720,
+        "y": 280,
         "wires": []
+    },
+    {
+        "id": "1156ad4308373486",
+        "type": "ha-api",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "(msg.payload)",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 310,
+        "y": 200,
+        "wires": [
+            [
+                "e6c40566033bbcdb"
+            ]
+        ]
     }
 ]
