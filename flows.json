@@ -344,7 +344,7 @@
         "type": "ha-entity-config",
         "server": "e0f05cf68b19d533",
         "deviceConfig": "4f6e4706c65a1ceb",
-        "name": "CStation1",
+        "name": "CStation2",
         "version": 6,
         "entityType": "text",
         "haConfig": [
@@ -910,8 +910,8 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 470,
-        "y": 1200,
+        "x": 510,
+        "y": 1160,
         "wires": [
             [
                 "28b7353f78cf40ba"
@@ -969,7 +969,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "Option111",
+        "payload": "option111",
         "payloadType": "str",
         "x": 200,
         "y": 1200,
@@ -1217,8 +1217,8 @@
         "topic": "",
         "payload": "Testing text again\\nnew line",
         "payloadType": "str",
-        "x": 250,
-        "y": 1200,
+        "x": 130,
+        "y": 1240,
         "wires": [
             [
                 "923f48b8c687f994"
