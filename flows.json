@@ -1861,7 +1861,7 @@
         "y": 160,
         "wires": [
             [
-                "7af2c3a4c7d1b643"
+                "665b5e101a797e54"
             ]
         ]
     },
@@ -1922,9 +1922,9 @@
         "server": "e0f05cf68b19d533",
         "version": 0,
         "event": "station_text",
-        "data": "(msg.payload)",
+        "data": "{\"text\":msg.payload, \"name\":msg.name, \"entityConfig\":msg.entityConfig }",
         "dataType": "jsonata",
-        "x": 810,
+        "x": 650,
         "y": 160,
         "wires": [
             []
@@ -1946,24 +1946,5 @@
         "x": 760,
         "y": 240,
         "wires": []
-    },
-    {
-        "id": "7af2c3a4c7d1b643",
-        "type": "template",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "json",
-        "syntax": "mustache",
-        "template": "{ \"text\":\"{{payload}}\", \"entityConfig\":\"{{entityConfig}}\", \"name\":\"{{name}}\" }",
-        "output": "str",
-        "x": 600,
-        "y": 200,
-        "wires": [
-            [
-                "be4df33592b6880d"
-            ]
-        ]
     }
 ]
