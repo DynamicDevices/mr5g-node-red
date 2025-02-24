@@ -1350,7 +1350,7 @@
         "y": 180,
         "wires": [
             [
-                "90682de01209e2cd"
+                "1aa66ac30734487a"
             ]
         ]
     },
@@ -1418,25 +1418,6 @@
         ]
     },
     {
-        "id": "90682de01209e2cd",
-        "type": "template",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "Station1 Station2\n\nWelcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\nWhen you are done reading this, poke the \nNext button with your index finger\n\n\nThis is the payload: {{payload}} !\n\nHere is a a few more lines of text\nand so it goes",
-        "output": "str",
-        "x": 500,
-        "y": 140,
-        "wires": [
-            [
-                "02da3032c24c877a"
-            ]
-        ]
-    },
-    {
         "id": "ea9e675c3af09977",
         "type": "inject",
         "z": "4c8d6de6577322fb",
@@ -1459,6 +1440,25 @@
         "payloadType": "str",
         "x": 300,
         "y": 220,
+        "wires": [
+            [
+                "02da3032c24c877a"
+            ]
+        ]
+    },
+    {
+        "id": "1aa66ac30734487a",
+        "type": "template",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !\n\nHere is a a few more lines of text\nand so it goes",
+        "output": "str",
+        "x": 480,
+        "y": 160,
         "wires": [
             [
                 "02da3032c24c877a"
