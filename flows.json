@@ -1979,7 +1979,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 720,
+        "x": 580,
         "y": 280,
         "wires": []
     },
@@ -2012,5 +2012,68 @@
                 "e6c40566033bbcdb"
             ]
         ]
+    },
+    {
+        "id": "95a887bd977e180f",
+        "type": "ha-fire-event",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 0,
+        "event": "station_text",
+        "data": "(msg.payload)",
+        "dataType": "jsonata",
+        "x": 370,
+        "y": 360,
+        "wires": [
+            [
+                "e974a513fa7b2827"
+            ]
+        ]
+    },
+    {
+        "id": "5d93dfce94112b4b",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "a bunch of stuff",
+        "payloadType": "str",
+        "x": 140,
+        "y": 360,
+        "wires": [
+            [
+                "95a887bd977e180f"
+            ]
+        ]
+    },
+    {
+        "id": "e974a513fa7b2827",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 360,
+        "wires": []
     }
 ]
