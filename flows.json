@@ -433,7 +433,7 @@
         "id": "4a56c15046029a88",
         "type": "mqtt-broker",
         "name": "",
-        "broker": "localhost",
+        "broker": "mr5g.dynamicdevices.co.uk",
         "port": 1883,
         "clientid": "",
         "autoConnect": true,
