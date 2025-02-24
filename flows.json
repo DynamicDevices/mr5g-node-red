@@ -1503,7 +1503,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "--bofdddfom--This is the payload: \n123455678\nABCD Here is a a few more lines of text\nand so it goes",
+        "template": "--bofdddfom--This is the payload: \nabcdg123455678\nABCD Here is a a few more lines of text\nand so it goes",
         "output": "str",
         "x": 480,
         "y": 160,
