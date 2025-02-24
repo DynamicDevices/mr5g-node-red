@@ -1503,7 +1503,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "--boom--This is the payload: {{payload}} !\n\nWelcome to the first station\nHere is a a few more lines of text\nand so it goes",
+        "template": "--boom--This is the payload: {{payload}} !\n\nHere is a a few more lines of text\nand so it goes",
         "output": "str",
         "x": 480,
         "y": 160,
