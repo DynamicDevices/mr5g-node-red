@@ -1882,5 +1882,80 @@
         "x": 630,
         "y": 140,
         "wires": []
+    },
+    {
+        "id": "d29afbf442eef003",
+        "type": "ha-api",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t  \"id\": 19,\t  \"type\": \"get_states\"\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 270,
+        "y": 220,
+        "wires": [
+            [
+                "e6c40566033bbcdb"
+            ]
+        ]
+    },
+    {
+        "id": "aa2f5fe853848cc6",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 200,
+        "wires": [
+            [
+                "d29afbf442eef003"
+            ]
+        ]
+    },
+    {
+        "id": "e6c40566033bbcdb",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 220,
+        "wires": []
     }
 ]
