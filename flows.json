@@ -16,6 +16,14 @@
         "env": []
     },
     {
+        "id": "1fc7b0190a9c731d",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "e0f05cf68b19d533",
         "type": "server",
         "name": "Home Assistant (MR5G)",
@@ -475,6 +483,29 @@
         ],
         "resend": false,
         "debugEnabled": false
+    },
+    {
+        "id": "2bfdfdd5.245c92",
+        "type": "server",
+        "name": "Home Assistant",
+        "version": 5,
+        "addon": true,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true,
+        "cacheJson": true,
+        "heartbeat": false,
+        "heartbeatInterval": 30,
+        "areaSelector": "friendlyName",
+        "deviceSelector": "friendlyName",
+        "entitySelector": "friendlyName",
+        "statusSeparator": "at: ",
+        "statusYear": "hidden",
+        "statusMonth": "short",
+        "statusDay": "numeric",
+        "statusHourCycle": "h23",
+        "statusTimeFormat": "h:m",
+        "enableGlobalContextStore": true
     },
     {
         "id": "e3304df6ff54a174",
@@ -1270,8 +1301,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 210,
-        "y": 380,
+        "x": 160,
+        "y": 540,
         "wires": [
             [
                 "7c55438c1014e74c"
@@ -1290,8 +1321,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 380,
+        "x": 370,
+        "y": 540,
         "wires": [
             [
                 "37c677280b46bb67"
@@ -1310,8 +1341,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
-        "y": 380,
+        "x": 550,
+        "y": 540,
         "wires": [
             []
         ]
@@ -1335,11 +1366,87 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 220,
-        "y": 440,
+        "x": 170,
+        "y": 600,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "139d311a90586900",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"id\":\"3b09bd15e699321e\",\"type\":\"tab\",\"label\":\"Programatic\",\"disabled\":false,\"info\":\"\",\"env\":[]},{\"id\":\"4a852dea629635d8\",\"type\":\"inject\",\"z\":\"3b09bd15e699321e\",\"name\":\"\",\"props\":[{\"p\":\"payload\"},{\"p\":\"topic\",\"vt\":\"str\"}],\"repeat\":\"\",\"crontab\":\"\",\"once\":false,\"onceDelay\":0.1,\"topic\":\"\",\"payload\":\"\",\"payloadType\":\"date\",\"x\":220,\"y\":140,\"wires\":[[\"e5e11237d3c0164e\"]]},{\"id\":\"e5e11237d3c0164e\",\"type\":\"debug\",\"z\":\"3b09bd15e699321e\",\"name\":\"debug 5\",\"active\":true,\"tosidebar\":true,\"console\":false,\"tostatus\":false,\"complete\":\"false\",\"statusVal\":\"\",\"statusType\":\"auto\",\"x\":390,\"y\":140,\"wires\":[]}]",
+        "payloadType": "str",
+        "x": 290,
+        "y": 300,
+        "wires": [
+            [
+                "7f706885293b1d5d"
+            ]
+        ]
+    },
+    {
+        "id": "7f706885293b1d5d",
+        "type": "ha-api",
+        "z": "4c8d6de6577322fb",
+        "name": "Register Sensor",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"component\": \"text\",\t   \"node_id\": \"ghghgh\",\t   \"config\": {\t       \"name\": \"mything\",\t   }\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 500,
+        "y": 300,
+        "wires": [
+            [
+                "b5e628659ebc305c"
+            ]
+        ]
+    },
+    {
+        "id": "b5e628659ebc305c",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 300,
+        "wires": []
     },
     {
         "id": "4a852dea629635d8",
@@ -1384,6 +1491,253 @@
         "statusType": "auto",
         "x": 390,
         "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d5c4ef79.0c564",
+        "type": "ha-api",
+        "z": "1fc7b0190a9c731d",
+        "name": "Register Sensor",
+        "version": 1,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"component\": \"sensor\",\t   \"server_id\": serverId,\t   \"node_id\": nodeId,\t   \"config\": {\t       \"name\": name,\t       \"unit_of_measurement\": uom\t   }\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 740,
+        "y": 160,
+        "wires": [
+            [
+                "58a160e0.16fe8"
+            ]
+        ]
+    },
+    {
+        "id": "a6e1d000.16b7a",
+        "type": "function",
+        "z": "1fc7b0190a9c731d",
+        "name": "Device Ids go here",
+        "func": "// List of all device ids, name of switch\nconst deviceIds = [\n    [\"10470280dc4f22ed6311\", \"switch1\"],\n    [\"2\", \"switch2\"],\n    // [\"10470280dc4f22ed6311\", \"switch3\"],\n];\n\ndeviceIds.forEach(d => {\n    [\"power\", \"current\", \"voltage\"].forEach(type => {\n        let unit;        \n        switch(type) {\n            case \"power\":\n                unit = \"W\"\n                break;\n            case \"current\": \n                unit = \"mA\"\n                break;\n            case \"voltage\": \n                unit = \"V\"\n                break;\n        }\n\n        node.send({\n           serverId: d[0],\n           nodeId: type,\n           name: `${d[1]} ${type}`,\n           uom: unit\n        })\n    })\n});\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 542,
+        "y": 160,
+        "wires": [
+            [
+                "d5c4ef79.0c564"
+            ]
+        ]
+    },
+    {
+        "id": "d872791e.7e3db8",
+        "type": "server-events",
+        "z": "1fc7b0190a9c731d",
+        "name": "",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "eventType": "home_assistant_client",
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "event_type",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            }
+        ],
+        "x": 216,
+        "y": 160,
+        "wires": [
+            [
+                "cab5b48c.7d4408"
+            ]
+        ]
+    },
+    {
+        "id": "865bb27b.23aaf",
+        "type": "inject",
+        "z": "1fc7b0190a9c731d",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 340,
+        "wires": [
+            [
+                "58a160e0.16fe8"
+            ]
+        ]
+    },
+    {
+        "id": "d7ba1479.a00048",
+        "type": "function",
+        "z": "1fc7b0190a9c731d",
+        "name": "fake tuya switch1",
+        "func": "msg.data = {\n    name: \"switch_1\",\n    ip: \"192.168.0.112\",\n    id: \"10470280dc4f22ed6311\",\n    available: true\n};\nmsg.payload = {\n    devId: \"10470280dc4f22ed6311\",\n    dps: {\n        1: true,\n        9: 0,\n        18: 5,\n        19: 6,\n        20: 2346,\n        21: 1,\n        22: 591,\n        23: 28555,\n        24: 16349,\n        25: 1275\n    }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 466,
+        "y": 340,
+        "wires": [
+            [
+                "66028769.695528"
+            ]
+        ]
+    },
+    {
+        "id": "e7005805.eb98e8",
+        "type": "function",
+        "z": "1fc7b0190a9c731d",
+        "name": "fake tuya switch2",
+        "func": "msg.data = {\n    name: \"switch_2\",\n    ip: \"192.168.0.112\",\n    id: \"2\",\n    available: true\n};\nmsg.payload = {\n    devId: \"2\",\n    dps: {\n        1: true,\n        9: 0,\n        18: 1,\n        19: 2,\n        20: 2346,\n        21: 1,\n        22: 591,\n        23: 28555,\n        24: 16349,\n        25: 1275\n    }\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 468,
+        "y": 388,
+        "wires": [
+            [
+                "66028769.695528"
+            ]
+        ]
+    },
+    {
+        "id": "66028769.695528",
+        "type": "function",
+        "z": "1fc7b0190a9c731d",
+        "name": "parse data",
+        "func": "const types = {\n    \"power\": \"18\",\n    \"current\": \"19\",\n    \"voltage\": \"20\"\n}\nfor (const [type, id] of Object.entries(types)) {\n    node.send({\n        serverId: msg.payload.devId,\n        nodeId: type,\n        payload: msg.payload.dps[id] || 0,\n    });\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 656,
+        "y": 340,
+        "wires": [
+            [
+                "9ddb7a33.f8dad8"
+            ]
+        ]
+    },
+    {
+        "id": "9ddb7a33.f8dad8",
+        "type": "ha-api",
+        "z": "1fc7b0190a9c731d",
+        "name": "Update Sensor",
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t    \"type\":\"nodered/entity\",\t    \"server_id\": serverId,\t    \"node_id\": nodeId,\t    \"state\": payload    \t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "location": "payload",
+        "locationType": "msg",
+        "x": 840,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3066ba37.c8ef16",
+        "type": "comment",
+        "z": "1fc7b0190a9c731d",
+        "name": "Register Sensors",
+        "info": "",
+        "x": 116,
+        "y": 112,
+        "wires": []
+    },
+    {
+        "id": "9df1457d.2665c8",
+        "type": "comment",
+        "z": "1fc7b0190a9c731d",
+        "name": "Update Sensors",
+        "info": "",
+        "x": 104,
+        "y": 292,
+        "wires": []
+    },
+    {
+        "id": "cab5b48c.7d4408",
+        "type": "switch",
+        "z": "1fc7b0190a9c731d",
+        "name": "connected",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "connected",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "a6e1d000.16b7a"
+            ]
+        ]
+    },
+    {
+        "id": "58a160e0.16fe8",
+        "type": "switch",
+        "z": "1fc7b0190a9c731d",
+        "name": "hub",
+        "property": "true",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 282,
+        "y": 340,
+        "wires": [
+            [
+                "d7ba1479.a00048",
+                "e7005805.eb98e8"
+            ]
+        ]
+    },
+    {
+        "id": "fe75725c.0db45",
+        "type": "comment",
+        "z": "1fc7b0190a9c731d",
+        "name": "Update Sensors after registering them",
+        "info": "",
+        "x": 494,
+        "y": 292,
         "wires": []
     }
 ]
