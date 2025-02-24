@@ -1373,82 +1373,6 @@
         ]
     },
     {
-        "id": "139d311a90586900",
-        "type": "inject",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "[{\"id\":\"3b09bd15e699321e\",\"type\":\"tab\",\"label\":\"Programatic\",\"disabled\":false,\"info\":\"\",\"env\":[]},{\"id\":\"4a852dea629635d8\",\"type\":\"inject\",\"z\":\"3b09bd15e699321e\",\"name\":\"\",\"props\":[{\"p\":\"payload\"},{\"p\":\"topic\",\"vt\":\"str\"}],\"repeat\":\"\",\"crontab\":\"\",\"once\":false,\"onceDelay\":0.1,\"topic\":\"\",\"payload\":\"\",\"payloadType\":\"date\",\"x\":220,\"y\":140,\"wires\":[[\"e5e11237d3c0164e\"]]},{\"id\":\"e5e11237d3c0164e\",\"type\":\"debug\",\"z\":\"3b09bd15e699321e\",\"name\":\"debug 5\",\"active\":true,\"tosidebar\":true,\"console\":false,\"tostatus\":false,\"complete\":\"false\",\"statusVal\":\"\",\"statusType\":\"auto\",\"x\":390,\"y\":140,\"wires\":[]}]",
-        "payloadType": "str",
-        "x": 290,
-        "y": 300,
-        "wires": [
-            [
-                "7f706885293b1d5d"
-            ]
-        ]
-    },
-    {
-        "id": "7f706885293b1d5d",
-        "type": "ha-api",
-        "z": "4c8d6de6577322fb",
-        "name": "Register Sensor",
-        "server": "e0f05cf68b19d533",
-        "version": 1,
-        "debugenabled": false,
-        "protocol": "websocket",
-        "method": "get",
-        "path": "",
-        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"component\": \"text\",\t   \"node_id\": \"ghghgh\",\t   \"config\": {\t       \"name\": \"mything\"\t   }\t}",
-        "dataType": "jsonata",
-        "responseType": "json",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "results"
-            }
-        ],
-        "x": 500,
-        "y": 300,
-        "wires": [
-            [
-                "b5e628659ebc305c"
-            ]
-        ]
-    },
-    {
-        "id": "b5e628659ebc305c",
-        "type": "debug",
-        "z": "4c8d6de6577322fb",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 680,
-        "y": 300,
-        "wires": []
-    },
-    {
         "id": "e5fd23dd2b866eb2",
         "type": "ha-api",
         "z": "4c8d6de6577322fb",
@@ -1544,8 +1468,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 660,
-        "y": 460,
+        "x": 700,
+        "y": 500,
         "wires": [
             []
         ]
@@ -1572,8 +1496,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 470,
-        "y": 520,
+        "x": 410,
+        "y": 580,
         "wires": [
             [
                 "560f10e926f43592"
@@ -1601,8 +1525,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 330,
-        "y": 520,
+        "x": 270,
+        "y": 580,
         "wires": [
             [
                 "b141d7dbcc7fe4b9"
@@ -1621,8 +1545,84 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 590,
-        "y": 520,
+        "x": 580,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "4fabddfd2a5ed381",
+        "type": "ha-api",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/entity\",\t   \"id\":21,\t   \"component\": \"text\",\t   \"node_id\": \"ghghgh\",\t   \"server_id\": \"whatever\",\t   \"state\": \"abcd\"\t}\t",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 450,
+        "y": 440,
+        "wires": [
+            [
+                "4b5ef42cb984ee1f"
+            ]
+        ]
+    },
+    {
+        "id": "03407968d35918ec",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"id\":\"3b09bd15e699321e\",\"type\":\"tab\",\"label\":\"Programatic\",\"disabled\":false,\"info\":\"\",\"env\":[]},{\"id\":\"4a852dea629635d8\",\"type\":\"inject\",\"z\":\"3b09bd15e699321e\",\"name\":\"\",\"props\":[{\"p\":\"payload\"},{\"p\":\"topic\",\"vt\":\"str\"}],\"repeat\":\"\",\"crontab\":\"\",\"once\":false,\"onceDelay\":0.1,\"topic\":\"\",\"payload\":\"\",\"payloadType\":\"date\",\"x\":220,\"y\":140,\"wires\":[[\"e5e11237d3c0164e\"]]},{\"id\":\"e5e11237d3c0164e\",\"type\":\"debug\",\"z\":\"3b09bd15e699321e\",\"name\":\"debug 5\",\"active\":true,\"tosidebar\":true,\"console\":false,\"tostatus\":false,\"complete\":\"false\",\"statusVal\":\"\",\"statusType\":\"auto\",\"x\":390,\"y\":140,\"wires\":[]}]",
+        "payloadType": "str",
+        "x": 270,
+        "y": 440,
+        "wires": [
+            [
+                "4fabddfd2a5ed381"
+            ]
+        ]
+    },
+    {
+        "id": "4b5ef42cb984ee1f",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 440,
         "wires": []
     },
     {
