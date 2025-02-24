@@ -303,6 +303,43 @@
         "debugEnabled": false
     },
     {
+        "id": "be77e3a6884158eb",
+        "type": "ha-entity-config",
+        "server": "bf5874816710d0c7",
+        "deviceConfig": "",
+        "name": "test select",
+        "version": "6",
+        "entityType": "select",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "test select"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "options",
+                "value": [
+                    "def",
+                    "abc",
+                    "132"
+                ]
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
         "id": "a022198d7bc69037",
         "type": "server-events",
         "z": "4c8d6de6577322fb",
@@ -923,6 +960,46 @@
         "wires": [
             [
                 "af05a71066a19284"
+            ]
+        ]
+    },
+    {
+        "id": "3fc01a3c8daa37a1",
+        "type": "ha-update-config",
+        "z": "4c8d6de6577322fb",
+        "name": "update_select",
+        "server": "e0f05cf68b19d533",
+        "entityConfig": "be77e3a6884158eb",
+        "version": 0,
+        "outputProperties": [],
+        "x": 560,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5e201ccd8ae46483",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "1,2,3",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"options\": [\"option111\",\"option222\",\"option3333\"]}",
+        "payloadType": "json",
+        "x": 350,
+        "y": 1040,
+        "wires": [
+            [
+                "3fc01a3c8daa37a1"
             ]
         ]
     }
