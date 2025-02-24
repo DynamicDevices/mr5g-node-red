@@ -340,6 +340,51 @@
         "debugEnabled": false
     },
     {
+        "id": "bd5d61c3f5eb6196",
+        "type": "ha-entity-config",
+        "server": "e0f05cf68b19d533",
+        "deviceConfig": "",
+        "name": "",
+        "version": 6,
+        "entityType": "text",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "mode",
+                "value": "text"
+            },
+            {
+                "property": "min_length",
+                "value": ""
+            },
+            {
+                "property": "max_length",
+                "value": ""
+            },
+            {
+                "property": "pattern",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
         "id": "a022198d7bc69037",
         "type": "server-events",
         "z": "4c8d6de6577322fb",
@@ -364,8 +409,8 @@
                 "valueType": "jsonata"
             }
         ],
-        "x": 200,
-        "y": 180,
+        "x": 180,
+        "y": 260,
         "wires": [
             []
         ]
@@ -397,7 +442,7 @@
             }
         ],
         "x": 390,
-        "y": 320,
+        "y": 360,
         "wires": [
             [
                 "e7363f487bb5639f"
@@ -420,7 +465,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 640,
-        "y": 240,
+        "y": 320,
         "wires": []
     },
     {
@@ -473,7 +518,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 640,
-        "y": 320,
+        "y": 360,
         "wires": []
     },
     {
@@ -778,7 +823,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 200,
-        "y": 320,
+        "y": 360,
         "wires": [
             [
                 "e3304df6ff54a174"
@@ -829,8 +874,8 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 720,
-        "y": 1040,
+        "x": 630,
+        "y": 1020,
         "wires": [
             [
                 "c529e9e965507cb4"
@@ -865,8 +910,8 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 540,
-        "y": 1120,
+        "x": 470,
+        "y": 1200,
         "wires": [
             [
                 "28b7353f78cf40ba"
@@ -885,8 +930,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
-        "y": 1120,
+        "x": 640,
+        "y": 1200,
         "wires": []
     },
     {
@@ -926,8 +971,8 @@
         "topic": "",
         "payload": "Option111",
         "payloadType": "str",
-        "x": 270,
-        "y": 1120,
+        "x": 200,
+        "y": 1200,
         "wires": [
             [
                 "af05a71066a19284"
@@ -943,8 +988,8 @@
         "entityConfig": "b8acaaa854c1dd5a",
         "version": 0,
         "outputProperties": [],
-        "x": 590,
-        "y": 1180,
+        "x": 520,
+        "y": 1260,
         "wires": [
             []
         ]
@@ -966,8 +1011,8 @@
         "topic": "",
         "payload": "{\"options\": [\"option111\",\"option222\",\"option3333\"]}",
         "payloadType": "json",
-        "x": 380,
-        "y": 1180,
+        "x": 310,
+        "y": 1260,
         "wires": [
             [
                 "3fc01a3c8daa37a1"
@@ -1145,8 +1190,8 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 530,
-        "y": 800,
+        "x": 410,
+        "y": 780,
         "wires": [
             []
         ]
@@ -1172,11 +1217,93 @@
         "topic": "",
         "payload": "Testing text again\\nnew line",
         "payloadType": "str",
-        "x": 330,
+        "x": 250,
         "y": 780,
         "wires": [
             [
                 "923f48b8c687f994"
+            ]
+        ]
+    },
+    {
+        "id": "9f16b7addba8359a",
+        "type": "template",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Station1 Station2\n\nWelcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\nWhen you are done reading this, poke the \nNext button with your index finger\n",
+        "output": "str",
+        "x": 400,
+        "y": 100,
+        "wires": [
+            [
+                "1d80565f80606721"
+            ]
+        ]
+    },
+    {
+        "id": "1d80565f80606721",
+        "type": "ha-text",
+        "z": "4c8d6de6577322fb",
+        "name": "Station1",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 1,
+        "entityConfig": "bd5d61c3f5eb6196",
+        "exposeAsEntityConfig": "",
+        "mode": "set",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "previousValue",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "previousValue"
+            }
+        ],
+        "x": 580,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e2563797f6721464",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 100,
+        "wires": [
+            [
+                "9f16b7addba8359a"
             ]
         ]
     }
