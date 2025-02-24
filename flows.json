@@ -279,7 +279,7 @@
                 "valueType": "entityState"
             }
         ],
-        "x": 230,
+        "x": 390,
         "y": 320,
         "wires": [
             [
@@ -335,8 +335,8 @@
                 "valueType": "entity"
             }
         ],
-        "x": 220,
-        "y": 260,
+        "x": 380,
+        "y": 240,
         "wires": [
             [
                 "c2b08d6dfb1d0214"
@@ -355,8 +355,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
-        "y": 340,
+        "x": 640,
+        "y": 320,
         "wires": []
     },
     {
@@ -508,51 +508,16 @@
         ]
     },
     {
-        "id": "a421d6212ebe1aca",
-        "type": "ha-button",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 170,
-        "y": 580,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "5616480acaba2b30",
         "type": "ha-switch",
         "z": "4c8d6de6577322fb",
-        "name": "",
+        "name": "Switch2",
         "version": 0,
         "debugenabled": false,
-        "inputs": 0,
+        "inputs": 1,
         "outputs": 2,
-        "entityConfig": "",
-        "enableInput": false,
+        "entityConfig": "25a36e10a1e235f4",
+        "enableInput": true,
         "outputOnStateChange": false,
         "outputProperties": [
             {
@@ -693,7 +658,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 80,
+        "x": 200,
         "y": 320,
         "wires": [
             [
