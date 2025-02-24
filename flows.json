@@ -829,8 +829,8 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 430,
-        "y": 840,
+        "x": 690,
+        "y": 900,
         "wires": [
             [
                 "c529e9e965507cb4"
@@ -901,8 +901,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
-        "y": 840,
+        "x": 780,
+        "y": 860,
         "wires": []
     },
     {
@@ -1125,7 +1125,8 @@
         "y": 760,
         "wires": [
             [
-                "b12ffd84a9ed4032"
+                "b12ffd84a9ed4032",
+                "015cec314d84f62b"
             ]
         ]
     },
