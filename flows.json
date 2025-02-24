@@ -1459,7 +1459,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{   \"id\": 19,   \"type\": \"get_config\" }",
+        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"id\":20,\t   \"component\": \"text\",\t   \"node_id\": \"ghghgh\",\t   \"config\": {\t       \"name\": \"mything\"\t   }\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
@@ -1470,7 +1470,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 490,
+        "x": 450,
         "y": 400,
         "wires": [
             [
@@ -1499,7 +1499,7 @@
         "topic": "",
         "payload": "[{\"id\":\"3b09bd15e699321e\",\"type\":\"tab\",\"label\":\"Programatic\",\"disabled\":false,\"info\":\"\",\"env\":[]},{\"id\":\"4a852dea629635d8\",\"type\":\"inject\",\"z\":\"3b09bd15e699321e\",\"name\":\"\",\"props\":[{\"p\":\"payload\"},{\"p\":\"topic\",\"vt\":\"str\"}],\"repeat\":\"\",\"crontab\":\"\",\"once\":false,\"onceDelay\":0.1,\"topic\":\"\",\"payload\":\"\",\"payloadType\":\"date\",\"x\":220,\"y\":140,\"wires\":[[\"e5e11237d3c0164e\"]]},{\"id\":\"e5e11237d3c0164e\",\"type\":\"debug\",\"z\":\"3b09bd15e699321e\",\"name\":\"debug 5\",\"active\":true,\"tosidebar\":true,\"console\":false,\"tostatus\":false,\"complete\":\"false\",\"statusVal\":\"\",\"statusType\":\"auto\",\"x\":390,\"y\":140,\"wires\":[]}]",
         "payloadType": "str",
-        "x": 290,
+        "x": 270,
         "y": 400,
         "wires": [
             [
