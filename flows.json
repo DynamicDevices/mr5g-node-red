@@ -1275,7 +1275,9 @@
         "x": 580,
         "y": 100,
         "wires": [
-            []
+            [
+                "bfd248d07afa4e77"
+            ]
         ]
     },
     {
@@ -1306,5 +1308,21 @@
                 "9f16b7addba8359a"
             ]
         ]
+    },
+    {
+        "id": "bfd248d07afa4e77",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 100,
+        "wires": []
     }
 ]
