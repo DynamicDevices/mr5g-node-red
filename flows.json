@@ -1136,8 +1136,8 @@
                 "valueType": "jsonata"
             }
         ],
-        "x": 220,
-        "y": 740,
+        "x": 290,
+        "y": 760,
         "wires": [
             [
                 "e47d6c75f547bc6a"
@@ -1156,8 +1156,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 470,
-        "y": 740,
+        "x": 520,
+        "y": 760,
         "wires": []
     },
     {
@@ -1394,7 +1394,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 450,
+        "x": 570,
         "y": 400,
         "wires": [
             [
@@ -1424,12 +1424,11 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 170,
+        "x": 130,
         "y": 400,
         "wires": [
             [
-                "e5fd23dd2b866eb2",
-                "b29da85209585bac"
+                "5387a835de2d1089"
             ]
         ]
     },
@@ -1446,7 +1445,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
+        "x": 720,
         "y": 400,
         "wires": []
     },
@@ -1573,8 +1572,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 450,
-        "y": 460,
+        "x": 570,
+        "y": 440,
         "wires": [
             [
                 "4b5ef42cb984ee1f"
@@ -1594,7 +1593,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
+        "x": 720,
         "y": 440,
         "wires": []
     },
@@ -1669,13 +1668,94 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 310,
+        "x": 430,
         "y": 440,
         "wires": [
             [
-                "4fabddfd2a5ed381"
+                "4fabddfd2a5ed381",
+                "f5744a9b8f92af7c"
             ]
         ]
+    },
+    {
+        "id": "c401c67fd7944867",
+        "type": "ha-fire-event",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 0,
+        "event": "station_text",
+        "data": "{\"text\":msg.payload, \"name\":msg.name, \"entityConfig\":msg.name }",
+        "dataType": "jsonata",
+        "x": 790,
+        "y": 480,
+        "wires": [
+            [
+                "0cf97ed270a5e35d"
+            ]
+        ]
+    },
+    {
+        "id": "5387a835de2d1089",
+        "type": "template",
+        "z": "4c8d6de6577322fb",
+        "name": "S1",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Welcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\n",
+        "output": "str",
+        "x": 270,
+        "y": 400,
+        "wires": [
+            [
+                "b29da85209585bac",
+                "e5fd23dd2b866eb2"
+            ]
+        ]
+    },
+    {
+        "id": "f5744a9b8f92af7c",
+        "type": "delay",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 480,
+        "wires": [
+            [
+                "c401c67fd7944867"
+            ]
+        ]
+    },
+    {
+        "id": "0cf97ed270a5e35d",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 520,
+        "wires": []
     },
     {
         "id": "4a852dea629635d8",
