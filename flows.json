@@ -1744,7 +1744,7 @@
         "persist": false,
         "proxy": "",
         "insecureHTTPParser": false,
-        "authType": "",
+        "authType": "basic",
         "senderr": false,
         "headers": [],
         "x": 390,
