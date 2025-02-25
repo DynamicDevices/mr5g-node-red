@@ -536,7 +536,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "This is the display case of stuff we've done\n\n\n",
+        "template": "This is the display case of stuff we've done\n\nAnd a lot more coming from there\n",
         "output": "str",
         "x": 320,
         "y": 140,
