@@ -1626,7 +1626,7 @@
         "type": "function",
         "z": "4c8d6de6577322fb",
         "name": "function 1",
-        "func": "let results = [];\nRED.nodes.eachNode(function(node) {\n   if (node.name === \"S1\") {\n      results.push(node);\n   }\n});\nmsg.payload = results;\nreturn msg;",
+        "func": "\nmsg.payload = RED.nodes;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1653,7 +1653,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 450,
+        "x": 480,
         "y": 500,
         "wires": []
     },
