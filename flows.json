@@ -1763,7 +1763,7 @@
         "type": "function",
         "z": "3b09bd15e699321e",
         "name": "DefineStation",
-        "func": "for (var i = 0; i < msg.payload.nodes.length; i++) {\n    var station = msg.payload.nodes[i];\n    if (station.type == \"template\") {\n        node.send({ \"name\":station.name,\n                    \"station_id\":station.id, \n                    \"next_stations\":station.wires[0], \n                    \"payload\":station.template});\n    }\n}\nreturn null;\n",
+        "func": "for (var i = 0; i < msg.payload.nodes.length; i++) {\n    var station = msg.payload.nodes[i];\n    if (station.type == \"template\") {\n        node.send({ \"name\":station.name,\n                    \"station_id\":station.id, \n                    \"next_stations\":station.wires[0].join(\" \"), \n                    \"payload\":station.template});\n    }\n}\nreturn null;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
