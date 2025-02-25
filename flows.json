@@ -1891,7 +1891,7 @@
         "type": "function",
         "z": "3b09bd15e699321e",
         "name": "function 2",
-        "func": "var res = [ ]\nfor (var station in msg.payload.nodes) {\n    node.send({ \"msg\": station.name});\n}\nreturn null;\n",
+        "func": "var res = [ ]\nfor (var station in msg.payload.nodes) {\n    node.send({ \"payload\": station.name});\n}\nreturn null;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
