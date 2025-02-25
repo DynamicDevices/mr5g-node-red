@@ -1919,5 +1919,70 @@
         "x": 740,
         "y": 320,
         "wires": []
+    },
+    {
+        "id": "901adc6ebdefd4e9",
+        "type": "function",
+        "z": "3b09bd15e699321e",
+        "name": "function 3",
+        "func": "node.send({\"payload\":\"hi there\"});\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 480,
+        "wires": [
+            [
+                "306f56310c2a1689"
+            ]
+        ]
+    },
+    {
+        "id": "306f56310c2a1689",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "ba3072e9019a3b10",
+        "type": "inject",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 390,
+        "y": 480,
+        "wires": [
+            [
+                "901adc6ebdefd4e9"
+            ]
+        ]
     }
 ]
