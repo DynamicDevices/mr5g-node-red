@@ -1626,7 +1626,7 @@
         "type": "function",
         "z": "4c8d6de6577322fb",
         "name": "function 1",
-        "func": "\nmsg.payload = flow;\nreturn msg;",
+        "func": "\nmsg.payload = flow.keys();\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
