@@ -1711,23 +1711,6 @@
         ]
     },
     {
-        "id": "d3836ebfb33c465a",
-        "type": "debug",
-        "z": "3b09bd15e699321e",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 900,
-        "y": 380,
-        "wires": []
-    },
-    {
         "id": "99e9fbc883a84b7a",
         "type": "inject",
         "z": "3b09bd15e699321e",
@@ -1789,7 +1772,7 @@
         "y": 80,
         "wires": [
             [
-                "d3836ebfb33c465a"
+                "e7f72d20af957f3e"
             ]
         ]
     },
@@ -1896,8 +1879,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 490,
-        "y": 620,
+        "x": 470,
+        "y": 340,
         "wires": [
             [
                 "1e7751d8f7e99a50"
@@ -1926,8 +1909,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 130,
-        "y": 600,
+        "x": 90,
+        "y": 340,
         "wires": [
             [
                 "b6d47ecf748e315b"
@@ -1947,8 +1930,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 640,
-        "y": 620,
+        "x": 620,
+        "y": 340,
         "wires": []
     },
     {
@@ -1973,8 +1956,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 550,
-        "y": 660,
+        "x": 530,
+        "y": 380,
         "wires": [
             [
                 "cf174fd53c711c49"
@@ -1994,8 +1977,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 660,
+        "x": 680,
+        "y": 380,
         "wires": []
     },
     {
@@ -2015,8 +1998,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 350,
-        "y": 660,
+        "x": 310,
+        "y": 400,
         "wires": [
             [
                 "1238bc8b8c58e3a2",
@@ -2034,8 +2017,8 @@
         "event": "station_text",
         "data": "{\"text\":msg.payload, \"name\":msg.name, \"entityConfig\":msg.name }",
         "dataType": "jsonata",
-        "x": 750,
-        "y": 700,
+        "x": 730,
+        "y": 420,
         "wires": [
             [
                 "4d4d3dbc968caa57"
@@ -2053,8 +2036,8 @@
         "syntax": "mustache",
         "template": "Welcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\n",
         "output": "str",
-        "x": 150,
-        "y": 640,
+        "x": 110,
+        "y": 380,
         "wires": [
             [
                 "266e3fd78fa31513",
@@ -2079,8 +2062,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 570,
-        "y": 700,
+        "x": 550,
+        "y": 420,
         "wires": [
             [
                 "27d2e0b97634f555"
@@ -2100,8 +2083,180 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 920,
-        "y": 700,
+        "x": 900,
+        "y": 420,
         "wires": []
+    },
+    {
+        "id": "e7f72d20af957f3e",
+        "type": "delay",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "200",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "88269691c5c04468",
+                "f9d1132654d2e48b"
+            ]
+        ]
+    },
+    {
+        "id": "c475917f3f417bd7",
+        "type": "delay",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 260,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "88269691c5c04468",
+        "type": "ha-api",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"id\":21,\t   \"component\": \"text\",\t   \"node_id\": msg.name,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"config\": {\t       \"name\": msg.name\t   }\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 350,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f9d1132654d2e48b",
+        "type": "delay",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 370,
+        "y": 180,
+        "wires": [
+            [
+                "98cc1edaba6e092d",
+                "d691e4d82f73a144"
+            ]
+        ]
+    },
+    {
+        "id": "98cc1edaba6e092d",
+        "type": "ha-api",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/entity\",\t   \"id\":21,\t   \"node_id\": msg.name,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"state\": msg.state\t}\t",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 530,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d691e4d82f73a144",
+        "type": "delay",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 550,
+        "y": 220,
+        "wires": [
+            [
+                "f7c4aad2644890e9"
+            ]
+        ]
+    },
+    {
+        "id": "f7c4aad2644890e9",
+        "type": "ha-fire-event",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 0,
+        "event": "station_text",
+        "data": "{\"text\":msg.payload, \"name\":msg.name, \"entityConfig\":msg.name }",
+        "dataType": "jsonata",
+        "x": 730,
+        "y": 220,
+        "wires": [
+            []
+        ]
     }
 ]
