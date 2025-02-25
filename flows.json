@@ -619,8 +619,8 @@
         "syntax": "mustache",
         "template": "This is the donations box\n",
         "output": "str",
-        "x": 700,
-        "y": 260,
+        "x": 720,
+        "y": 280,
         "wires": [
             [
                 "4b17b99690fd021d"
@@ -639,8 +639,8 @@
         "syntax": "mustache",
         "template": "You are at the end\nThank you for participating\nWe hope you enjoyed this adventure\n",
         "output": "str",
-        "x": 890,
-        "y": 260,
+        "x": 910,
+        "y": 280,
         "wires": [
             []
         ],
@@ -1687,120 +1687,6 @@
         ]
     },
     {
-        "id": "4a852dea629635d8",
-        "type": "inject",
-        "z": "3b09bd15e699321e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 220,
-        "y": 140,
-        "wires": [
-            [
-                "e5e11237d3c0164e"
-            ]
-        ]
-    },
-    {
-        "id": "e5e11237d3c0164e",
-        "type": "debug",
-        "z": "3b09bd15e699321e",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 390,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "8e918b85421b1f18",
-        "type": "http request",
-        "z": "3b09bd15e699321e",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "http://localhost:1880/auth/login",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "basic",
-        "senderr": false,
-        "headers": [],
-        "x": 390,
-        "y": 240,
-        "wires": [
-            [
-                "91bf72d3fff35154"
-            ]
-        ]
-    },
-    {
-        "id": "4127819cc359f7e4",
-        "type": "inject",
-        "z": "3b09bd15e699321e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 200,
-        "y": 240,
-        "wires": [
-            [
-                "8e918b85421b1f18"
-            ]
-        ]
-    },
-    {
-        "id": "91bf72d3fff35154",
-        "type": "debug",
-        "z": "3b09bd15e699321e",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 580,
-        "y": 220,
-        "wires": []
-    },
-    {
         "id": "5077c02accb21025",
         "type": "http request",
         "z": "3b09bd15e699321e",
@@ -1816,8 +1702,8 @@
         "authType": "basic",
         "senderr": false,
         "headers": [],
-        "x": 350,
-        "y": 380,
+        "x": 290,
+        "y": 80,
         "wires": [
             [
                 "4b1b57ec218d74c5"
@@ -1861,8 +1747,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 160,
-        "y": 380,
+        "x": 120,
+        "y": 80,
         "wires": [
             [
                 "5077c02accb21025"
@@ -1877,8 +1763,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 530,
-        "y": 380,
+        "x": 430,
+        "y": 80,
         "wires": [
             [
                 "86f0bb486a016a48",
@@ -1898,8 +1784,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 720,
-        "y": 380,
+        "x": 600,
+        "y": 80,
         "wires": [
             [
                 "d3836ebfb33c465a"
@@ -1918,8 +1804,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 320,
+        "x": 780,
+        "y": 80,
         "wires": []
     },
     {
@@ -1986,5 +1872,235 @@
                 "901adc6ebdefd4e9"
             ]
         ]
+    },
+    {
+        "id": "e8c2265f6e1da0f8",
+        "type": "ha-api",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"id\":21,\t   \"component\": \"text\",\t   \"node_id\": msg.name,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"config\": {\t       \"name\": msg.name\t   }\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 490,
+        "y": 620,
+        "wires": [
+            [
+                "1e7751d8f7e99a50"
+            ]
+        ]
+    },
+    {
+        "id": "265365a55b414836",
+        "type": "inject",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "props": [
+            {
+                "p": "name",
+                "v": "yourthing",
+                "vt": "str"
+            },
+            {
+                "p": "state",
+                "v": "abc",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 600,
+        "wires": [
+            [
+                "b6d47ecf748e315b"
+            ]
+        ]
+    },
+    {
+        "id": "1e7751d8f7e99a50",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "1238bc8b8c58e3a2",
+        "type": "ha-api",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/entity\",\t   \"id\":21,\t   \"node_id\": msg.name,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"state\": msg.state\t}\t",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 550,
+        "y": 660,
+        "wires": [
+            [
+                "cf174fd53c711c49"
+            ]
+        ]
+    },
+    {
+        "id": "cf174fd53c711c49",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "266e3fd78fa31513",
+        "type": "delay",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 350,
+        "y": 660,
+        "wires": [
+            [
+                "1238bc8b8c58e3a2",
+                "175b96f992e0bd11"
+            ]
+        ]
+    },
+    {
+        "id": "27d2e0b97634f555",
+        "type": "ha-fire-event",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 0,
+        "event": "station_text",
+        "data": "{\"text\":msg.payload, \"name\":msg.name, \"entityConfig\":msg.name }",
+        "dataType": "jsonata",
+        "x": 750,
+        "y": 700,
+        "wires": [
+            [
+                "4d4d3dbc968caa57"
+            ]
+        ]
+    },
+    {
+        "id": "b6d47ecf748e315b",
+        "type": "template",
+        "z": "3b09bd15e699321e",
+        "name": "S1",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Welcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\n",
+        "output": "str",
+        "x": 150,
+        "y": 640,
+        "wires": [
+            [
+                "266e3fd78fa31513",
+                "e8c2265f6e1da0f8"
+            ]
+        ]
+    },
+    {
+        "id": "175b96f992e0bd11",
+        "type": "delay",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 570,
+        "y": 700,
+        "wires": [
+            [
+                "27d2e0b97634f555"
+            ]
+        ]
+    },
+    {
+        "id": "4d4d3dbc968caa57",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 700,
+        "wires": []
     }
 ]
