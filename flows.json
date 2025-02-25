@@ -8,17 +8,17 @@
         "env": []
     },
     {
-        "id": "4c8d6de6577322fb",
+        "id": "3b09bd15e699321e",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Programatic",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "3b09bd15e699321e",
+        "id": "4c8d6de6577322fb",
         "type": "tab",
-        "label": "Programatic",
+        "label": "Flow 1",
         "disabled": false,
         "info": "",
         "env": []
@@ -645,6 +645,328 @@
             []
         ],
         "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "5077c02accb21025",
+        "type": "http request",
+        "z": "3b09bd15e699321e",
+        "name": "QuestWalk",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:1880/flow/1fc7b0190a9c731d",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 290,
+        "y": 80,
+        "wires": [
+            [
+                "4b1b57ec218d74c5"
+            ]
+        ]
+    },
+    {
+        "id": "99e9fbc883a84b7a",
+        "type": "inject",
+        "z": "3b09bd15e699321e",
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "5077c02accb21025"
+            ]
+        ]
+    },
+    {
+        "id": "4b1b57ec218d74c5",
+        "type": "json",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 430,
+        "y": 80,
+        "wires": [
+            [
+                "86f0bb486a016a48",
+                "4151ad7aa08d2963"
+            ]
+        ]
+    },
+    {
+        "id": "4151ad7aa08d2963",
+        "type": "function",
+        "z": "3b09bd15e699321e",
+        "name": "DefineStation",
+        "func": "for (var i = 0; i < msg.payload.nodes.length; i++) {\n    var station = msg.payload.nodes[i];\n    if (station.type == \"template\") {\n        node.send({ \"name\":station.name,\n                    \"station_id\":station.id, \n                    \"next_stations\":station.wires[0].join(\" \"), \n                    \"payload\":station.template});\n    }\n}\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 80,
+        "wires": [
+            [
+                "63a12da53fc34b07",
+                "e7f72d20af957f3e"
+            ]
+        ]
+    },
+    {
+        "id": "86f0bb486a016a48",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "e7f72d20af957f3e",
+        "type": "delay",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "88269691c5c04468",
+                "f9d1132654d2e48b"
+            ]
+        ]
+    },
+    {
+        "id": "88269691c5c04468",
+        "type": "ha-api",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"id\":21,\t   \"component\": \"text\",\t   \"node_id\": msg.station_id,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"config\": {\t       \"name\": msg.name\t   }\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 350,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f9d1132654d2e48b",
+        "type": "delay",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 370,
+        "y": 180,
+        "wires": [
+            [
+                "98cc1edaba6e092d",
+                "d691e4d82f73a144"
+            ]
+        ]
+    },
+    {
+        "id": "98cc1edaba6e092d",
+        "type": "ha-api",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/entity\",\t   \"id\":21,\t   \"node_id\": msg.station_id,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"state\": msg.next_stations\t}\t",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 530,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d691e4d82f73a144",
+        "type": "delay",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 550,
+        "y": 220,
+        "wires": [
+            [
+                "f7c4aad2644890e9"
+            ]
+        ]
+    },
+    {
+        "id": "f7c4aad2644890e9",
+        "type": "ha-fire-event",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 0,
+        "event": "station_text",
+        "data": "{\"text\":msg.payload, \t \"name\":msg.name, \t \"next_stations\": msg.next_stations,\t \"entityConfig\":msg.station_id }",
+        "dataType": "jsonata",
+        "x": 730,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "63a12da53fc34b07",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "bed601439137ba06",
+        "type": "server-events",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "eventType": "station_text",
+        "eventData": "",
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            }
+        ],
+        "x": 190,
+        "y": 280,
+        "wires": [
+            [
+                "e47d6c75f547bc6a"
+            ]
+        ]
+    },
+    {
+        "id": "e47d6c75f547bc6a",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 280,
+        "wires": []
     },
     {
         "id": "f3f3fafed626ed19",
@@ -1636,327 +1958,5 @@
                 "cb6269f3d0909f43"
             ]
         ]
-    },
-    {
-        "id": "5077c02accb21025",
-        "type": "http request",
-        "z": "3b09bd15e699321e",
-        "name": "QuestWalk",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "http://localhost:1880/flow/1fc7b0190a9c731d",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "basic",
-        "senderr": false,
-        "headers": [],
-        "x": 290,
-        "y": 80,
-        "wires": [
-            [
-                "4b1b57ec218d74c5"
-            ]
-        ]
-    },
-    {
-        "id": "99e9fbc883a84b7a",
-        "type": "inject",
-        "z": "3b09bd15e699321e",
-        "name": "Start",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 80,
-        "wires": [
-            [
-                "5077c02accb21025"
-            ]
-        ]
-    },
-    {
-        "id": "4b1b57ec218d74c5",
-        "type": "json",
-        "z": "3b09bd15e699321e",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 430,
-        "y": 80,
-        "wires": [
-            [
-                "86f0bb486a016a48",
-                "4151ad7aa08d2963"
-            ]
-        ]
-    },
-    {
-        "id": "4151ad7aa08d2963",
-        "type": "function",
-        "z": "3b09bd15e699321e",
-        "name": "DefineStation",
-        "func": "for (var i = 0; i < msg.payload.nodes.length; i++) {\n    var station = msg.payload.nodes[i];\n    if (station.type == \"template\") {\n        node.send({ \"name\":station.name,\n                    \"station_id\":station.id, \n                    \"next_stations\":station.wires[0].join(\" \"), \n                    \"payload\":station.template});\n    }\n}\nreturn null;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 80,
-        "wires": [
-            [
-                "63a12da53fc34b07",
-                "e7f72d20af957f3e"
-            ]
-        ]
-    },
-    {
-        "id": "86f0bb486a016a48",
-        "type": "debug",
-        "z": "3b09bd15e699321e",
-        "name": "debug 13",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 680,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "e7f72d20af957f3e",
-        "type": "delay",
-        "z": "3b09bd15e699321e",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "100",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 170,
-        "y": 140,
-        "wires": [
-            [
-                "88269691c5c04468",
-                "f9d1132654d2e48b"
-            ]
-        ]
-    },
-    {
-        "id": "88269691c5c04468",
-        "type": "ha-api",
-        "z": "3b09bd15e699321e",
-        "name": "",
-        "server": "e0f05cf68b19d533",
-        "version": 1,
-        "debugenabled": false,
-        "protocol": "websocket",
-        "method": "get",
-        "path": "",
-        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"id\":21,\t   \"component\": \"text\",\t   \"node_id\": msg.station_id,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"config\": {\t       \"name\": msg.name\t   }\t}",
-        "dataType": "jsonata",
-        "responseType": "json",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "results"
-            }
-        ],
-        "x": 350,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f9d1132654d2e48b",
-        "type": "delay",
-        "z": "3b09bd15e699321e",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "500",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 370,
-        "y": 180,
-        "wires": [
-            [
-                "98cc1edaba6e092d",
-                "d691e4d82f73a144"
-            ]
-        ]
-    },
-    {
-        "id": "98cc1edaba6e092d",
-        "type": "ha-api",
-        "z": "3b09bd15e699321e",
-        "name": "",
-        "server": "e0f05cf68b19d533",
-        "version": 1,
-        "debugenabled": false,
-        "protocol": "websocket",
-        "method": "get",
-        "path": "",
-        "data": "{\t   \"type\":\"nodered/entity\",\t   \"id\":21,\t   \"node_id\": msg.station_id,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"state\": msg.next_stations\t}\t",
-        "dataType": "jsonata",
-        "responseType": "json",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "results"
-            }
-        ],
-        "x": 530,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d691e4d82f73a144",
-        "type": "delay",
-        "z": "3b09bd15e699321e",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "500",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 550,
-        "y": 220,
-        "wires": [
-            [
-                "f7c4aad2644890e9"
-            ]
-        ]
-    },
-    {
-        "id": "f7c4aad2644890e9",
-        "type": "ha-fire-event",
-        "z": "3b09bd15e699321e",
-        "name": "",
-        "server": "e0f05cf68b19d533",
-        "version": 0,
-        "event": "station_text",
-        "data": "{\"text\":msg.payload, \t \"name\":msg.name, \t \"entityConfig\":msg.station_id }",
-        "dataType": "jsonata",
-        "x": 730,
-        "y": 220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "63a12da53fc34b07",
-        "type": "debug",
-        "z": "3b09bd15e699321e",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 820,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "bed601439137ba06",
-        "type": "server-events",
-        "z": "3b09bd15e699321e",
-        "name": "",
-        "server": "e0f05cf68b19d533",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "eventType": "station_text",
-        "eventData": "",
-        "waitForRunning": true,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "$outputData(\"eventData\").event_type",
-                "valueType": "jsonata"
-            }
-        ],
-        "x": 190,
-        "y": 280,
-        "wires": [
-            [
-                "e47d6c75f547bc6a"
-            ]
-        ]
-    },
-    {
-        "id": "e47d6c75f547bc6a",
-        "type": "debug",
-        "z": "3b09bd15e699321e",
-        "name": "debug 16",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 420,
-        "y": 280,
-        "wires": []
     }
 ]
