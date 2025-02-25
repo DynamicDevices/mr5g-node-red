@@ -1739,7 +1739,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "https://mr5g.dynamicdevices.co.uk/api/hassio_ingress/bdr877ms3AcTgwsxUZc_SiJ-VnlSio6vtj4QU8PAwjs/flow/1fc7b0190a9c731d",
+        "url": "https://mr5g.dynamicdevices.co.uk/api/hassio_ingress/bdr877ms3AcTgwsxUZc_SiJ-VnlSio6vtj4QU8PAwjs/auth/login",
         "tls": "",
         "persist": false,
         "proxy": "",
