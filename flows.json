@@ -1805,10 +1805,10 @@
         "type": "http request",
         "z": "3b09bd15e699321e",
         "name": "",
-        "method": "GET",
+        "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://localhost:1880/client_id=node-red-admin&grant_type=password&scope=*&username=admin&password=decafbad00",
+        "url": "http://localhost:1880/",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -1831,10 +1831,28 @@
         "name": "",
         "props": [
             {
-                "p": "payload"
+                "p": "client_id",
+                "v": "node-red-admin",
+                "vt": "str"
             },
             {
-                "p": "topic",
+                "p": "grant_type",
+                "v": "password",
+                "vt": "str"
+            },
+            {
+                "p": "scope",
+                "v": "*",
+                "vt": "str"
+            },
+            {
+                "p": "username",
+                "v": "admin",
+                "vt": "str"
+            },
+            {
+                "p": "password",
+                "v": "decafbad00",
                 "vt": "str"
             }
         ],
@@ -1843,9 +1861,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 190,
+        "x": 180,
         "y": 380,
         "wires": [
             [
