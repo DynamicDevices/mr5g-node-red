@@ -1799,5 +1799,74 @@
         "x": 600,
         "y": 320,
         "wires": []
+    },
+    {
+        "id": "5077c02accb21025",
+        "type": "http request",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:1880/client_id=node-red-admin&grant_type=password&scope=*&username=admin&password=password",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 370,
+        "y": 380,
+        "wires": [
+            [
+                "d3836ebfb33c465a"
+            ]
+        ]
+    },
+    {
+        "id": "296bc9fb941a01ed",
+        "type": "inject",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 380,
+        "wires": [
+            [
+                "5077c02accb21025"
+            ]
+        ]
+    },
+    {
+        "id": "d3836ebfb33c465a",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 380,
+        "wires": []
     }
 ]
