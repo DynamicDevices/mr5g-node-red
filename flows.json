@@ -1622,6 +1622,71 @@
         "icon": "node-red/comment.svg"
     },
     {
+        "id": "cb6269f3d0909f43",
+        "type": "function",
+        "z": "4c8d6de6577322fb",
+        "name": "function 1",
+        "func": "let results = [];\nRED.nodes.eachNode(function(node) {\n   if (node.name === \"S1\") {\n      results.push(node);\n   }\n});\nmsg.payload = results;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 500,
+        "wires": [
+            [
+                "952b3aa724846f6b"
+            ]
+        ]
+    },
+    {
+        "id": "952b3aa724846f6b",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "5b14169c841ac7fa",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 500,
+        "wires": [
+            [
+                "cb6269f3d0909f43"
+            ]
+        ]
+    },
+    {
         "id": "4a852dea629635d8",
         "type": "inject",
         "z": "3b09bd15e699321e",
@@ -1731,7 +1796,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 530,
+        "x": 600,
         "y": 320,
         "wires": []
     },
