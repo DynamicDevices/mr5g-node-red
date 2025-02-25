@@ -1881,7 +1881,8 @@
         "y": 380,
         "wires": [
             [
-                "d3836ebfb33c465a"
+                "d3836ebfb33c465a",
+                "86f0bb486a016a48"
             ]
         ]
     },
@@ -1890,10 +1891,10 @@
         "type": "function",
         "z": "3b09bd15e699321e",
         "name": "function 2",
-        "func": "var res = [ ]\nfor (station in msg.payload.nodes) {\n    node.send({ \"msg\": station.name});\n}\n",
+        "func": "var res = [ ]\nfor (var station in msg.payload.nodes) {\n    node.send({ \"msg\": station.name});\n}\nreturn null;\n",
         "outputs": 1,
         "timeout": 0,
-        "noerr": 2,
+        "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
@@ -1902,5 +1903,21 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "86f0bb486a016a48",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 320,
+        "wires": []
     }
 ]
