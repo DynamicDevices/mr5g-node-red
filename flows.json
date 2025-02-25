@@ -1739,7 +1739,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "https://mr5g.dynamicdevices.co.uk/api/hassio_ingress/bdr877ms3AcTgwsxUZc_SiJ-VnlSio6vtj4QU8PAwjs/flows?_=1740447164366",
+        "url": "http://localhost:1880/auth/token",
         "tls": "",
         "persist": false,
         "proxy": "",
