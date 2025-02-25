@@ -1805,7 +1805,7 @@
         "type": "http request",
         "z": "3b09bd15e699321e",
         "name": "",
-        "method": "POST",
+        "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
         "url": "http://localhost:1880/flow/1fc7b0190a9c731d",
