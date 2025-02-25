@@ -1739,7 +1739,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "",
+        "url": "/",
         "tls": "",
         "persist": false,
         "proxy": "",
