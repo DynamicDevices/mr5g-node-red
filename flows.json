@@ -1808,7 +1808,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://localhost:1880/client_id=node-red-admin&grant_type=password&scope=*&username=admin&password=password",
+        "url": "http://localhost:1880/client_id=node-red-admin&grant_type=password&scope=*&username=admin&password=decafbad00",
         "tls": "",
         "persist": false,
         "proxy": "",
