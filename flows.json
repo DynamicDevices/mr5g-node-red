@@ -1626,14 +1626,14 @@
         "type": "function",
         "z": "4c8d6de6577322fb",
         "name": "function 1",
-        "func": "\nmsg.payload = RED.util.generateId();\nreturn msg;",
+        "func": "\nmsg.payload = RED._;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
+        "x": 380,
         "y": 500,
         "wires": [
             [
@@ -1653,7 +1653,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
+        "x": 560,
         "y": 500,
         "wires": []
     },
