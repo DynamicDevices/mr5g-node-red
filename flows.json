@@ -578,7 +578,7 @@
         "syntax": "mustache",
         "template": "This is the coffee machine\n\n",
         "output": "str",
-        "x": 650,
+        "x": 630,
         "y": 140,
         "wires": [
             [
@@ -619,7 +619,7 @@
         "syntax": "mustache",
         "template": "This is the donations box\n",
         "output": "str",
-        "x": 720,
+        "x": 760,
         "y": 280,
         "wires": [
             [
@@ -639,7 +639,7 @@
         "syntax": "mustache",
         "template": "You are at the end\nThank you for participating\nWe hope you enjoyed this adventure\n",
         "output": "str",
-        "x": 910,
+        "x": 950,
         "y": 280,
         "wires": [
             []
@@ -1712,7 +1712,7 @@
         "type": "function",
         "z": "3b09bd15e699321e",
         "name": "DefineStation",
-        "func": "for (var i = 0; i < msg.payload.nodes.length; i++) {\n    var station = msg.payload.nodes[i];\n    var forelinks = [ station.id ];\n    for (var j = 0; j < station.wires.length; j++) {\n        forelinks.push(station.wires[j][0]);\n    }\n    node.send({ \"name\":station.name,\n                \"station_id\":station.id, \n                \"next_stations\":forelinks.join(\" \"), \n                \"payload\":station.template});\n}\nreturn null;\n",
+        "func": "for (var i = 0; i < msg.payload.nodes.length; i++) {\n    if (msg.type != \"template\")\n        continue;\n    var station = msg.payload.nodes[i];\n    var forelinks = [ station.id ];\n    for (var j = 0; j < station.wires.length; j++) {\n        forelinks.push(station.wires[j][0]);\n    }\n    node.send({ \"name\":station.name,\n                \"station_id\":station.id, \n                \"next_stations\":forelinks.join(\" \"), \n                \"payload\":station.template});\n}\nreturn null;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1723,7 +1723,6 @@
         "y": 80,
         "wires": [
             [
-                "e7f72d20af957f3e",
                 "63a12da53fc34b07"
             ]
         ]
