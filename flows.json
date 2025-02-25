@@ -1801,7 +1801,7 @@
         "z": "3b09bd15e699321e",
         "name": "",
         "pauseType": "delay",
-        "timeout": "200",
+        "timeout": "100",
         "timeoutUnits": "milliseconds",
         "rate": "1",
         "nbRateUnits": "1",
