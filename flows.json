@@ -1739,7 +1739,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://localhost:1880/auth/token",
+        "url": "http://localhost:1880/auth/login",
         "tls": "",
         "persist": false,
         "proxy": "",
