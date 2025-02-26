@@ -936,7 +936,7 @@
         "wires": [
             [
                 "88269691c5c04468",
-                "f9d1132654d2e48b"
+                "3247b1681a5cb8f7"
             ]
         ]
     },
@@ -965,7 +965,9 @@
         "x": 350,
         "y": 140,
         "wires": [
-            []
+            [
+                "3247b1681a5cb8f7"
+            ]
         ]
     },
     {
@@ -989,7 +991,8 @@
         "y": 200,
         "wires": [
             [
-                "98cc1edaba6e092d"
+                "98cc1edaba6e092d",
+                "d691e4d82f73a144"
             ]
         ]
     },
@@ -1004,7 +1007,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t   \"type\":\"nodered/entity\",\t   \"id\":21,\t   \"node_id\": msg.station_id,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"state\": msg.next_stations,\t   \"name\":msg.name\t}\t",
+        "data": "{\t   \"type\":\"nodered/entity\",\t   \"id\":21,\t   \"node_id\": msg.station_id,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"state\": msg.next_stations\t}\t",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
@@ -1126,6 +1129,22 @@
         "statusType": "auto",
         "x": 420,
         "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3247b1681a5cb8f7",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 140,
         "wires": []
     },
     {
