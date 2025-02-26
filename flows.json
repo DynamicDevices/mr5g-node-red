@@ -990,7 +990,7 @@
         "wires": [
             [
                 "d691e4d82f73a144",
-                "98cc1edaba6e092d"
+                "c2b0d0479565f682"
             ]
         ]
     },
@@ -1140,7 +1140,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t    \"type\":\"config/entity_registry/update\",\t    \"entity_id\":$join([\"text.\", msg.station_id]),\t    \"name\":msg.name,\t    \"icon\":null,\t    \"area_id\":null,\t    \"labels\":[]\t}",
+        "data": "{\t    \"type\":\"config/entity_registry/update\",\t    \"entity_id\":msg.entity_id,\t    \"name\":msg.name,\t    \"icon\":null,\t    \"area_id\":null,\t    \"labels\":[]\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
