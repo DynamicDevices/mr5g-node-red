@@ -536,13 +536,13 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "This is the display case of stuff we've done\n\nAnd a lot more coming from there\n",
+        "template": "This is the display case of stuff \npeople in DoESLiverpool have built.",
         "output": "str",
-        "x": 320,
-        "y": 140,
+        "x": 260,
+        "y": 100,
         "wires": [
             [
-                "9f848a9a817387d0"
+                "d517ae3da0719d94"
             ]
         ],
         "icon": "node-red/comment.svg"
@@ -556,13 +556,13 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "Here is the heat press\nfor making T-shirts\nand there is also a mug press\n\n",
+        "template": "Here is the heat press for making T-shirt designs\nThere is also a mug press.  It uses sublimation\nprinting to transfer the ink from the paper to\nthe product.\n\n\n",
         "output": "str",
         "x": 490,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
-                "4cd95aa1054bcd64"
+                "c84ee1c2efc3550a"
             ]
         ],
         "icon": "node-red/comment.svg"
@@ -576,10 +576,10 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "This is the coffee machine\n\nWhere Poppy should be doing some work\nright now",
+        "template": "If the coffee pot is empty you can\nselect Next2 for a step-by-step guide\nto fill it.",
         "output": "str",
-        "x": 630,
-        "y": 140,
+        "x": 90,
+        "y": 400,
         "wires": [
             [
                 "5ad57becefdc770b",
@@ -599,8 +599,8 @@
         "syntax": "mustache",
         "template": "make coffee\n",
         "output": "str",
-        "x": 850,
-        "y": 140,
+        "x": 270,
+        "y": 500,
         "wires": [
             [
                 "a7d5a4f05d6917dc"
@@ -619,8 +619,8 @@
         "syntax": "mustache",
         "template": "This is the donations box\n",
         "output": "str",
-        "x": 760,
-        "y": 280,
+        "x": 400,
+        "y": 400,
         "wires": [
             [
                 "4b17b99690fd021d"
@@ -639,8 +639,167 @@
         "syntax": "mustache",
         "template": "You are at the end\nThank you for participating\nWe hope you enjoyed this adventure\n",
         "output": "str",
-        "x": 950,
+        "x": 630,
+        "y": 400,
+        "wires": [
+            []
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "d517ae3da0719d94",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "displayhg",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This, for example, is a piece of machined\naluminium that is used to hold the nose wires\nof a hang-glider\n\nPress Next2 to skip to next area",
+        "output": "str",
+        "x": 240,
+        "y": 180,
+        "wires": [
+            [
+                "333eeaeea0cde9fa",
+                "9f848a9a817387d0"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "333eeaeea0cde9fa",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "displayvis",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "During the pandemic DoESLiverpool produced\nvisors for local health care institutes",
+        "output": "str",
+        "x": 240,
+        "y": 240,
+        "wires": [
+            [
+                "9f848a9a817387d0"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "c84ee1c2efc3550a",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "vinyl cutter",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "If you have a 2D design, this machine can cut\nit out of vinyl that you can stick onto things\n\n\n",
+        "output": "str",
+        "x": 490,
+        "y": 160,
+        "wires": [
+            [
+                "305346dd7244f151"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "305346dd7244f151",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "3Dprinter",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "One of the many 3D printers working in the\nspace.  We charge only the cost of materials.",
+        "output": "str",
+        "x": 480,
+        "y": 220,
+        "wires": [
+            [
+                "bcd8091c5e630e4e"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "bcd8091c5e630e4e",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "metalworkshop",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Stay out.  This place is dangerous.\nYou might suffocate from the lack of\noxygen or be shredded by the machines.",
+        "output": "str",
+        "x": 500,
         "y": 280,
+        "wires": [
+            [
+                "d2732b7c26e95524"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "d2732b7c26e95524",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "lasercutting",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "The laser cutting is all done in this room\nbecause the machines are noisy.\nIt's boring work because you are not allowed\nto leave them unattended due to fire risk.\nIf they are in use, go in and ask the people\nwhat they are making.",
+        "output": "str",
+        "x": 510,
+        "y": 340,
+        "wires": [
+            [
+                "621febc928390def"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "621febc928390def",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "solderstation",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "We do all our soldering at this desk.\nThere probably isn't much to see here.",
+        "output": "str",
+        "x": 710,
+        "y": 100,
+        "wires": [
+            [
+                "8e98e6478f02be05"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "8e98e6478f02be05",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "sewingroom",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Go in here for the sewing room.\nWe don't have time to give a proper\ntour of it right now.",
+        "output": "str",
+        "x": 730,
+        "y": 180,
         "wires": [
             []
         ],
