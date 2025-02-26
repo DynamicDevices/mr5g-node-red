@@ -801,7 +801,9 @@
         "x": 730,
         "y": 180,
         "wires": [
-            []
+            [
+                "4cd95aa1054bcd64"
+            ]
         ],
         "icon": "node-red/comment.svg"
     },
