@@ -1206,6 +1206,221 @@
         ]
     },
     {
+        "id": "4dd3c945c7625c5d",
+        "type": "function",
+        "z": "3b09bd15e699321e",
+        "name": "DefineStation",
+        "func": "var sprefix = \"z\";\nvar idlookup = { };\nfor (var i = 0; i < msg.payload.nodes.length; i++) {\n    var station = msg.payload.nodes[i];\n    idlookup[station.id] = station.name.replace(\" \", \"_\");\n}\nfor (var i = 0; i < msg.payload.nodes.length; i++) {\n    var station = msg.payload.nodes[i];\n    var nextstations = [ ];\n    var nextstationnames = [ ];\n    for (var j = 0; j < station.wires[0].length; j++) {\n        nextstations.push(sprefix + station.wires[0][j]);\n        nextstationnames.push(idlookup[station.wires[0][j]]);\n    }\n    if (station.type == \"template\") {\n        node.send({ \"name\":station.name,\n                    \"station_id\":sprefix + station.id, \n                    \"next_stations\":nextstationnames.join(\" \"), \n                    //\"next_stations\":nextstations.join(\" \"), \n                    \"payload\":station.template,\n                    \"entity_id\":\"text.\"+station.id});\n    }\n}\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 580,
+        "wires": [
+            [
+                "4579a45ab1ea254e",
+                "9bc64d39be4b97ba"
+            ]
+        ]
+    },
+    {
+        "id": "9bc64d39be4b97ba",
+        "type": "delay",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 370,
+        "y": 580,
+        "wires": [
+            [
+                "10e01a788c2aca1b"
+            ]
+        ]
+    },
+    {
+        "id": "10e01a788c2aca1b",
+        "type": "ha-api",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"id\":21,\t   \"component\": \"text\",\t   \"node_id\": msg.station_id,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"config\": {\t       \"name\": msg.name\t   }\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 550,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5111d7a41727e976",
+        "type": "delay",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 570,
+        "y": 640,
+        "wires": [
+            [
+                "60110fcd0421f799",
+                "78b836f68ad37c74"
+            ]
+        ]
+    },
+    {
+        "id": "78b836f68ad37c74",
+        "type": "ha-api",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/entity\",\t   \"id\":21,\t   \"node_id\": msg.station_id,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"state\": msg.next_stations\t}\t",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 730,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "60110fcd0421f799",
+        "type": "delay",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 660,
+        "wires": [
+            [
+                "9bab88cd3d08d18c"
+            ]
+        ]
+    },
+    {
+        "id": "9bab88cd3d08d18c",
+        "type": "ha-fire-event",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 0,
+        "event": "station_text",
+        "data": "{\"text\":msg.payload, \t \"name\":msg.name, \t \"next_stations\": msg.next_stations,\t \"entityConfig\":msg.name }",
+        "dataType": "jsonata",
+        "x": 930,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4579a45ab1ea254e",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "e091401d6fa33b9e",
+        "type": "inject",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"nodes\":[{\"id\":\"aaaaaaa\",\"type\":\"template\",\"z\":\"bbbbbbbb\",\"name\":\"thing\",\"field\":\"payload\",\"fieldType\":\"msg\",\"format\":\"handlebars\",\"syntax\":\"mustache\",\"template\":\"Welcome to the first station of your QuestTour\\nThis will guide you around the DoESLiverpool \\nhackspace.\\n\\n\",\"output\":\"str\",\"x\":100,\"y\":100,\"wires\":[[]],\"icon\":\"node-red/comment.svg\"}]}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 520,
+        "wires": [
+            [
+                "4dd3c945c7625c5d"
+            ]
+        ]
+    },
+    {
         "id": "f3f3fafed626ed19",
         "type": "mqtt out",
         "z": "4c8d6de6577322fb",
