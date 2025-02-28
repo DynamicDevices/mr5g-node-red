@@ -1545,6 +1545,81 @@
         "wires": []
     },
     {
+        "id": "c11cbd2539a95b9d",
+        "type": "inject",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 800,
+        "wires": [
+            [
+                "29fe67556c09f88b"
+            ]
+        ]
+    },
+    {
+        "id": "bf32a749764e497b",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "29fe67556c09f88b",
+        "type": "ha-api",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/entity\",\t   \"id\":21,\t   \"node_id\": \"aaaa2\",\t   \"server_id\":$globalContext(\"server_id\"),\t   \"state\": \"jjjjj\",\t   \"label\":\"kkkk\"\t}\t",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 530,
+        "y": 800,
+        "wires": [
+            [
+                "bf32a749764e497b"
+            ]
+        ]
+    },
+    {
         "id": "f3f3fafed626ed19",
         "type": "mqtt out",
         "z": "4c8d6de6577322fb",
