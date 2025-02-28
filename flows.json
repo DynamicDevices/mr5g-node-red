@@ -1600,7 +1600,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t   \"type\":\"nodered/entity\",\t   \"id\":21,\t   \"node_id\": \"aaaa2\",\t   \"server_id\":$globalContext(\"server_id\"),\t   \"state\": \"jjjjj\",\t   \"label\":\"kkkk\"\t}\t",
+        "data": "{\t   \"type\":\"nodered/entity\",\t   \"id\":21,\t   \"node_id\": \"aaaa2\",\t   \"server_id\":$globalContext(\"server_id\"),\t   \"state\": \"jjjjj\",\t   \"labels\":[\"kkkk\"]\t}\t",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
