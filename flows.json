@@ -1177,6 +1177,35 @@
         ]
     },
     {
+        "id": "61c9b88e71e8550b",
+        "type": "inject",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"nodes\":[{\"id\":\"eb8e2330d2479177\",\"type\":\"template\",\"z\":\"1fc7b0190a9c731d\",\"name\":\"start here\",\"field\":\"payload\",\"fieldType\":\"msg\",\"format\":\"handlebars\",\"syntax\":\"mustache\",\"template\":\"Welcome to the first station of your QuestTour\\nThis will guide you around the DoESLiverpool \\nhackspace.\\n\\n\",\"output\":\"str\",\"x\":100,\"y\":100,\"wires\":[[\"09fa3d523675e490\"]],\"icon\":\"node-red/comment.svg\"}]}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 180,
+        "wires": [
+            [
+                "4151ad7aa08d2963"
+            ]
+        ]
+    },
+    {
         "id": "f3f3fafed626ed19",
         "type": "mqtt out",
         "z": "4c8d6de6577322fb",
