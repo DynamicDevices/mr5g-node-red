@@ -1159,7 +1159,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t    \"type\":\"config/entity_registry/update\",\t    \"entity_id\":\"text.aaaa2\",\t    \"name\":\"namegiven\",\t    \"icon\":null,\t    \"area_id\":\"thisarea\",\t    \"labels\":[\"label2\", \"label3\"]\t}",
+        "data": "{\t    \"type\":\"config/entity_registry/update\",\t    \"entity_id\":\"text.donations\",\t    \"name\":\"namegiven\",\t    \"icon\":null,\t    \"area_id\":\"thisarea\",\t    \"labels\":[\"label2\", \"label3\"]\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
