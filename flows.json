@@ -1421,6 +1421,63 @@
         ]
     },
     {
+        "id": "5e2ef4eb761cca61",
+        "type": "ha-api",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"id\":21,\t   \"component\": \"text\",\t   \"node_id\": \"aaaa1\",\t   \"server_id\":$globalContext(\"server_id\"),\t   \"config\": {\t      \"state\":\"12345\"\t   }\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 370,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "620aa2e3e3d8a328",
+        "type": "inject",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 720,
+        "wires": [
+            [
+                "5e2ef4eb761cca61"
+            ]
+        ]
+    },
+    {
         "id": "f3f3fafed626ed19",
         "type": "mqtt out",
         "z": "4c8d6de6577322fb",
