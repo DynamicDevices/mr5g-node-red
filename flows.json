@@ -1496,6 +1496,55 @@
         "wires": []
     },
     {
+        "id": "427e97fd6cab2377",
+        "type": "server-events",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "eventType": "",
+        "eventData": "",
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            }
+        ],
+        "x": 240,
+        "y": 860,
+        "wires": [
+            [
+                "0ca4a1ddc8809c87"
+            ]
+        ]
+    },
+    {
+        "id": "0ca4a1ddc8809c87",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 860,
+        "wires": []
+    },
+    {
         "id": "f3f3fafed626ed19",
         "type": "mqtt out",
         "z": "4c8d6de6577322fb",
