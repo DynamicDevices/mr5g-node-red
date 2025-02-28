@@ -1431,7 +1431,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"id\":21,\t   \"component\": \"text\",\t   \"node_id\": \"aaaa1\",\t   \"server_id\":$globalContext(\"server_id\"),\t   \"config\": {\t      \"state\":\"12345\",\t      \"label\":\"whatlabel\"\t   }\t}",
+        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"id\":21,\t   \"component\": \"text\",\t   \"node_id\": \"aaaa2\",\t   \"server_id\":$globalContext(\"server_id\"),\t   \"config\": {\t      \"state\":\"12345\",\t      \"label\":\"whatlabel\"\t   }\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
