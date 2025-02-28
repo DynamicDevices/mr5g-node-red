@@ -843,7 +843,7 @@
         "authType": "basic",
         "senderr": false,
         "headers": [],
-        "x": 290,
+        "x": 270,
         "y": 80,
         "wires": [
             [
@@ -892,8 +892,7 @@
         "y": 80,
         "wires": [
             [
-                "86f0bb486a016a48",
-                "4151ad7aa08d2963"
+                "86f0bb486a016a48"
             ]
         ]
     },
@@ -909,8 +908,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
-        "y": 80,
+        "x": 180,
+        "y": 240,
         "wires": [
             [
                 "63a12da53fc34b07",
@@ -930,8 +929,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 40,
+        "x": 600,
+        "y": 60,
         "wires": []
     },
     {
@@ -951,8 +950,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 170,
-        "y": 140,
+        "x": 370,
+        "y": 240,
         "wires": [
             [
                 "88269691c5c04468",
@@ -982,8 +981,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 350,
-        "y": 140,
+        "x": 550,
+        "y": 240,
         "wires": [
             []
         ]
@@ -1005,8 +1004,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 370,
-        "y": 200,
+        "x": 570,
+        "y": 300,
         "wires": [
             [
                 "d691e4d82f73a144",
@@ -1036,8 +1035,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 530,
-        "y": 180,
+        "x": 730,
+        "y": 280,
         "wires": [
             []
         ]
@@ -1059,8 +1058,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 550,
-        "y": 220,
+        "x": 750,
+        "y": 320,
         "wires": [
             [
                 "f7c4aad2644890e9"
@@ -1077,8 +1076,8 @@
         "event": "station_text",
         "data": "{\"text\":msg.payload, \t \"name\":msg.name, \t \"next_stations\": msg.next_stations,\t \"entityConfig\":msg.name }",
         "dataType": "jsonata",
-        "x": 730,
-        "y": 220,
+        "x": 930,
+        "y": 320,
         "wires": [
             []
         ]
@@ -1096,8 +1095,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 80,
+        "x": 800,
+        "y": 180,
         "wires": []
     },
     {
@@ -1171,8 +1170,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 410,
-        "y": 260,
+        "x": 610,
+        "y": 360,
         "wires": [
             []
         ]
