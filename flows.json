@@ -508,6 +508,51 @@
         "enableGlobalContextStore": true
     },
     {
+        "id": "bfbb121d51632d6a",
+        "type": "ha-entity-config",
+        "server": "e0f05cf68b19d533",
+        "deviceConfig": "4f6e4706c65a1ceb",
+        "name": "ename",
+        "version": 6,
+        "entityType": "text",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "efriendname"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "mode",
+                "value": "text"
+            },
+            {
+                "property": "min_length",
+                "value": ""
+            },
+            {
+                "property": "max_length",
+                "value": ""
+            },
+            {
+                "property": "pattern",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
         "id": "eb8e2330d2479177",
         "type": "template",
         "z": "1fc7b0190a9c731d",
@@ -1663,6 +1708,69 @@
         "wires": [
             [
                 "c2b0d0479565f682"
+            ]
+        ]
+    },
+    {
+        "id": "1322f2db8c3ddadb",
+        "type": "ha-text",
+        "z": "3b09bd15e699321e",
+        "name": "ennamename",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 1,
+        "entityConfig": "bfbb121d51632d6a",
+        "exposeAsEntityConfig": "",
+        "mode": "set",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "previousValue",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "previousValue"
+            }
+        ],
+        "x": 470,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a7a4547c4782edeb",
+        "type": "inject",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 350,
+        "y": 980,
+        "wires": [
+            [
+                "1322f2db8c3ddadb"
             ]
         ]
     },
