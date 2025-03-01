@@ -1785,7 +1785,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t   \"type\":\"devices\",\t   \"id\":21\t}",
+        "data": "{\t   \"type\":\"config/devices\",\t   \"id\":21\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
@@ -1796,7 +1796,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 450,
+        "x": 470,
         "y": 1080,
         "wires": [
             [
@@ -1845,7 +1845,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 570,
+        "x": 620,
         "y": 1080,
         "wires": []
     },
