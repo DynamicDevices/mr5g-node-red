@@ -1739,7 +1739,7 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 470,
+        "x": 550,
         "y": 980,
         "wires": [
             []
@@ -1773,6 +1773,81 @@
                 "1322f2db8c3ddadb"
             ]
         ]
+    },
+    {
+        "id": "a187f86916557e6f",
+        "type": "ha-api",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"devices\",\t   \"id\":21\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 450,
+        "y": 1080,
+        "wires": [
+            [
+                "3ddbe9e0c2dcbf49"
+            ]
+        ]
+    },
+    {
+        "id": "01675b9603d573ea",
+        "type": "inject",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 1080,
+        "wires": [
+            [
+                "a187f86916557e6f"
+            ]
+        ]
+    },
+    {
+        "id": "3ddbe9e0c2dcbf49",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 1080,
+        "wires": []
     },
     {
         "id": "f3f3fafed626ed19",
