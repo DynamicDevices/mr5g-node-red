@@ -1850,6 +1850,81 @@
         "wires": []
     },
     {
+        "id": "3e7709ad00989c0f",
+        "type": "ha-api",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"config/entity_registry/get\",\t   \"entity_id\":\"text.efriendname\",\t   \"id\":21\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 470,
+        "y": 1160,
+        "wires": [
+            [
+                "99647a084753188c"
+            ]
+        ]
+    },
+    {
+        "id": "2f7f83df78c5e3ec",
+        "type": "inject",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 1160,
+        "wires": [
+            [
+                "3e7709ad00989c0f"
+            ]
+        ]
+    },
+    {
+        "id": "99647a084753188c",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 1160,
+        "wires": []
+    },
+    {
         "id": "f3f3fafed626ed19",
         "type": "mqtt out",
         "z": "4c8d6de6577322fb",
