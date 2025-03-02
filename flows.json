@@ -4102,7 +4102,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"component\": \"text\",\t   \"node_id\": msg.payload,\t   \"server_id\":\"ss\",\t   \"device_info\":{},\t   \"config\":{\"state\":\"bingo\"}\t}",
+        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"component\": \"text\",\t   \"node_id\": msg.payload,\t   \"server_id\":\"ss\",\t   \"device_info\":{},\t   \"config\":{\"name\":\"boko\"}\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
@@ -4216,7 +4216,6 @@
         "y": 400,
         "wires": [
             [
-                "604e0f2d59fb0ec8",
                 "0389e15562f0b95e"
             ]
         ]
@@ -4290,7 +4289,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 610,
+        "x": 650,
         "y": 400,
         "wires": [
             [
