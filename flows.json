@@ -4282,5 +4282,34 @@
                 "f195f5dd8bfe6e53"
             ]
         ]
+    },
+    {
+        "id": "5b767a908c0c0e38",
+        "type": "inject",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "device_registry",
+        "payloadType": "str",
+        "x": 560,
+        "y": 160,
+        "wires": [
+            [
+                "f195f5dd8bfe6e53"
+            ]
+        ]
     }
 ]
