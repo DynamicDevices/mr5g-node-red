@@ -4212,7 +4212,7 @@
         "id": "8f7361744d092e65",
         "type": "switch",
         "z": "9c5d86c38c3086b2",
-        "name": "area=devtext",
+        "name": "platform=nodered",
         "property": "platform",
         "propertyType": "msg",
         "rules": [
@@ -4225,7 +4225,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1110,
+        "x": 1130,
         "y": 160,
         "wires": [
             [
