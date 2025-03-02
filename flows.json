@@ -970,7 +970,7 @@
         "type": "function",
         "z": "3b09bd15e699321e",
         "name": "DefineStation",
-        "func": "var sprefix = \"z\";\nvar n = msg.payload.nodes.length;\nn = 3;\nvar idlookup = { };\nfor (var i = 0; i < msg.payload.nodes.length; i++) {\n    var station = msg.payload.nodes[i];\n    if (station.type == \"template\")\n        idlookup[station.id] = station.name;\n}\nfor (var i = 0; i < n; i++) {\n    var station = msg.payload.nodes[i];\n    var nextstations = [ ];\n    var nextstationnames = [ ];\n    for (var j = 0; j < station.wires[0].length; j++) {\n        var nwid = station.wires[0][j];\n        if (idlookup[nwid]) {\n            nextstations.push(sprefix + nwid);\n            nextstationnames.push(idlookup[nwid]);\n        }\n    }\n    if (station.type == \"template\") {\n        node.send({ \"name\":station.name,\n                    \"station_id\":sprefix + station.id, \n                    \"next_stations\":nextstations.join(\" \"), \n                    \"next_stationnames\":nextstationnames.join(\",\"),\n                    \"payload\":station.template,\n                    \"entity_id\":\"text.nodered_\"+sprefix+station.id});\n    }\n}\nreturn null;\n",
+        "func": "var sprefix = \"z\";\nvar n = msg.payload.nodes.length;\nn = 3;\nglobal.set(\"server_id\", \"whatever\");\nvar idlookup = { };\nfor (var i = 0; i < msg.payload.nodes.length; i++) {\n    var station = msg.payload.nodes[i];\n    if (station.type == \"template\")\n        idlookup[station.id] = station.name;\n}\nfor (var i = 0; i < n; i++) {\n    var station = msg.payload.nodes[i];\n    var nextstations = [ ];\n    var nextstationnames = [ ];\n    for (var j = 0; j < station.wires[0].length; j++) {\n        var nwid = station.wires[0][j];\n        if (idlookup[nwid]) {\n            nextstations.push(sprefix + nwid);\n            nextstationnames.push(idlookup[nwid]);\n        }\n    }\n    if (station.type == \"template\") {\n        node.send({ \"name\":station.name,\n                    \"station_id\":sprefix + station.id, \n                    \"next_stations\":nextstations.join(\" \"), \n                    \"next_stationnames\":nextstationnames.join(\",\"),\n                    \"payload\":station.template,\n                    \"entity_id\":\"text.nodered_\"+sprefix+station.id});\n    }\n}\nreturn null;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1001,14 +1001,7 @@
         "data": "{\t   \"type\":\"nodered/discovery\",\t   \"component\": \"text\",\t   \"node_id\": msg.station_id,\t   \"server_id\":$globalContext(\"server_id\")\t}",
         "dataType": "jsonata",
         "responseType": "json",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "results"
-            }
-        ],
+        "outputProperties": [],
         "x": 350,
         "y": 120,
         "wires": [
@@ -1039,75 +1032,6 @@
                 "fa42f2cd47ab55f0",
                 "e4c8643bbf3b90dc"
             ]
-        ]
-    },
-    {
-        "id": "78b836f68ad37c74",
-        "type": "ha-api",
-        "z": "3b09bd15e699321e",
-        "name": "",
-        "server": "e0f05cf68b19d533",
-        "version": 1,
-        "debugenabled": false,
-        "protocol": "websocket",
-        "method": "get",
-        "path": "",
-        "data": "{\t   \"type\":\"nodered/entity\",\t   \"id\":21,\t   \"node_id\": msg.station_id,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"state\": msg.next_stations\t}\t",
-        "dataType": "jsonata",
-        "responseType": "json",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "results"
-            }
-        ],
-        "x": 570,
-        "y": 740,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "60110fcd0421f799",
-        "type": "delay",
-        "z": "3b09bd15e699321e",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "500",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 730,
-        "y": 740,
-        "wires": [
-            [
-                "9bab88cd3d08d18c"
-            ]
-        ]
-    },
-    {
-        "id": "9bab88cd3d08d18c",
-        "type": "ha-fire-event",
-        "z": "3b09bd15e699321e",
-        "name": "",
-        "server": "e0f05cf68b19d533",
-        "version": 0,
-        "event": "station_text",
-        "data": "{\"text\":msg.payload, \t \"name\":msg.name, \t \"next_stations\": msg.next_stations,\t \"entityConfig\":msg.name }",
-        "dataType": "jsonata",
-        "x": 990,
-        "y": 760,
-        "wires": [
-            []
         ]
     },
     {
