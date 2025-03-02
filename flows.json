@@ -665,7 +665,6 @@
         "y": 80,
         "wires": [
             [
-                "86f0bb486a016a48",
                 "4dd3c945c7625c5d"
             ]
         ]
@@ -682,30 +681,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 180,
-        "y": 240,
+        "x": 420,
+        "y": 1080,
         "wires": [
             [
                 "63a12da53fc34b07",
                 "e7f72d20af957f3e"
             ]
         ]
-    },
-    {
-        "id": "86f0bb486a016a48",
-        "type": "debug",
-        "z": "3b09bd15e699321e",
-        "name": "debug 13",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 60,
-        "wires": []
     },
     {
         "id": "e7f72d20af957f3e",
@@ -724,8 +707,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 370,
-        "y": 240,
+        "x": 610,
+        "y": 1080,
         "wires": [
             [
                 "88269691c5c04468",
@@ -755,8 +738,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 550,
-        "y": 240,
+        "x": 790,
+        "y": 1080,
         "wires": [
             []
         ]
@@ -778,8 +761,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 570,
-        "y": 300,
+        "x": 810,
+        "y": 1140,
         "wires": [
             [
                 "d691e4d82f73a144",
@@ -809,8 +792,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 730,
-        "y": 280,
+        "x": 970,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -832,8 +815,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 750,
-        "y": 320,
+        "x": 990,
+        "y": 1160,
         "wires": [
             [
                 "f7c4aad2644890e9"
@@ -850,8 +833,8 @@
         "event": "station_text",
         "data": "{\"text\":msg.payload, \t \"name\":msg.name, \t \"next_stations\": msg.next_stations,\t \"entityConfig\":msg.name }",
         "dataType": "jsonata",
-        "x": 930,
-        "y": 320,
+        "x": 1170,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -869,8 +852,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 180,
+        "x": 1040,
+        "y": 1020,
         "wires": []
     },
     {
@@ -898,8 +881,8 @@
                 "valueType": "jsonata"
             }
         ],
-        "x": 190,
-        "y": 380,
+        "x": 430,
+        "y": 1220,
         "wires": [
             [
                 "e47d6c75f547bc6a"
@@ -918,8 +901,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 420,
-        "y": 380,
+        "x": 660,
+        "y": 1220,
         "wires": []
     },
     {
@@ -973,8 +956,8 @@
         "topic": "",
         "payload": "{\"nodes\":[{\"id\":\"aaaaaaa\",\"type\":\"template\",\"z\":\"bbbbbbbb\",\"name\":\"thing\",\"field\":\"payload\",\"fieldType\":\"msg\",\"format\":\"handlebars\",\"syntax\":\"mustache\",\"template\":\"Welcome to the first station of your QuestTour\\nThis will guide you around the DoESLiverpool \\nhackspace.\\n\\n\",\"output\":\"str\",\"x\":100,\"y\":100,\"wires\":[[]],\"icon\":\"node-red/comment.svg\"}]}",
         "payloadType": "json",
-        "x": 90,
-        "y": 180,
+        "x": 330,
+        "y": 1020,
         "wires": [
             [
                 "4151ad7aa08d2963"
@@ -993,12 +976,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 260,
-        "y": 520,
+        "x": 140,
+        "y": 120,
         "wires": [
             [
                 "4579a45ab1ea254e",
-                "10e01a788c2aca1b"
+                "10e01a788c2aca1b",
+                "5111d7a41727e976"
             ]
         ]
     },
@@ -1024,12 +1008,10 @@
                 "valueType": "results"
             }
         ],
-        "x": 270,
-        "y": 580,
+        "x": 350,
+        "y": 120,
         "wires": [
-            [
-                "5111d7a41727e976"
-            ]
+            []
         ]
     },
     {
@@ -1049,8 +1031,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 470,
-        "y": 580,
+        "x": 370,
+        "y": 160,
         "wires": [
             [
                 "fa42f2cd47ab55f0",
@@ -1140,8 +1122,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
-        "y": 520,
+        "x": 620,
+        "y": 80,
         "wires": []
     },
     {
@@ -1917,8 +1899,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 660,
-        "y": 580,
+        "x": 560,
+        "y": 160,
         "wires": [
             []
         ]
@@ -1945,8 +1927,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 910,
-        "y": 560,
+        "x": 570,
+        "y": 200,
         "wires": [
             [
                 "6b4ada8c5bbb0c31"
@@ -1970,8 +1952,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 690,
-        "y": 620,
+        "x": 390,
+        "y": 200,
         "wires": [
             [
                 "124f0cb51ddc8331"
@@ -1991,8 +1973,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1060,
-        "y": 620,
+        "x": 740,
+        "y": 200,
         "wires": []
     },
     {
