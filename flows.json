@@ -4254,20 +4254,20 @@
         "id": "54dfda8f1e4598e6",
         "type": "switch",
         "z": "9c5d86c38c3086b2",
-        "name": "area=devtext",
-        "property": "entity_id",
+        "name": "manufacturer=nodered",
+        "property": "manufacturer",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "eq",
-                "v": "switch.nodered_25a36e10a1e235f4",
+                "v": "Node-RED",
                 "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1110,
+        "x": 1140,
         "y": 200,
         "wires": [
             [
