@@ -4193,7 +4193,7 @@
         "type": "debug",
         "z": "9c5d86c38c3086b2",
         "name": "debug 32",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4201,7 +4201,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1140,
+        "x": 1240,
         "y": 120,
         "wires": []
     },
@@ -4250,7 +4250,8 @@
         "y": 120,
         "wires": [
             [
-                "e823a5a2ed0bac9e"
+                "e823a5a2ed0bac9e",
+                "8f7361744d092e65"
             ]
         ]
     },
@@ -4340,8 +4341,8 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 420,
-        "y": 200,
+        "x": 400,
+        "y": 220,
         "wires": [
             [
                 "9f735f569c3259e9"
@@ -4369,8 +4370,8 @@
         "topic": "",
         "payload": "questwalkdevice",
         "payloadType": "str",
-        "x": 240,
-        "y": 180,
+        "x": 200,
+        "y": 220,
         "wires": [
             [
                 "63bc11327f702d3c"
@@ -4390,8 +4391,78 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
+        "x": 580,
         "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c9dfc1494b1c6094",
+        "type": "ha-api",
+        "z": "9c5d86c38c3086b2",
+        "name": "nodered/discovery",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"id\":21,\t   \"component\": \"text\",\t   \"node_id\": \"aaaa2\",\t   \"server_id\":$globalContext(\"server_id\"),\t   \"config\": {\t      \"state\":\"12345\",\t      \"label\":\"whatlabel\"\t   }\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 430,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f7361744d092e65",
+        "type": "switch",
+        "z": "9c5d86c38c3086b2",
+        "name": "area=devtext",
+        "property": "area_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "devtext",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1110,
+        "y": 160,
+        "wires": [
+            [
+                "dd0bde06841ea4ba"
+            ]
+        ]
+    },
+    {
+        "id": "dd0bde06841ea4ba",
+        "type": "debug",
+        "z": "9c5d86c38c3086b2",
+        "name": "debug 34",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 160,
         "wires": []
     }
 ]
