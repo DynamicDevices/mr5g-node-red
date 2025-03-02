@@ -3666,7 +3666,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
+        "x": 820,
         "y": 820,
         "wires": []
     },
@@ -3792,6 +3792,29 @@
             [
                 "0cc9da7fd9d558b1"
             ]
+        ]
+    },
+    {
+        "id": "a19129c48dcfe767",
+        "type": "switch",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "property": "name",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Quest",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 670,
+        "y": 820,
+        "wires": [
+            []
         ]
     }
 ]
