@@ -3092,7 +3092,7 @@
         "wires": [
             [
                 "ad375b4157a8ebf7",
-                "3a198a6401abaf9e"
+                "cb21483e7188ff9d"
             ]
         ]
     },
@@ -3118,36 +3118,13 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 690,
-        "y": 460,
+        "x": 630,
+        "y": 440,
         "wires": [
             [
                 "c3d72ca744f122ab"
             ],
             []
-        ]
-    },
-    {
-        "id": "3a198a6401abaf9e",
-        "type": "counter",
-        "z": "9c5d86c38c3086b2",
-        "name": "",
-        "init": "0",
-        "step": "1",
-        "lower": null,
-        "upper": null,
-        "mode": "increment",
-        "outputs": 2,
-        "x": 460,
-        "y": 480,
-        "wires": [
-            [
-                "cb21483e7188ff9d",
-                "beb9b3bcb5849bf8"
-            ],
-            [
-                "cd6f446676fc20dc"
-            ]
         ]
     },
     {
@@ -3206,7 +3183,7 @@
         "upper": null,
         "mode": "increment",
         "outputs": 1,
-        "x": 880,
+        "x": 820,
         "y": 480,
         "wires": [
             [
@@ -3219,7 +3196,7 @@
         "type": "debug",
         "z": "9c5d86c38c3086b2",
         "name": "debug 22",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3244,8 +3221,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 640,
-        "y": 520,
+        "x": 800,
+        "y": 400,
         "wires": []
     },
     {
