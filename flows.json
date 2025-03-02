@@ -2934,7 +2934,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t   \"type\":\"config/entity_registry/list_for_display\",\t   \"id\":21\t}",
+        "data": "{\t   \"type\":\"config/entity_registry/list\",\t   \"id\":21\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
