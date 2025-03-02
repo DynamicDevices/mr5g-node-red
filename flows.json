@@ -3649,7 +3649,7 @@
         "y": 820,
         "wires": [
             [
-                "0cc9da7fd9d558b1"
+                "49068b015bf1eeb5"
             ]
         ]
     },
@@ -3665,7 +3665,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 540,
+        "x": 700,
         "y": 820,
         "wires": []
     },
@@ -3770,6 +3770,26 @@
         "wires": [
             [
                 "9df1b917c7bed606"
+            ]
+        ]
+    },
+    {
+        "id": "49068b015bf1eeb5",
+        "type": "function",
+        "z": "9c5d86c38c3086b2",
+        "name": "Split",
+        "func": "msg.payload.forEach(function(a) { node.send(a); });",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 820,
+        "wires": [
+            [
+                "0cc9da7fd9d558b1"
             ]
         ]
     }
