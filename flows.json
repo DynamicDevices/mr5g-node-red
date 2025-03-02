@@ -1898,14 +1898,14 @@
         "id": "fa42f2cd47ab55f0",
         "type": "ha-api",
         "z": "3b09bd15e699321e",
-        "name": "entity-area",
+        "name": "set-namearea",
         "server": "e0f05cf68b19d533",
         "version": 1,
         "debugenabled": false,
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t   \"type\":\"config/entity_registry/update\",\t   \"entity_id\":msg.entity_id,\t   \"area_id\":\"questwalkarea\",\t   \"name\":msg.payload\t}",
+        "data": "{\t   \"type\":\"config/entity_registry/update\",\t   \"entity_id\":msg.entity_id,\t   \"area_id\":\"questwalkarea\",\t   \"name\":msg.name\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
@@ -1916,7 +1916,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 650,
+        "x": 660,
         "y": 580,
         "wires": [
             []
