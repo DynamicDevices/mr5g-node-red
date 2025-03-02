@@ -3460,14 +3460,14 @@
         "id": "eea4e32fcee13ae9",
         "type": "ha-api",
         "z": "9c5d86c38c3086b2",
-        "name": "ChangeArea",
+        "name": "CreateArea",
         "server": "e0f05cf68b19d533",
         "version": 1,
         "debugenabled": false,
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t    \"type\":$join([\"config/area_registry/\",msg.topic]),\t    \"name\":msg.payload\t}",
+        "data": "{\t    \"type\":\"config/area_registry/create\",\t    \"name\":msg.payload\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
@@ -3499,7 +3499,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
+        "x": 740,
         "y": 320,
         "wires": []
     },
@@ -3507,7 +3507,7 @@
         "id": "e4d9750c06320698",
         "type": "inject",
         "z": "9c5d86c38c3086b2",
-        "name": "create QuestWalk",
+        "name": "create questwalk",
         "props": [
             {
                 "p": "payload"
@@ -3522,9 +3522,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "create",
-        "payload": "QuestWalk",
+        "payload": "questwalk",
         "payloadType": "str",
-        "x": 330,
+        "x": 320,
         "y": 320,
         "wires": [
             [
@@ -3989,7 +3989,37 @@
         "y": 360,
         "wires": [
             [
-                "eea4e32fcee13ae9"
+                "aca62391a56155fe"
+            ]
+        ]
+    },
+    {
+        "id": "aca62391a56155fe",
+        "type": "ha-api",
+        "z": "9c5d86c38c3086b2",
+        "name": "DeleteArea",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t    \"type\":\"config/area_registry/delete\",\t    \"name\":msg.payload\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 550,
+        "y": 360,
+        "wires": [
+            [
+                "753232f3808cc3f6"
             ]
         ]
     }
