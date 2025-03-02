@@ -4315,7 +4315,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t   \"type\":\"nodered/device/remove\",\t   \"node_id\":\"aaaa2\"\t}\t",
+        "data": "{\t   \"type\":\"nodered/device/remove\",\t   \"node_id\":\"questwalkdevice2\"\t}\t",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
