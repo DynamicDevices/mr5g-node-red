@@ -24,6 +24,14 @@
         "env": []
     },
     {
+        "id": "9c5d86c38c3086b2",
+        "type": "tab",
+        "label": "API experiments",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "e0f05cf68b19d533",
         "type": "server",
         "name": "Home Assistant (MR5G)",
@@ -2914,5 +2922,155 @@
                 "cb6269f3d0909f43"
             ]
         ]
+    },
+    {
+        "id": "cd81a384a9e144e9",
+        "type": "ha-api",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"config/entity_registry/list_for_display\",\t   \"id\":21\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 310,
+        "y": 120,
+        "wires": [
+            [
+                "ad375b4157a8ebf7"
+            ]
+        ]
+    },
+    {
+        "id": "36f9aacd38e725cd",
+        "type": "inject",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "cd81a384a9e144e9"
+            ]
+        ]
+    },
+    {
+        "id": "ad375b4157a8ebf7",
+        "type": "debug",
+        "z": "9c5d86c38c3086b2",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "d2133df9a795dd5f",
+        "type": "ha-api",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"config/entity_registry/get\",\t   \"entity_id\":\"text.efriendname\",\t   \"id\":21\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 290,
+        "y": 40,
+        "wires": [
+            [
+                "30484591391aa0e4"
+            ]
+        ]
+    },
+    {
+        "id": "8ee1a1e276deb2c2",
+        "type": "inject",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 40,
+        "wires": [
+            [
+                "d2133df9a795dd5f"
+            ]
+        ]
+    },
+    {
+        "id": "30484591391aa0e4",
+        "type": "debug",
+        "z": "9c5d86c38c3086b2",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 40,
+        "wires": []
     }
 ]
