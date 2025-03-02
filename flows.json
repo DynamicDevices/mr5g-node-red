@@ -1308,7 +1308,7 @@
         "type": "debug",
         "z": "3b09bd15e699321e",
         "name": "debug 14",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3032,7 +3032,7 @@
         "type": "debug",
         "z": "9c5d86c38c3086b2",
         "name": "debug 25",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3354,8 +3354,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 760,
-        "y": 460,
+        "x": 740,
+        "y": 480,
         "wires": [
             [
                 "5e3a1fc19db35d04"
@@ -3383,8 +3383,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 560,
-        "y": 460,
+        "x": 540,
+        "y": 480,
         "wires": [
             [
                 "967c6ab966a11d91"
@@ -3403,8 +3403,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 890,
-        "y": 460,
+        "x": 870,
+        "y": 480,
         "wires": [
             [
                 "6b6728522c8440f8"
@@ -3431,8 +3431,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1050,
-        "y": 460,
+        "x": 1030,
+        "y": 480,
         "wires": [
             [
                 "637b76cf21f2a4d2"
@@ -3913,8 +3913,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 530,
-        "y": 500,
+        "x": 510,
+        "y": 520,
         "wires": [
             []
         ]
@@ -4087,7 +4087,7 @@
         "y": 380,
         "wires": [
             [
-                "b5864582a1e9202d"
+                "90e8785a16fbd96e"
             ]
         ]
     },
@@ -4095,14 +4095,14 @@
         "id": "b5864582a1e9202d",
         "type": "ha-api",
         "z": "9c5d86c38c3086b2",
-        "name": "",
+        "name": "discover/text",
         "server": "e0f05cf68b19d533",
         "version": 1,
         "debugenabled": false,
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"component\": \"text\",\t   \"node_id\": msg.payload,\t   \"server_id\":\"ss\",\t   \"device_info\":{},\t   \"remove\":true\t}",
+        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"component\": \"text\",\t   \"node_id\": msg.payload,\t   \"server_id\":\"ss\",\t   \"device_info\":{},\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
@@ -4113,8 +4113,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 310,
-        "y": 380,
+        "x": 410,
+        "y": 360,
         "wires": [
             [
                 "190c66ab82925ff0"
@@ -4134,8 +4134,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 920,
-        "y": 380,
+        "x": 1020,
+        "y": 360,
         "wires": []
     },
     {
@@ -4159,11 +4159,87 @@
         "topic": "",
         "payload": "bbb3",
         "payloadType": "str",
-        "x": 150,
+        "x": 130,
         "y": 420,
         "wires": [
             [
-                "b5864582a1e9202d"
+                "90e8785a16fbd96e"
+            ]
+        ]
+    },
+    {
+        "id": "90e8785a16fbd96e",
+        "type": "change",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "rules": [],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 285,
+        "y": 360,
+        "wires": [
+            [
+                "b5864582a1e9202d",
+                "9447f91ad5d40c6b"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "9447f91ad5d40c6b",
+        "type": "delay",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "300",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 410,
+        "y": 400,
+        "wires": [
+            [
+                "f5140410cb293da9"
+            ]
+        ]
+    },
+    {
+        "id": "f5140410cb293da9",
+        "type": "ha-api",
+        "z": "9c5d86c38c3086b2",
+        "name": "entity-get",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"config/entity_registry/get\",\t   \"entity_id\": $join([\"text.nodered_\", msg.payload])\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 600,
+        "y": 400,
+        "wires": [
+            [
+                "190c66ab82925ff0"
             ]
         ]
     }
