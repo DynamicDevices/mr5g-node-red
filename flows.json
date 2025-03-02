@@ -3020,7 +3020,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1170,
-        "y": 220,
+        "y": 260,
         "wires": [
             [
                 "26319a576f1a1cf9"
@@ -3032,7 +3032,7 @@
         "type": "debug",
         "z": "9c5d86c38c3086b2",
         "name": "debug 22",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3041,7 +3041,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1360,
-        "y": 280,
+        "y": 300,
         "wires": []
     },
     {
@@ -3067,7 +3067,7 @@
             }
         ],
         "x": 1360,
-        "y": 220,
+        "y": 260,
         "wires": [
             []
         ]
@@ -3172,7 +3172,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1170,
-        "y": 280,
+        "y": 300,
         "wires": [
             [
                 "195ce6e45abd46e7"
@@ -3537,7 +3537,7 @@
         "type": "debug",
         "z": "9c5d86c38c3086b2",
         "name": "debug 25",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3546,7 +3546,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1360,
-        "y": 320,
+        "y": 360,
         "wires": []
     },
     {
@@ -3834,7 +3834,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1240,
-        "y": 360,
+        "y": 460,
         "wires": []
     },
     {
@@ -3860,7 +3860,7 @@
             }
         ],
         "x": 760,
-        "y": 360,
+        "y": 460,
         "wires": [
             [
                 "5e3a1fc19db35d04"
@@ -3889,7 +3889,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 560,
-        "y": 360,
+        "y": 460,
         "wires": [
             [
                 "967c6ab966a11d91"
@@ -3909,7 +3909,7 @@
         "finalize": "",
         "libs": [],
         "x": 890,
-        "y": 360,
+        "y": 460,
         "wires": [
             [
                 "6b6728522c8440f8"
@@ -3937,7 +3937,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1050,
-        "y": 360,
+        "y": 460,
         "wires": [
             [
                 "637b76cf21f2a4d2"
@@ -3961,7 +3961,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1240,
-        "y": 400,
+        "y": 500,
         "wires": []
     },
     {
@@ -4341,8 +4341,8 @@
                 "valueType": "previousValue"
             }
         ],
-        "x": 400,
-        "y": 220,
+        "x": 460,
+        "y": 980,
         "wires": [
             [
                 "9f735f569c3259e9"
@@ -4370,8 +4370,8 @@
         "topic": "",
         "payload": "questwalkdevice",
         "payloadType": "str",
-        "x": 200,
-        "y": 220,
+        "x": 260,
+        "y": 980,
         "wires": [
             [
                 "63bc11327f702d3c"
@@ -4391,8 +4391,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
-        "y": 220,
+        "x": 640,
+        "y": 980,
         "wires": []
     },
     {
@@ -4417,8 +4417,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 430,
-        "y": 460,
+        "x": 530,
+        "y": 500,
         "wires": [
             []
         ]
