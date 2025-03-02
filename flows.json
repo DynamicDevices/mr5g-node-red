@@ -4004,7 +4004,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t    \"type\":\"config/area_registry/delete\",\t    \"entity_id\":msg.payload\t}",
+        "data": "{\t    \"type\":\"config/area_registry/delete\",\t    \"area_id\":msg.payload\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
