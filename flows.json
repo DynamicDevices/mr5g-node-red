@@ -4113,7 +4113,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 330,
+        "x": 430,
         "y": 360,
         "wires": [
             [
@@ -4134,7 +4134,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
+        "x": 640,
         "y": 360,
         "wires": []
     },
@@ -4171,22 +4171,29 @@
         "id": "90e8785a16fbd96e",
         "type": "change",
         "z": "9c5d86c38c3086b2",
-        "name": "",
-        "rules": [],
+        "name": "entity_id",
+        "rules": [
+            {
+                "t": "set",
+                "p": "entity_id",
+                "pt": "msg",
+                "to": "$join([\"text.nodered_\", msg.payload])",
+                "tot": "jsonata"
+            }
+        ],
         "action": "",
         "property": "",
         "from": "",
         "to": "",
         "reg": false,
-        "x": 205,
+        "x": 250,
         "y": 360,
         "wires": [
             [
                 "b5864582a1e9202d",
                 "9447f91ad5d40c6b"
             ]
-        ],
-        "l": false
+        ]
     },
     {
         "id": "9447f91ad5d40c6b",
@@ -4205,11 +4212,11 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 330,
+        "x": 430,
         "y": 400,
         "wires": [
             [
-                "f5140410cb293da9"
+                "604e0f2d59fb0ec8"
             ]
         ]
     },
@@ -4235,8 +4242,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 480,
-        "y": 400,
+        "x": 800,
+        "y": 280,
         "wires": [
             [
                 "7ae3626a68028cd5"
@@ -4256,7 +4263,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 640,
+        "x": 820,
         "y": 360,
         "wires": []
     },
@@ -4264,14 +4271,14 @@
         "id": "604e0f2d59fb0ec8",
         "type": "ha-api",
         "z": "9c5d86c38c3086b2",
-        "name": "entity-get",
+        "name": "entity-update",
         "server": "e0f05cf68b19d533",
         "version": 1,
         "debugenabled": false,
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t   \"type\":\"config/entity_registry/update\",\t   \"entity_id\":msg.entity_id,\t   \"area_id\":\"questwalkarea\"\t}",
+        "data": "{\t   \"type\":\"config/entity_registry/update\",\t   \"entity_id\":msg.entity_id,\t   \"area_id\":\"questwalkarea\",\t   \"name\":msg.payload\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
@@ -4282,10 +4289,29 @@
                 "valueType": "results"
             }
         ],
-        "x": 640,
+        "x": 610,
         "y": 400,
         "wires": [
-            []
+            [
+                "dec587fb46a81888"
+            ]
         ]
+    },
+    {
+        "id": "dec587fb46a81888",
+        "type": "debug",
+        "z": "9c5d86c38c3086b2",
+        "name": "debug 37",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 400,
+        "wires": []
     }
 ]
