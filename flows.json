@@ -665,7 +665,8 @@
         "y": 80,
         "wires": [
             [
-                "86f0bb486a016a48"
+                "86f0bb486a016a48",
+                "4dd3c945c7625c5d"
             ]
         ]
     },
@@ -1138,35 +1139,6 @@
         "x": 560,
         "y": 520,
         "wires": []
-    },
-    {
-        "id": "e091401d6fa33b9e",
-        "type": "inject",
-        "z": "3b09bd15e699321e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"nodes\":[{\"id\":\"aaaaaaa\",\"type\":\"template\",\"z\":\"bbbbbbbb\",\"name\":\"thing\",\"field\":\"payload\",\"fieldType\":\"msg\",\"format\":\"handlebars\",\"syntax\":\"mustache\",\"template\":\"Welcome to the first station of your QuestTour\\nThis will guide you around the DoESLiverpool \\nhackspace.\\n\\n\",\"output\":\"str\",\"x\":100,\"y\":100,\"wires\":[[]],\"icon\":\"node-red/comment.svg\"}]}",
-        "payloadType": "json",
-        "x": 90,
-        "y": 520,
-        "wires": [
-            [
-                "4dd3c945c7625c5d"
-            ]
-        ]
     },
     {
         "id": "5e2ef4eb761cca61",
