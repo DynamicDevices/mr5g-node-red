@@ -4102,7 +4102,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"component\": \"text\",\t   \"node_id\": \"aaaa2\",\t   \"server_id\":\"ss\",\t   \"device_info\":{},\t   \"remove\":false\t}",
+        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"component\": \"text\",\t   \"node_id\": \"aaaa2\",\t   \"server_id\":\"ss\",\t   \"device_info\":{},\t   \"remove\":true\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
@@ -4134,7 +4134,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
+        "x": 800,
         "y": 340,
         "wires": []
     }
