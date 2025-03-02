@@ -1079,8 +1079,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 730,
-        "y": 620,
+        "x": 570,
+        "y": 700,
         "wires": [
             []
         ]
@@ -1918,6 +1918,34 @@
         ],
         "x": 660,
         "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "124f0cb51ddc8331",
+        "type": "ha-api",
+        "z": "3b09bd15e699321e",
+        "name": "entity-update",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/entity\",\t   \"node_id\":msg.station_id,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"state\":msg.next_stationnames\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 910,
+        "y": 560,
         "wires": [
             []
         ]
