@@ -2945,8 +2945,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 280,
-        "y": 180,
+        "x": 440,
+        "y": 40,
         "wires": [
             [
                 "54b5f56c852d5cf3"
@@ -2957,7 +2957,7 @@
         "id": "36f9aacd38e725cd",
         "type": "inject",
         "z": "9c5d86c38c3086b2",
-        "name": "",
+        "name": "Clear all nodered entities",
         "props": [
             {
                 "p": "payload"
@@ -2974,105 +2974,13 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 180,
+        "x": 250,
+        "y": 40,
         "wires": [
             [
                 "cd81a384a9e144e9"
             ]
         ]
-    },
-    {
-        "id": "ad375b4157a8ebf7",
-        "type": "debug",
-        "z": "9c5d86c38c3086b2",
-        "name": "debug 20",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "d2133df9a795dd5f",
-        "type": "ha-api",
-        "z": "9c5d86c38c3086b2",
-        "name": "",
-        "server": "e0f05cf68b19d533",
-        "version": 1,
-        "debugenabled": false,
-        "protocol": "websocket",
-        "method": "get",
-        "path": "",
-        "data": "{\t   \"type\":\"config/entity_registry/get\",\t   \"entity_id\":\"text.efriendname\",\t   \"id\":21\t}",
-        "dataType": "jsonata",
-        "responseType": "json",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "results"
-            }
-        ],
-        "x": 290,
-        "y": 40,
-        "wires": [
-            [
-                "30484591391aa0e4"
-            ]
-        ]
-    },
-    {
-        "id": "8ee1a1e276deb2c2",
-        "type": "inject",
-        "z": "9c5d86c38c3086b2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 40,
-        "wires": [
-            [
-                "d2133df9a795dd5f"
-            ]
-        ]
-    },
-    {
-        "id": "30484591391aa0e4",
-        "type": "debug",
-        "z": "9c5d86c38c3086b2",
-        "name": "debug 21",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 40,
-        "wires": []
     },
     {
         "id": "54b5f56c852d5cf3",
@@ -3086,11 +2994,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 180,
+        "x": 570,
+        "y": 40,
         "wires": [
             [
-                "ad375b4157a8ebf7",
                 "cb21483e7188ff9d"
             ]
         ]
@@ -3099,7 +3006,7 @@
         "id": "cb21483e7188ff9d",
         "type": "switch",
         "z": "9c5d86c38c3086b2",
-        "name": "",
+        "name": "platform=nodered",
         "property": "platform",
         "propertyType": "msg",
         "rules": [
@@ -3112,12 +3019,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 570,
-        "y": 300,
+        "x": 730,
+        "y": 40,
         "wires": [
             [
-                "26319a576f1a1cf9",
-                "cd6f446676fc20dc"
+                "26319a576f1a1cf9"
             ]
         ]
     },
@@ -3179,49 +3085,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 920,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "beb9b3bcb5849bf8",
-        "type": "debug",
-        "z": "9c5d86c38c3086b2",
-        "name": "debug 23",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "cd6f446676fc20dc",
-        "type": "debug",
-        "z": "9c5d86c38c3086b2",
-        "name": "debug 24",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 720,
-        "y": 360,
+        "x": 800,
+        "y": 100,
         "wires": []
     },
     {
         "id": "26319a576f1a1cf9",
         "type": "ha-api",
         "z": "9c5d86c38c3086b2",
-        "name": "",
+        "name": "Remove",
         "server": "e0f05cf68b19d533",
         "version": 1,
         "debugenabled": false,
@@ -3239,11 +3111,113 @@
                 "valueType": "results"
             }
         ],
-        "x": 710,
-        "y": 300,
+        "x": 920,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0216d3225a27b0bb",
+        "type": "ha-api",
+        "z": "9c5d86c38c3086b2",
+        "name": "EntityList",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"config/entity_registry/list\",\t   \"id\":21\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 320,
+        "y": 100,
         "wires": [
             [
-                "beb9b3bcb5849bf8"
+                "42c6dc93463101cf"
+            ]
+        ]
+    },
+    {
+        "id": "59e2a4cdc28c7ea9",
+        "type": "inject",
+        "z": "9c5d86c38c3086b2",
+        "name": "List all nodered entities",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 100,
+        "wires": [
+            [
+                "0216d3225a27b0bb"
+            ]
+        ]
+    },
+    {
+        "id": "42c6dc93463101cf",
+        "type": "function",
+        "z": "9c5d86c38c3086b2",
+        "name": "Split",
+        "func": "msg.payload.forEach(function(a) {\n    node.send(a);\n});\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 100,
+        "wires": [
+            [
+                "187c3c618ed2225f"
+            ]
+        ]
+    },
+    {
+        "id": "187c3c618ed2225f",
+        "type": "switch",
+        "z": "9c5d86c38c3086b2",
+        "name": "platform=nodered",
+        "property": "platform",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "nodered",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 610,
+        "y": 100,
+        "wires": [
+            [
+                "195ce6e45abd46e7"
             ]
         ]
     }
