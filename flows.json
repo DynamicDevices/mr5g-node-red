@@ -4350,5 +4350,81 @@
         "x": 620,
         "y": 280,
         "wires": []
+    },
+    {
+        "id": "b6f137529640f2cd",
+        "type": "inject",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 320,
+        "wires": [
+            [
+                "b5864582a1e9202d"
+            ]
+        ]
+    },
+    {
+        "id": "b5864582a1e9202d",
+        "type": "ha-api",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"component\": \"text\",\t   \"node_id\": \"aaaa2\",\t   \"server_id\":\"ss\",\t   \"device_info\":{}\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 410,
+        "y": 320,
+        "wires": [
+            [
+                "190c66ab82925ff0"
+            ]
+        ]
+    },
+    {
+        "id": "190c66ab82925ff0",
+        "type": "debug",
+        "z": "9c5d86c38c3086b2",
+        "name": "debug 35",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 320,
+        "wires": []
     }
 ]
