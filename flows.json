@@ -1013,7 +1013,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"component\": \"text\",\t   \"node_id\": msg.station_id,\t   \"server_id\":$globalContext(\"server_id\"),\t}",
+        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"component\": \"text\",\t   \"node_id\": msg.station_id,\t   \"server_id\":$globalContext(\"server_id\")\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
