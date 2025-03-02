@@ -3097,24 +3097,6 @@
         ]
     },
     {
-        "id": "22d08f4da9c80be3",
-        "type": "rbe",
-        "z": "9c5d86c38c3086b2",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 630,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "cb21483e7188ff9d",
         "type": "switch",
         "z": "9c5d86c38c3086b2",
@@ -3136,8 +3118,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 670,
-        "y": 480,
+        "x": 690,
+        "y": 460,
         "wires": [
             [
                 "c3d72ca744f122ab"
@@ -3152,16 +3134,18 @@
         "name": "",
         "init": "0",
         "step": "1",
-        "lower": null,
-        "upper": null,
+        "lower": "",
+        "upper": "",
         "mode": "increment",
-        "outputs": "1",
+        "outputs": 2,
         "x": 460,
         "y": 480,
         "wires": [
             [
-                "cb21483e7188ff9d"
-            ]
+                "cb21483e7188ff9d",
+                "beb9b3bcb5849bf8"
+            ],
+            []
         ]
     },
     {
@@ -3243,6 +3227,23 @@
         "statusType": "auto",
         "x": 920,
         "y": 560,
+        "wires": []
+    },
+    {
+        "id": "beb9b3bcb5849bf8",
+        "type": "debug",
+        "z": "9c5d86c38c3086b2",
+        "name": "debug 23",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 520,
         "wires": []
     }
 ]
