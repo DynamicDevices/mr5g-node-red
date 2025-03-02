@@ -3666,7 +3666,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
+        "x": 880,
         "y": 820,
         "wires": []
     },
@@ -3674,7 +3674,7 @@
         "id": "a11bf49326c09724",
         "type": "inject",
         "z": "9c5d86c38c3086b2",
-        "name": "List labels",
+        "name": "List Devices",
         "props": [
             {
                 "p": "payload"
@@ -3691,7 +3691,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 220,
+        "x": 230,
         "y": 820,
         "wires": [
             [
@@ -3798,7 +3798,7 @@
         "id": "a19129c48dcfe767",
         "type": "switch",
         "z": "9c5d86c38c3086b2",
-        "name": "",
+        "name": "name=Quest",
         "property": "name",
         "propertyType": "msg",
         "rules": [
