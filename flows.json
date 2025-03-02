@@ -2927,7 +2927,7 @@
         "id": "cd81a384a9e144e9",
         "type": "ha-api",
         "z": "9c5d86c38c3086b2",
-        "name": "",
+        "name": "EntityList",
         "server": "e0f05cf68b19d533",
         "version": 1,
         "debugenabled": false,
@@ -2945,11 +2945,12 @@
                 "valueType": "results"
             }
         ],
-        "x": 310,
+        "x": 320,
         "y": 120,
         "wires": [
             [
-                "ad375b4157a8ebf7"
+                "ad375b4157a8ebf7",
+                "54b5f56c852d5cf3"
             ]
         ]
     },
@@ -2994,8 +2995,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 460,
-        "y": 120,
+        "x": 720,
+        "y": 320,
         "wires": []
     },
     {
@@ -3072,5 +3073,25 @@
         "x": 440,
         "y": 40,
         "wires": []
+    },
+    {
+        "id": "54b5f56c852d5cf3",
+        "type": "function",
+        "z": "9c5d86c38c3086b2",
+        "name": "function 2",
+        "func": "for (var a in msg.payload) {\n    node.push(a);\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 360,
+        "wires": [
+            [
+                "ad375b4157a8ebf7"
+            ]
+        ]
     }
 ]
