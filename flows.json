@@ -4428,12 +4428,12 @@
         "type": "switch",
         "z": "9c5d86c38c3086b2",
         "name": "area=devtext",
-        "property": "area_id",
+        "property": "manufacturer",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "eq",
-                "v": "devtext",
+                "v": "Node-RED",
                 "vt": "str"
             }
         ],
