@@ -250,7 +250,7 @@
         "id": "a0413381ff7cd93f",
         "type": "ha-entity-config",
         "server": "e0f05cf68b19d533",
-        "deviceConfig": "4f6e4706c65a1ceb",
+        "deviceConfig": "f683b6bedf956581",
         "name": "questwalkdevice",
         "version": 6,
         "entityType": "text",
@@ -563,7 +563,7 @@
     {
         "id": "f683b6bedf956581",
         "type": "ha-device-config",
-        "name": "questwalkdevice2",
+        "name": "questwalkdevice3",
         "hwVersion": "",
         "manufacturer": "Node-RED",
         "model": "",
