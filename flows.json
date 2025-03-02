@@ -67,8 +67,8 @@
         "id": "26ec5cd84cdf971f",
         "type": "ha-entity-config",
         "server": "e0f05cf68b19d533",
-        "deviceConfig": "4f6e4706c65a1ceb",
-        "name": "AlexButton",
+        "deviceConfig": "1278838c849816cb",
+        "name": "QuestWalkTrigger",
         "version": 6,
         "entityType": "button",
         "haConfig": [
@@ -275,6 +275,15 @@
         "id": "f683b6bedf956581",
         "type": "ha-device-config",
         "name": "questwalkdevice3",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "1278838c849816cb",
+        "type": "ha-device-config",
+        "name": "QuestWalkTrigger",
         "hwVersion": "",
         "manufacturer": "Node-RED",
         "model": "",
@@ -2078,6 +2087,43 @@
         "x": 520,
         "y": 620,
         "wires": []
+    },
+    {
+        "id": "abb84b27791d34b4",
+        "type": "ha-button",
+        "z": "3b09bd15e699321e",
+        "name": "QuestWalkTrigger",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "26ec5cd84cdf971f",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "5077c02accb21025"
+            ]
+        ]
     },
     {
         "id": "f3f3fafed626ed19",
