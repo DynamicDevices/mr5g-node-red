@@ -4293,7 +4293,8 @@
         "y": 400,
         "wires": [
             [
-                "dec587fb46a81888"
+                "dec587fb46a81888",
+                "333a94cc5c6d7418"
             ]
         ]
     },
@@ -4310,8 +4311,38 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
+        "x": 940,
         "y": 400,
         "wires": []
+    },
+    {
+        "id": "333a94cc5c6d7418",
+        "type": "ha-api",
+        "z": "9c5d86c38c3086b2",
+        "name": "entity-update",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/entity\",\t   \"node_id\":msg.payload,\t   \"state\":\"bongo\"\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 790,
+        "y": 440,
+        "wires": [
+            [
+                "dec587fb46a81888"
+            ]
+        ]
     }
 ]
