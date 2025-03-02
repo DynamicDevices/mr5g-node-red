@@ -3079,7 +3079,7 @@
         "id": "54b5f56c852d5cf3",
         "type": "function",
         "z": "9c5d86c38c3086b2",
-        "name": "function 2",
+        "name": "Split",
         "func": "msg.payload.forEach(function(a) {\n    node.send(a);\n});\nreturn null;",
         "outputs": 1,
         "timeout": 0,
@@ -3087,12 +3087,143 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
+        "x": 470,
         "y": 360,
         "wires": [
             [
-                "ad375b4157a8ebf7"
+                "ad375b4157a8ebf7",
+                "3a198a6401abaf9e"
             ]
+        ]
+    },
+    {
+        "id": "22d08f4da9c80be3",
+        "type": "rbe",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 630,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb21483e7188ff9d",
+        "type": "switch",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "property": "platform",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "nodered",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 670,
+        "y": 480,
+        "wires": [
+            [
+                "c3d72ca744f122ab"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3a198a6401abaf9e",
+        "type": "counter",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "init": "0",
+        "step": "1",
+        "lower": null,
+        "upper": null,
+        "mode": "increment",
+        "outputs": "1",
+        "x": 460,
+        "y": 480,
+        "wires": [
+            [
+                "cb21483e7188ff9d"
+            ]
+        ]
+    },
+    {
+        "id": "eb82bbe965966f7e",
+        "type": "batch",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "mode": "count",
+        "count": 10,
+        "overlap": 0,
+        "interval": 10,
+        "allowEmptySequence": false,
+        "honourParts": false,
+        "topics": [
+            {
+                "topic": ""
+            }
+        ],
+        "x": 160,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0eb5ef3220a2da8f",
+        "type": "switch",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "property": "platform",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "nodered",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 170,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c3d72ca744f122ab",
+        "type": "counter",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "init": "0",
+        "step": "1",
+        "lower": null,
+        "upper": null,
+        "mode": "increment",
+        "outputs": 1,
+        "x": 880,
+        "y": 480,
+        "wires": [
+            []
         ]
     }
 ]
