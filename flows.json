@@ -3253,7 +3253,7 @@
         "type": "debug",
         "z": "9c5d86c38c3086b2",
         "name": "debug 24",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
