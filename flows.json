@@ -4180,8 +4180,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 330,
-        "y": 160,
+        "x": 830,
+        "y": 120,
         "wires": [
             [
                 "78cce50977e453d3"
@@ -4201,8 +4201,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 640,
-        "y": 160,
+        "x": 1140,
+        "y": 120,
         "wires": []
     },
     {
@@ -4226,8 +4226,8 @@
         "topic": "",
         "payload": "area_registry",
         "payloadType": "str",
-        "x": 150,
-        "y": 160,
+        "x": 550,
+        "y": 80,
         "wires": [
             [
                 "f195f5dd8bfe6e53"
@@ -4246,11 +4246,40 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
-        "y": 160,
+        "x": 990,
+        "y": 120,
         "wires": [
             [
                 "e823a5a2ed0bac9e"
+            ]
+        ]
+    },
+    {
+        "id": "ab37321e8082ca2a",
+        "type": "inject",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "entity_registry",
+        "payloadType": "str",
+        "x": 550,
+        "y": 120,
+        "wires": [
+            [
+                "f195f5dd8bfe6e53"
             ]
         ]
     }
