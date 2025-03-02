@@ -4193,7 +4193,7 @@
         "type": "debug",
         "z": "9c5d86c38c3086b2",
         "name": "debug 32",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
