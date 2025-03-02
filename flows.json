@@ -4193,7 +4193,7 @@
         "type": "debug",
         "z": "9c5d86c38c3086b2",
         "name": "debug 32",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4428,12 +4428,12 @@
         "type": "switch",
         "z": "9c5d86c38c3086b2",
         "name": "area=devtext",
-        "property": "area_id",
+        "property": "platform",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "eq",
-                "v": "devtext",
+                "v": "nodered",
                 "vt": "str"
             }
         ],
