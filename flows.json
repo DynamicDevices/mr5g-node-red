@@ -3163,16 +3163,22 @@
                 "t": "eq",
                 "v": "nodered",
                 "vt": "str"
+            },
+            {
+                "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
+        "outputs": 2,
         "x": 730,
         "y": 100,
         "wires": [
             [
                 "195ce6e45abd46e7"
+            ],
+            [
+                "9ca51bcaf1a6bf3d"
             ]
         ]
     },
@@ -3524,5 +3530,22 @@
                 "eea4e32fcee13ae9"
             ]
         ]
+    },
+    {
+        "id": "9ca51bcaf1a6bf3d",
+        "type": "debug",
+        "z": "9c5d86c38c3086b2",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 140,
+        "wires": []
     }
 ]
