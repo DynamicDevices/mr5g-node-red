@@ -4027,14 +4027,14 @@
         "id": "498a2a96e940acf2",
         "type": "ha-api",
         "z": "9c5d86c38c3086b2",
-        "name": "DeleteArea",
+        "name": "DeleteDevice",
         "server": "e0f05cf68b19d533",
         "version": 1,
         "debugenabled": false,
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t    \"type\":\"config/area_registry/delete\",\t    \"area_id\":msg.payload\t}",
+        "data": "{\t    \"type\":\"config/device_registry/delete\",\t    \"area_id\":msg.payload\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
@@ -4311,5 +4311,86 @@
                 "f195f5dd8bfe6e53"
             ]
         ]
+    },
+    {
+        "id": "63bc11327f702d3c",
+        "type": "ha-text",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 1,
+        "entityConfig": "a0413381ff7cd93f",
+        "exposeAsEntityConfig": "",
+        "mode": "set",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "previousValue",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "previousValue"
+            }
+        ],
+        "x": 1010,
+        "y": 500,
+        "wires": [
+            [
+                "9f735f569c3259e9"
+            ]
+        ]
+    },
+    {
+        "id": "8e19c4f48d32af95",
+        "type": "inject",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 880,
+        "y": 460,
+        "wires": [
+            [
+                "63bc11327f702d3c"
+            ]
+        ]
+    },
+    {
+        "id": "9f735f569c3259e9",
+        "type": "debug",
+        "z": "9c5d86c38c3086b2",
+        "name": "debug 33",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 500,
+        "wires": []
     }
 ]
