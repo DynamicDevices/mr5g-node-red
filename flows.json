@@ -4137,5 +4137,34 @@
         "x": 920,
         "y": 380,
         "wires": []
+    },
+    {
+        "id": "2a3489a3c001f379",
+        "type": "inject",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "bbb3",
+        "payloadType": "str",
+        "x": 150,
+        "y": 420,
+        "wires": [
+            [
+                "b5864582a1e9202d"
+            ]
+        ]
     }
 ]
