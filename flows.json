@@ -3972,7 +3972,7 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "entity_id",
+        "complete": "name",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
