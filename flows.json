@@ -4045,7 +4045,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 930,
+        "x": 970,
         "y": 40,
         "wires": [
             [
@@ -4075,7 +4075,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 930,
+        "x": 970,
         "y": 80,
         "wires": [
             [
@@ -4119,9 +4119,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "questwalk",
+        "payload": "questwalkarea",
         "payloadType": "str",
-        "x": 780,
+        "x": 790,
         "y": 80,
         "wires": [
             [
@@ -4148,9 +4148,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "questwalk",
+        "payload": "questwalkareea",
         "payloadType": "str",
-        "x": 780,
+        "x": 800,
         "y": 40,
         "wires": [
             [
