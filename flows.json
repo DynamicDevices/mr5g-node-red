@@ -3478,7 +3478,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 670,
+        "x": 310,
         "y": 80,
         "wires": [
             [
@@ -3499,7 +3499,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
+        "x": 520,
         "y": 40,
         "wires": []
     },
@@ -3524,7 +3524,7 @@
         "topic": "",
         "payload": "questwalk",
         "payloadType": "str",
-        "x": 520,
+        "x": 160,
         "y": 80,
         "wires": [
             [
@@ -3985,7 +3985,7 @@
         "topic": "",
         "payload": "questwalk",
         "payloadType": "str",
-        "x": 520,
+        "x": 160,
         "y": 40,
         "wires": [
             [
@@ -4015,11 +4015,222 @@
                 "valueType": "results"
             }
         ],
-        "x": 670,
+        "x": 310,
         "y": 40,
         "wires": [
             [
                 "753232f3808cc3f6"
+            ]
+        ]
+    },
+    {
+        "id": "498a2a96e940acf2",
+        "type": "ha-api",
+        "z": "9c5d86c38c3086b2",
+        "name": "DeleteArea",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t    \"type\":\"config/area_registry/delete\",\t    \"area_id\":msg.payload\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 930,
+        "y": 40,
+        "wires": [
+            [
+                "2e1b92a0553ba0be"
+            ]
+        ]
+    },
+    {
+        "id": "df4506907bfa85d1",
+        "type": "ha-api",
+        "z": "9c5d86c38c3086b2",
+        "name": "CreateArea",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t    \"type\":\"config/area_registry/create\",\t    \"name\":msg.payload\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 930,
+        "y": 80,
+        "wires": [
+            [
+                "2e1b92a0553ba0be"
+            ]
+        ]
+    },
+    {
+        "id": "2e1b92a0553ba0be",
+        "type": "debug",
+        "z": "9c5d86c38c3086b2",
+        "name": "debug 31",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "cb8d1a1e5a104d23",
+        "type": "inject",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "questwalk",
+        "payloadType": "str",
+        "x": 780,
+        "y": 80,
+        "wires": [
+            [
+                "df4506907bfa85d1"
+            ]
+        ]
+    },
+    {
+        "id": "24bdea99bad2666c",
+        "type": "inject",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "questwalk",
+        "payloadType": "str",
+        "x": 780,
+        "y": 40,
+        "wires": [
+            [
+                "498a2a96e940acf2"
+            ]
+        ]
+    },
+    {
+        "id": "f195f5dd8bfe6e53",
+        "type": "ha-api",
+        "z": "9c5d86c38c3086b2",
+        "name": "ListAreas",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t    \"type\":\"config/area_registry/list\",\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 300,
+        "y": 140,
+        "wires": [
+            [
+                "e823a5a2ed0bac9e"
+            ]
+        ]
+    },
+    {
+        "id": "e823a5a2ed0bac9e",
+        "type": "debug",
+        "z": "9c5d86c38c3086b2",
+        "name": "debug 32",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "5bb86a4c2fb87ff4",
+        "type": "inject",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "f195f5dd8bfe6e53"
             ]
         ]
     }
