@@ -1053,7 +1053,8 @@
         "y": 580,
         "wires": [
             [
-                "fa42f2cd47ab55f0"
+                "fa42f2cd47ab55f0",
+                "e4c8643bbf3b90dc"
             ]
         ]
     },
@@ -1080,7 +1081,7 @@
             }
         ],
         "x": 570,
-        "y": 700,
+        "y": 740,
         "wires": [
             []
         ]
@@ -1102,8 +1103,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 750,
-        "y": 660,
+        "x": 730,
+        "y": 740,
         "wires": [
             [
                 "9bab88cd3d08d18c"
@@ -1121,7 +1122,7 @@
         "data": "{\"text\":msg.payload, \t \"name\":msg.name, \t \"next_stations\": msg.next_stations,\t \"entityConfig\":msg.name }",
         "dataType": "jsonata",
         "x": 990,
-        "y": 660,
+        "y": 760,
         "wires": [
             []
         ]
@@ -1947,8 +1948,52 @@
         "x": 910,
         "y": 560,
         "wires": [
-            []
+            [
+                "6b4ada8c5bbb0c31"
+            ]
         ]
+    },
+    {
+        "id": "e4c8643bbf3b90dc",
+        "type": "delay",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 690,
+        "y": 620,
+        "wires": [
+            [
+                "124f0cb51ddc8331"
+            ]
+        ]
+    },
+    {
+        "id": "6b4ada8c5bbb0c31",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 620,
+        "wires": []
     },
     {
         "id": "f3f3fafed626ed19",
