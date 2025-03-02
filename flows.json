@@ -3116,7 +3116,7 @@
         "y": 300,
         "wires": [
             [
-                "beb9b3bcb5849bf8"
+                "26319a576f1a1cf9"
             ]
         ]
     },
@@ -3215,5 +3215,35 @@
         "x": 640,
         "y": 580,
         "wires": []
+    },
+    {
+        "id": "26319a576f1a1cf9",
+        "type": "ha-api",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t    \"type\":\"config/entity_registry/remove\",\t    \"entity_id\":msg.entity_id\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 710,
+        "y": 300,
+        "wires": [
+            [
+                "beb9b3bcb5849bf8"
+            ]
+        ]
     }
 ]
