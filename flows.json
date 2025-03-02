@@ -1911,7 +1911,7 @@
         "server": "e0f05cf68b19d533",
         "version": 0,
         "event": "station_text",
-        "data": "{\"text\":msg.payload, \t \"entity_id\":msg.entity_id,\t \"next_stations\": msg.next_stations\t}",
+        "data": "{\"text\":msg.payload, \t \"entity_id\":msg.entity_id,\t \"station_id\":msg.station_id,\t \"name\":msg.name,\t \"next_stations\": msg.next_stations\t}",
         "dataType": "jsonata",
         "x": 650,
         "y": 240,
