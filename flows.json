@@ -3179,16 +3179,17 @@
         "name": "",
         "init": "0",
         "step": "1",
-        "lower": null,
-        "upper": null,
+        "lower": "",
+        "upper": "",
         "mode": "increment",
-        "outputs": 1,
+        "outputs": 2,
         "x": 820,
         "y": 480,
         "wires": [
             [
                 "195ce6e45abd46e7"
-            ]
+            ],
+            []
         ]
     },
     {
