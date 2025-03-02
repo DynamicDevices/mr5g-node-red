@@ -3467,7 +3467,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t    \"type\":\"config/category_registry/list\",\t    \"scope\":\"\"\t}",
+        "data": "{\t    \"type\":\"config/label_registry/list\"\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
