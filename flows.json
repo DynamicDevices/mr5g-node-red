@@ -3204,8 +3204,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 690,
-        "y": 480,
+        "x": 670,
+        "y": 560,
         "wires": [
             [
                 "d5b93d0825573c8d"
@@ -3234,8 +3234,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 470,
-        "y": 200,
+        "x": 510,
+        "y": 420,
         "wires": [
             [
                 "f7fe3d2e1658c333"
@@ -3263,8 +3263,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 240,
-        "y": 200,
+        "x": 280,
+        "y": 420,
         "wires": [
             [
                 "9073f7309ce9cc2d"
@@ -3283,8 +3283,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
-        "y": 300,
+        "x": 700,
+        "y": 420,
         "wires": []
     },
     {
@@ -3312,8 +3312,8 @@
                 "valueType": "jsonata"
             }
         ],
-        "x": 280,
-        "y": 440,
+        "x": 260,
+        "y": 520,
         "wires": [
             [
                 "979e674fca07e3d1"
@@ -3332,8 +3332,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 460,
-        "y": 440,
+        "x": 440,
+        "y": 520,
         "wires": []
     },
     {
@@ -3357,8 +3357,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 360,
-        "y": 380,
+        "x": 340,
+        "y": 460,
         "wires": [
             [
                 "028e8c99a3397225"
@@ -3377,8 +3377,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 380,
+        "x": 720,
+        "y": 460,
         "wires": []
     },
     {
@@ -3403,8 +3403,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 570,
-        "y": 380,
+        "x": 550,
+        "y": 460,
         "wires": [
             [
                 "2ca395aa479bf0f3"
@@ -3423,8 +3423,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 840,
-        "y": 480,
+        "x": 820,
+        "y": 560,
         "wires": []
     },
     {
@@ -3448,8 +3448,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 520,
-        "y": 480,
+        "x": 500,
+        "y": 560,
         "wires": [
             [
                 "7156f3b5a3e57b15"
@@ -3467,7 +3467,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t    \"type\":\"config/area_registry/list\"\t}",
+        "data": "{\t    \"type\":\"config/area_registry/create\",\t    \"name\":\"questwalk_doesliverpool\"\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
@@ -3478,8 +3478,8 @@
                 "valueType": "results"
             }
         ],
-        "x": 550,
-        "y": 620,
+        "x": 470,
+        "y": 320,
         "wires": [
             [
                 "753232f3808cc3f6"
@@ -3491,15 +3491,15 @@
         "type": "debug",
         "z": "9c5d86c38c3086b2",
         "name": "debug 24",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 620,
+        "x": 620,
+        "y": 320,
         "wires": []
     },
     {
@@ -3523,8 +3523,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 380,
-        "y": 620,
+        "x": 300,
+        "y": 320,
         "wires": [
             [
                 "eea4e32fcee13ae9"
@@ -3818,5 +3818,149 @@
                 "0cc9da7fd9d558b1"
             ]
         ]
+    },
+    {
+        "id": "637b76cf21f2a4d2",
+        "type": "debug",
+        "z": "9c5d86c38c3086b2",
+        "name": "debug 29",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "967c6ab966a11d91",
+        "type": "ha-api",
+        "z": "9c5d86c38c3086b2",
+        "name": "EntityList",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"config/entity_registry/list\",\t   \"id\":21\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 360,
+        "y": 220,
+        "wires": [
+            [
+                "5e3a1fc19db35d04"
+            ]
+        ]
+    },
+    {
+        "id": "9d07893e9d6d301e",
+        "type": "inject",
+        "z": "9c5d86c38c3086b2",
+        "name": "List all nodered entities",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 220,
+        "wires": [
+            [
+                "967c6ab966a11d91"
+            ]
+        ]
+    },
+    {
+        "id": "5e3a1fc19db35d04",
+        "type": "function",
+        "z": "9c5d86c38c3086b2",
+        "name": "Split",
+        "func": "msg.payload.forEach(function(a) {\n    node.send(a);\n});\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 220,
+        "wires": [
+            [
+                "6b6728522c8440f8"
+            ]
+        ]
+    },
+    {
+        "id": "6b6728522c8440f8",
+        "type": "switch",
+        "z": "9c5d86c38c3086b2",
+        "name": "platform=nodered",
+        "property": "platform",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "nodered",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 650,
+        "y": 220,
+        "wires": [
+            [
+                "637b76cf21f2a4d2"
+            ],
+            [
+                "0cd4c80c02be9965"
+            ]
+        ]
+    },
+    {
+        "id": "0cd4c80c02be9965",
+        "type": "debug",
+        "z": "9c5d86c38c3086b2",
+        "name": "debug 30",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 260,
+        "wires": []
     }
 ]
