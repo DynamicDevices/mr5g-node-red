@@ -3205,7 +3205,7 @@
             }
         ],
         "x": 670,
-        "y": 560,
+        "y": 640,
         "wires": [
             [
                 "d5b93d0825573c8d"
@@ -3235,7 +3235,7 @@
             }
         ],
         "x": 510,
-        "y": 420,
+        "y": 500,
         "wires": [
             [
                 "f7fe3d2e1658c333"
@@ -3264,7 +3264,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 280,
-        "y": 420,
+        "y": 500,
         "wires": [
             [
                 "9073f7309ce9cc2d"
@@ -3284,7 +3284,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 700,
-        "y": 420,
+        "y": 500,
         "wires": []
     },
     {
@@ -3313,7 +3313,7 @@
             }
         ],
         "x": 260,
-        "y": 520,
+        "y": 600,
         "wires": [
             [
                 "979e674fca07e3d1"
@@ -3333,7 +3333,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 440,
-        "y": 520,
+        "y": 600,
         "wires": []
     },
     {
@@ -3358,7 +3358,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 340,
-        "y": 460,
+        "y": 540,
         "wires": [
             [
                 "028e8c99a3397225"
@@ -3378,7 +3378,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 720,
-        "y": 460,
+        "y": 540,
         "wires": []
     },
     {
@@ -3404,7 +3404,7 @@
             }
         ],
         "x": 550,
-        "y": 460,
+        "y": 540,
         "wires": [
             [
                 "2ca395aa479bf0f3"
@@ -3424,7 +3424,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 820,
-        "y": 560,
+        "y": 640,
         "wires": []
     },
     {
@@ -3449,7 +3449,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 500,
-        "y": 560,
+        "y": 640,
         "wires": [
             [
                 "7156f3b5a3e57b15"
@@ -3460,14 +3460,14 @@
         "id": "eea4e32fcee13ae9",
         "type": "ha-api",
         "z": "9c5d86c38c3086b2",
-        "name": "",
+        "name": "ChangeArea",
         "server": "e0f05cf68b19d533",
         "version": 1,
         "debugenabled": false,
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t    \"type\":\"config/area_registry/create\",\t    \"name\":\"questwalk_doesliverpool\"\t}",
+        "data": "{\t    \"type\":$join([\"config/area_registry/\",msg.topic]),\t    \"name\":msg.payload\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
@@ -3478,7 +3478,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 470,
+        "x": 530,
         "y": 320,
         "wires": [
             [
@@ -3495,10 +3495,11 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
+        "x": 680,
         "y": 320,
         "wires": []
     },
@@ -3506,7 +3507,7 @@
         "id": "e4d9750c06320698",
         "type": "inject",
         "z": "9c5d86c38c3086b2",
-        "name": "List labels",
+        "name": "create QuestWalk",
         "props": [
             {
                 "p": "payload"
@@ -3520,10 +3521,10 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 300,
+        "topic": "create",
+        "payload": "QuestWalk",
+        "payloadType": "str",
+        "x": 330,
         "y": 320,
         "wires": [
             [
@@ -3962,5 +3963,34 @@
         "x": 840,
         "y": 260,
         "wires": []
+    },
+    {
+        "id": "c61906cf903eda43",
+        "type": "inject",
+        "z": "9c5d86c38c3086b2",
+        "name": "delete QuestWalk",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "delete",
+        "payload": "QuestWalk",
+        "payloadType": "str",
+        "x": 320,
+        "y": 360,
+        "wires": [
+            [
+                "eea4e32fcee13ae9"
+            ]
+        ]
     }
 ]
