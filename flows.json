@@ -4162,14 +4162,14 @@
         "id": "f195f5dd8bfe6e53",
         "type": "ha-api",
         "z": "9c5d86c38c3086b2",
-        "name": "ListAreas",
+        "name": "List",
         "server": "e0f05cf68b19d533",
         "version": 1,
         "debugenabled": false,
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t    \"type\":\"config/area_registry/list\"\t}",
+        "data": "{\t    \"type\":$join([\"config/\" msg.payload, \"/list\"])\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
@@ -4180,11 +4180,11 @@
                 "valueType": "results"
             }
         ],
-        "x": 300,
-        "y": 140,
+        "x": 330,
+        "y": 160,
         "wires": [
             [
-                "e823a5a2ed0bac9e"
+                "78cce50977e453d3"
             ]
         ]
     },
@@ -4201,8 +4201,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 520,
-        "y": 140,
+        "x": 640,
+        "y": 160,
         "wires": []
     },
     {
@@ -4224,13 +4224,33 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 140,
+        "payload": "area_registry",
+        "payloadType": "str",
+        "x": 150,
+        "y": 160,
         "wires": [
             [
                 "f195f5dd8bfe6e53"
+            ]
+        ]
+    },
+    {
+        "id": "78cce50977e453d3",
+        "type": "function",
+        "z": "9c5d86c38c3086b2",
+        "name": "Split",
+        "func": "msg.payload.forEach(function(a) { node.send(a); });",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 160,
+        "wires": [
+            [
+                "e823a5a2ed0bac9e"
             ]
         ]
     }
