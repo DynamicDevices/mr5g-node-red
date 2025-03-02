@@ -3506,7 +3506,7 @@
         "id": "e4d9750c06320698",
         "type": "inject",
         "z": "9c5d86c38c3086b2",
-        "name": "",
+        "name": "List labels",
         "props": [
             {
                 "p": "payload"
@@ -3620,6 +3620,156 @@
         "wires": [
             [
                 "2a01b28a48615b59"
+            ]
+        ]
+    },
+    {
+        "id": "1c1e544283472878",
+        "type": "ha-api",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t    \"type\":\"config/device_registry/list\"\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 390,
+        "y": 820,
+        "wires": [
+            [
+                "0cc9da7fd9d558b1"
+            ]
+        ]
+    },
+    {
+        "id": "0cc9da7fd9d558b1",
+        "type": "debug",
+        "z": "9c5d86c38c3086b2",
+        "name": "debug 27",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "a11bf49326c09724",
+        "type": "inject",
+        "z": "9c5d86c38c3086b2",
+        "name": "List labels",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 820,
+        "wires": [
+            [
+                "1c1e544283472878"
+            ]
+        ]
+    },
+    {
+        "id": "9df1b917c7bed606",
+        "type": "ha-api",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t    \"type\":\"config/label_registry/create\",\t    \"name\":\"questwalk1\"\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 370,
+        "y": 900,
+        "wires": [
+            [
+                "33f29e35d09c978f"
+            ]
+        ]
+    },
+    {
+        "id": "33f29e35d09c978f",
+        "type": "debug",
+        "z": "9c5d86c38c3086b2",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "a8ad33ef8569579d",
+        "type": "inject",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 900,
+        "wires": [
+            [
+                "9df1b917c7bed606"
             ]
         ]
     }
