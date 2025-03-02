@@ -2700,7 +2700,7 @@
             }
         ],
         "x": 670,
-        "y": 700,
+        "y": 720,
         "wires": [
             [
                 "d5b93d0825573c8d"
@@ -2730,7 +2730,7 @@
             }
         ],
         "x": 510,
-        "y": 560,
+        "y": 580,
         "wires": [
             [
                 "f7fe3d2e1658c333"
@@ -2759,7 +2759,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 280,
-        "y": 560,
+        "y": 580,
         "wires": [
             [
                 "9073f7309ce9cc2d"
@@ -2779,7 +2779,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 700,
-        "y": 560,
+        "y": 580,
         "wires": []
     },
     {
@@ -2808,7 +2808,7 @@
             }
         ],
         "x": 260,
-        "y": 660,
+        "y": 680,
         "wires": [
             [
                 "979e674fca07e3d1"
@@ -2828,7 +2828,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 440,
-        "y": 660,
+        "y": 680,
         "wires": []
     },
     {
@@ -2853,7 +2853,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 340,
-        "y": 600,
+        "y": 620,
         "wires": [
             [
                 "028e8c99a3397225"
@@ -2873,7 +2873,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 720,
-        "y": 600,
+        "y": 620,
         "wires": []
     },
     {
@@ -2899,7 +2899,7 @@
             }
         ],
         "x": 550,
-        "y": 600,
+        "y": 620,
         "wires": [
             [
                 "2ca395aa479bf0f3"
@@ -2919,7 +2919,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 820,
-        "y": 700,
+        "y": 720,
         "wires": []
     },
     {
@@ -2944,7 +2944,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 500,
-        "y": 700,
+        "y": 720,
         "wires": [
             [
                 "7156f3b5a3e57b15"
@@ -3017,9 +3017,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "questwalk",
+        "payload": "questwalkarea",
         "payloadType": "str",
-        "x": 160,
+        "x": 130,
         "y": 80,
         "wires": [
             [
@@ -3355,7 +3355,7 @@
             }
         ],
         "x": 740,
-        "y": 480,
+        "y": 500,
         "wires": [
             [
                 "5e3a1fc19db35d04"
@@ -3384,7 +3384,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 540,
-        "y": 480,
+        "y": 500,
         "wires": [
             [
                 "967c6ab966a11d91"
@@ -3404,7 +3404,7 @@
         "finalize": "",
         "libs": [],
         "x": 870,
-        "y": 480,
+        "y": 500,
         "wires": [
             [
                 "6b6728522c8440f8"
@@ -3432,7 +3432,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1030,
-        "y": 480,
+        "y": 500,
         "wires": [
             [
                 "637b76cf21f2a4d2"
@@ -3478,9 +3478,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "questwalk",
+        "payload": "questwalkarea",
         "payloadType": "str",
-        "x": 160,
+        "x": 130,
         "y": 40,
         "wires": [
             [
@@ -3914,7 +3914,7 @@
             }
         ],
         "x": 510,
-        "y": 520,
+        "y": 540,
         "wires": [
             []
         ]
@@ -4083,8 +4083,8 @@
         "topic": "",
         "payload": "bbb2",
         "payloadType": "str",
-        "x": 130,
-        "y": 380,
+        "x": 90,
+        "y": 360,
         "wires": [
             [
                 "90e8785a16fbd96e"
@@ -4113,7 +4113,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 410,
+        "x": 330,
         "y": 360,
         "wires": [
             [
@@ -4126,7 +4126,7 @@
         "type": "debug",
         "z": "9c5d86c38c3086b2",
         "name": "debug 35",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4134,7 +4134,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1020,
+        "x": 480,
         "y": 360,
         "wires": []
     },
@@ -4159,8 +4159,8 @@
         "topic": "",
         "payload": "bbb3",
         "payloadType": "str",
-        "x": 130,
-        "y": 420,
+        "x": 90,
+        "y": 400,
         "wires": [
             [
                 "90e8785a16fbd96e"
@@ -4178,7 +4178,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 285,
+        "x": 205,
         "y": 360,
         "wires": [
             [
@@ -4205,7 +4205,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 410,
+        "x": 330,
         "y": 400,
         "wires": [
             [
@@ -4235,7 +4235,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 580,
+        "x": 480,
         "y": 400,
         "wires": [
             [
@@ -4256,8 +4256,36 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
-        "y": 400,
+        "x": 640,
+        "y": 360,
         "wires": []
+    },
+    {
+        "id": "604e0f2d59fb0ec8",
+        "type": "ha-api",
+        "z": "9c5d86c38c3086b2",
+        "name": "entity-get",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"config/entity_registry/update\",\t   \"entity_id\":msg.entity_id,\t   \"area_id\":\"questwalkarea\"\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 640,
+        "y": 400,
+        "wires": [
+            []
+        ]
     }
 ]
