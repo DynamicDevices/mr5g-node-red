@@ -250,8 +250,8 @@
         "id": "a0413381ff7cd93f",
         "type": "ha-entity-config",
         "server": "e0f05cf68b19d533",
-        "deviceConfig": "4f6e4706c65a1ceb",
-        "name": "questwalkdevice",
+        "deviceConfig": "f683b6bedf956581",
+        "name": "questwalkdevice2",
         "version": 6,
         "entityType": "text",
         "haConfig": [
@@ -559,6 +559,15 @@
         ],
         "resend": false,
         "debugEnabled": false
+    },
+    {
+        "id": "f683b6bedf956581",
+        "type": "ha-device-config",
+        "name": "questwalkdevice2",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
     },
     {
         "id": "eb8e2330d2479177",
@@ -3968,7 +3977,7 @@
         "type": "debug",
         "z": "9c5d86c38c3086b2",
         "name": "debug 32",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4167,7 +4176,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 640,
+        "x": 680,
         "y": 980,
         "wires": []
     },
@@ -4264,6 +4273,40 @@
             [
                 "dd0bde06841ea4ba"
             ]
+        ]
+    },
+    {
+        "id": "1439a617ef700184",
+        "type": "ha-number",
+        "z": "9c5d86c38c3086b2",
+        "name": "",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "",
+        "exposeAsEntityConfig": "",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "previousValue",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "previousValue"
+            }
+        ],
+        "x": 470,
+        "y": 360,
+        "wires": [
+            []
         ]
     }
 ]
