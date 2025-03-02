@@ -1945,6 +1945,141 @@
         ]
     },
     {
+        "id": "aca62391a56155fe",
+        "type": "ha-api",
+        "z": "3b09bd15e699321e",
+        "name": "DeleteArea",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t    \"type\":\"config/area_registry/delete\",\t    \"area_id\":msg.payload\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 310,
+        "y": 620,
+        "wires": [
+            [
+                "753232f3808cc3f6"
+            ]
+        ]
+    },
+    {
+        "id": "eea4e32fcee13ae9",
+        "type": "ha-api",
+        "z": "3b09bd15e699321e",
+        "name": "CreateArea",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t    \"type\":\"config/area_registry/create\",\t    \"name\":msg.payload\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 310,
+        "y": 660,
+        "wires": [
+            [
+                "753232f3808cc3f6"
+            ]
+        ]
+    },
+    {
+        "id": "c61906cf903eda43",
+        "type": "inject",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "questwalkarea",
+        "payloadType": "str",
+        "x": 130,
+        "y": 620,
+        "wires": [
+            [
+                "aca62391a56155fe"
+            ]
+        ]
+    },
+    {
+        "id": "e4d9750c06320698",
+        "type": "inject",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "questwalkarea",
+        "payloadType": "str",
+        "x": 130,
+        "y": 660,
+        "wires": [
+            [
+                "eea4e32fcee13ae9"
+            ]
+        ]
+    },
+    {
+        "id": "753232f3808cc3f6",
+        "type": "debug",
+        "z": "3b09bd15e699321e",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 620,
+        "wires": []
+    },
+    {
         "id": "f3f3fafed626ed19",
         "type": "mqtt out",
         "z": "4c8d6de6577322fb",
@@ -2985,82 +3120,6 @@
         ]
     },
     {
-        "id": "eea4e32fcee13ae9",
-        "type": "ha-api",
-        "z": "9c5d86c38c3086b2",
-        "name": "CreateArea",
-        "server": "e0f05cf68b19d533",
-        "version": 1,
-        "debugenabled": false,
-        "protocol": "websocket",
-        "method": "get",
-        "path": "",
-        "data": "{\t    \"type\":\"config/area_registry/create\",\t    \"name\":msg.payload\t}",
-        "dataType": "jsonata",
-        "responseType": "json",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "results"
-            }
-        ],
-        "x": 310,
-        "y": 80,
-        "wires": [
-            [
-                "753232f3808cc3f6"
-            ]
-        ]
-    },
-    {
-        "id": "753232f3808cc3f6",
-        "type": "debug",
-        "z": "9c5d86c38c3086b2",
-        "name": "debug 24",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 520,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "e4d9750c06320698",
-        "type": "inject",
-        "z": "9c5d86c38c3086b2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "questwalkarea",
-        "payloadType": "str",
-        "x": 130,
-        "y": 80,
-        "wires": [
-            [
-                "eea4e32fcee13ae9"
-            ]
-        ]
-    },
-    {
         "id": "2a01b28a48615b59",
         "type": "ha-api",
         "z": "9c5d86c38c3086b2",
@@ -3474,65 +3533,6 @@
         "x": 1260,
         "y": 500,
         "wires": []
-    },
-    {
-        "id": "c61906cf903eda43",
-        "type": "inject",
-        "z": "9c5d86c38c3086b2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "questwalkarea",
-        "payloadType": "str",
-        "x": 130,
-        "y": 40,
-        "wires": [
-            [
-                "aca62391a56155fe"
-            ]
-        ]
-    },
-    {
-        "id": "aca62391a56155fe",
-        "type": "ha-api",
-        "z": "9c5d86c38c3086b2",
-        "name": "DeleteArea",
-        "server": "e0f05cf68b19d533",
-        "version": 1,
-        "debugenabled": false,
-        "protocol": "websocket",
-        "method": "get",
-        "path": "",
-        "data": "{\t    \"type\":\"config/area_registry/delete\",\t    \"area_id\":msg.payload\t}",
-        "dataType": "jsonata",
-        "responseType": "json",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "results"
-            }
-        ],
-        "x": 310,
-        "y": 40,
-        "wires": [
-            [
-                "753232f3808cc3f6"
-            ]
-        ]
     },
     {
         "id": "498a2a96e940acf2",
