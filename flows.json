@@ -3968,7 +3968,7 @@
         "id": "c61906cf903eda43",
         "type": "inject",
         "z": "9c5d86c38c3086b2",
-        "name": "delete QuestWalk",
+        "name": "",
         "props": [
             {
                 "p": "payload"
@@ -3983,9 +3983,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "delete",
-        "payload": "QuestWalk",
+        "payload": "questwalk_doesliverpool",
         "payloadType": "str",
-        "x": 320,
+        "x": 370,
         "y": 360,
         "wires": [
             [
