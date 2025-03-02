@@ -4326,7 +4326,7 @@
         "protocol": "websocket",
         "method": "get",
         "path": "",
-        "data": "{\t   \"type\":\"nodered/entity\",\t   \"node_id\":msg.payload,\t   \"serverid\":\"ss\",\t   \"state\":\"bongo\"\t}",
+        "data": "{\t   \"type\":\"nodered/entity\",\t   \"node_id\":msg.payload,\t   \"server_id\":\"ss\",\t   \"state\":\"bongo\"\t}",
         "dataType": "jsonata",
         "responseType": "json",
         "outputProperties": [
