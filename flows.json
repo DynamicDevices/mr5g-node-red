@@ -300,11 +300,11 @@
         "syntax": "mustache",
         "template": "Welcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\n",
         "output": "str",
-        "x": 100,
+        "x": 80,
         "y": 100,
         "wires": [
             [
-                "09fa3d523675e490"
+                "4fd2a70c6441c9ff"
             ]
         ],
         "icon": "node-red/comment.svg"
@@ -321,7 +321,7 @@
         "template": "This is the display case of stuff \npeople in DoESLiverpool have built.",
         "output": "str",
         "x": 260,
-        "y": 100,
+        "y": 240,
         "wires": [
             [
                 "d517ae3da0719d94"
@@ -340,8 +340,8 @@
         "syntax": "mustache",
         "template": "Here is the heat press for making T-shirt designs\nThere is also a mug press.  It uses sublimation\nprinting to transfer the ink from the paper to\nthe product.\n\n\n",
         "output": "str",
-        "x": 490,
-        "y": 100,
+        "x": 530,
+        "y": 220,
         "wires": [
             [
                 "c84ee1c2efc3550a"
@@ -360,8 +360,8 @@
         "syntax": "mustache",
         "template": "If the coffee pot is empty you can\nselect Next2 for a step-by-step guide\nto fill it.",
         "output": "str",
-        "x": 90,
-        "y": 400,
+        "x": 110,
+        "y": 500,
         "wires": [
             [
                 "5ad57becefdc770b",
@@ -381,8 +381,8 @@
         "syntax": "mustache",
         "template": "make coffee\n",
         "output": "str",
-        "x": 190,
-        "y": 500,
+        "x": 210,
+        "y": 620,
         "wires": [
             [
                 "03a83ed978fa2ca7"
@@ -401,8 +401,8 @@
         "syntax": "mustache",
         "template": "This is the donations box\n",
         "output": "str",
-        "x": 400,
-        "y": 400,
+        "x": 420,
+        "y": 520,
         "wires": [
             [
                 "4b17b99690fd021d"
@@ -421,8 +421,8 @@
         "syntax": "mustache",
         "template": "You are at the end\nThank you for participating\nWe hope you enjoyed this adventure\n",
         "output": "str",
-        "x": 630,
-        "y": 400,
+        "x": 650,
+        "y": 520,
         "wires": [
             []
         ],
@@ -439,8 +439,8 @@
         "syntax": "mustache",
         "template": "This, for example, is a piece of machined\naluminium that is used to hold the nose wires\nof a hang-glider\n\nPress Next2 to skip to next area",
         "output": "str",
-        "x": 240,
-        "y": 180,
+        "x": 260,
+        "y": 300,
         "wires": [
             [
                 "333eeaeea0cde9fa",
@@ -460,8 +460,8 @@
         "syntax": "mustache",
         "template": "During the pandemic DoESLiverpool produced\nvisors for local health care institutes",
         "output": "str",
-        "x": 240,
-        "y": 240,
+        "x": 260,
+        "y": 360,
         "wires": [
             [
                 "9f848a9a817387d0"
@@ -480,8 +480,8 @@
         "syntax": "mustache",
         "template": "If you have a 2D design, this machine can cut\nit out of vinyl that you can stick onto things\n\n\n",
         "output": "str",
-        "x": 490,
-        "y": 160,
+        "x": 510,
+        "y": 280,
         "wires": [
             [
                 "305346dd7244f151"
@@ -500,8 +500,8 @@
         "syntax": "mustache",
         "template": "One of the many 3D printers working in the\nspace.  We charge only the cost of materials.",
         "output": "str",
-        "x": 480,
-        "y": 220,
+        "x": 500,
+        "y": 340,
         "wires": [
             [
                 "bcd8091c5e630e4e"
@@ -520,8 +520,8 @@
         "syntax": "mustache",
         "template": "Stay out.  This place is dangerous.\nYou might suffocate from the lack of\noxygen or be shredded by the machines.",
         "output": "str",
-        "x": 500,
-        "y": 280,
+        "x": 520,
+        "y": 400,
         "wires": [
             [
                 "d2732b7c26e95524"
@@ -540,8 +540,8 @@
         "syntax": "mustache",
         "template": "The laser cutting is all done in this room\nbecause the machines are noisy.\nIt's boring work because you are not allowed\nto leave them unattended due to fire risk.\nIf they are in use, go in and ask the people\nwhat they are making.",
         "output": "str",
-        "x": 510,
-        "y": 340,
+        "x": 530,
+        "y": 460,
         "wires": [
             [
                 "621febc928390def"
@@ -560,8 +560,8 @@
         "syntax": "mustache",
         "template": "We do all our soldering at this desk.\nThere probably isn't much to see here.",
         "output": "str",
-        "x": 710,
-        "y": 100,
+        "x": 730,
+        "y": 220,
         "wires": [
             [
                 "8e98e6478f02be05"
@@ -580,8 +580,8 @@
         "syntax": "mustache",
         "template": "Go in here for the sewing room.\nWe don't have time to give a proper\ntour of it right now.",
         "output": "str",
-        "x": 730,
-        "y": 180,
+        "x": 750,
+        "y": 300,
         "wires": [
             [
                 "4cd95aa1054bcd64"
@@ -600,8 +600,8 @@
         "syntax": "mustache",
         "template": "the filters are in this cupboard\n",
         "output": "str",
-        "x": 370,
-        "y": 540,
+        "x": 390,
+        "y": 660,
         "wires": [
             [
                 "0eb8197c646f6918"
@@ -620,11 +620,51 @@
         "syntax": "mustache",
         "template": "Pour the coffee from the fridge",
         "output": "str",
-        "x": 580,
-        "y": 540,
+        "x": 600,
+        "y": 660,
         "wires": [
             [
                 "a7d5a4f05d6917dc"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "4fd2a70c6441c9ff",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "introvid1",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the introvid1\n\nVideoPlaceTop: vid31\n\n",
+        "output": "str",
+        "x": 260,
+        "y": 100,
+        "wires": [
+            [
+                "0fdcd0f750827ec7"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "0fdcd0f750827ec7",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "introvid2",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the introvid2\n\nVideoPlaceRight: vid17\n\n",
+        "output": "str",
+        "x": 420,
+        "y": 100,
+        "wires": [
+            [
+                "09fa3d523675e490"
             ]
         ],
         "icon": "node-red/comment.svg"
