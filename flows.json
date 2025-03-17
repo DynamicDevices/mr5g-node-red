@@ -358,7 +358,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "If the coffee pot is empty you can\nselect Next2 for a step-by-step guide\nto fill it.",
+        "template": "This is the coffee pot.\nCoffee is free to the members and visitors of the hackspace.\nIf it is empty, would you like to go through the instructions to fill it?\n\nNextButtonDef: donations,no,\nNextButtonDef: make,Yes,coffee_machine\n",
         "output": "str",
         "x": 110,
         "y": 500,
