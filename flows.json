@@ -2238,7 +2238,7 @@
         "type": "function",
         "z": "3b09bd15e699321e",
         "name": "DefineStation2",
-        "func": "var sprefix = \"z\";\nvar n = msg.payload.nodes.length;\n//n = 3;\nglobal.set(\"server_id\", \"whatever\");\nvar idlookup = { };\nfor (var i = 0; i < msg.payload.nodes.length; i++) {\n    var station = msg.payload.nodes[i];\n    if (station.type == \"template\")\n        idlookup[station.id] = station.name;\n}\nfor (var i = 0; i < n; i++) {\n    var station = msg.payload.nodes[i];\n    var nextstations = [ ];\n    var nextstationnames = [ ];\n    node.send(station);\n    for (var j = 0; j < station.wires[0].length; j++) {\n        var nwid = station.wires[0][j];\n    }\n}\n",
+        "func": "var sprefix = \"z\";\nvar n = msg.payload.nodes.length;\n//n = 3;\nglobal.set(\"server_id\", \"whatever\");\nvar idlookup = { };\nfor (var i = 0; i < msg.payload.nodes.length; i++) {\n    var station = msg.payload.nodes[i];\n    if (station.type == \"template\")\n        idlookup[station.id] = station.name;\n}\nfor (var i = 0; i < n; i++) {\n    var station = msg.payload.nodes[i];\n    var nextstations = [ ];\n    var nextstationnames = [ ];\n    //node.send(station);\n    for (var j = 0; j < station.wires[0].length; j++) {\n        var nwid = station.wires[0][j];\n    }\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
