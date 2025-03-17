@@ -765,7 +765,8 @@
         "wires": [
             [
                 "4dd3c945c7625c5d",
-                "4579a45ab1ea254e"
+                "4579a45ab1ea254e",
+                "598c3c4e2838aca8"
             ]
         ]
     },
@@ -2232,6 +2233,24 @@
         "x": 480,
         "y": 40,
         "wires": []
+    },
+    {
+        "id": "598c3c4e2838aca8",
+        "type": "function",
+        "z": "3b09bd15e699321e",
+        "name": "DefineStation2",
+        "func": "var sprefix = \"z\";\nvar n = msg.payload.nodes.length;\n//n = 3;\nglobal.set(\"server_id\", \"whatever\");\nvar idlookup = { };\nfor (var i = 0; i < msg.payload.nodes.length; i++) {\n    var station = msg.payload.nodes[i];\n    if (station.type == \"template\")\n        idlookup[station.id] = station.name;\n}\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 120,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "f3f3fafed626ed19",
