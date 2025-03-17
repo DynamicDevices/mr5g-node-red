@@ -765,7 +765,7 @@
         "wires": [
             [
                 "4579a45ab1ea254e",
-                "598c3c4e2838aca8"
+                "4dd3c945c7625c5d"
             ]
         ]
     },
@@ -2231,43 +2231,6 @@
         "statusType": "auto",
         "x": 480,
         "y": 40,
-        "wires": []
-    },
-    {
-        "id": "598c3c4e2838aca8",
-        "type": "function",
-        "z": "3b09bd15e699321e",
-        "name": "DefineStation2",
-        "func": "var sprefix = \"z\";\nvar n = msg.payload.nodes.length;\n//n = 3;\nglobal.set(\"server_id\", \"whatever\");\nvar idlookup = { };\nfor (var i = 0; i < msg.payload.nodes.length; i++) {\n    var station = msg.payload.nodes[i];\n    if (station.type == \"template\")\n        idlookup[station.id] = station.name;\n}\nfor (var i = 10; i < n; i++) {\n    var station = msg.payload.nodes[i];\n    var nextstations = [ ];\n    var nextstationnames = [ ];\n    node.send(station);\n    continue;\n    for (var j = 0; j < station.wires[0].length; j++) {\n        var nwid = station.wires[0][j];\n    }\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 740,
-        "y": 120,
-        "wires": [
-            [
-                "4b82b5c1c62a03b9"
-            ]
-        ]
-    },
-    {
-        "id": "4b82b5c1c62a03b9",
-        "type": "debug",
-        "z": "3b09bd15e699321e",
-        "name": "debug 39",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 880,
-        "y": 160,
         "wires": []
     },
     {
