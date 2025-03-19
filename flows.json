@@ -298,13 +298,14 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "Welcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\n\n\nNextButtonDef: make,Yes,coffee_maker\n",
+        "template": "Welcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\nPoke the Start button with your index \nfinger to move on.  \n(Or skip to the coffee maker.)\n\nNextButtonDef: intro,Start,\nNextButtonDef: make,Make Coffee,coffee_maker\n",
         "output": "str",
         "x": 80,
         "y": 100,
         "wires": [
             [
-                "4fd2a70c6441c9ff"
+                "4fd2a70c6441c9ff",
+                "5ad57becefdc770b"
             ]
         ],
         "icon": "node-red/comment.svg"
@@ -361,8 +362,8 @@
         "syntax": "mustache",
         "template": "Finally we reach the coffee station.\n\nCoffee is free to the members and visitors of the hackspace.\nIf the coffee has run out, would you like to go through the instructions to fill it?\n\nNextButtonDef: donations,no,\nNextButtonDef: make,Yes,coffee_maker\n",
         "output": "str",
-        "x": 150,
-        "y": 600,
+        "x": 170,
+        "y": 540,
         "wires": [
             [
                 "5ad57becefdc770b",
@@ -382,8 +383,8 @@
         "syntax": "mustache",
         "template": "make coffee\n",
         "output": "str",
-        "x": 150,
-        "y": 680,
+        "x": 330,
+        "y": 580,
         "wires": [
             [
                 "03a83ed978fa2ca7"
@@ -402,8 +403,8 @@
         "syntax": "mustache",
         "template": "This is the donations box\n",
         "output": "str",
-        "x": 460,
-        "y": 780,
+        "x": 560,
+        "y": 540,
         "wires": [
             [
                 "4b17b99690fd021d"
@@ -423,7 +424,7 @@
         "template": "You are at the end\nThank you for participating\nWe hope you enjoyed this adventure\n",
         "output": "str",
         "x": 730,
-        "y": 800,
+        "y": 540,
         "wires": [
             []
         ],
@@ -601,8 +602,8 @@
         "syntax": "mustache",
         "template": "the filters are in this cupboard\n",
         "output": "str",
-        "x": 190,
-        "y": 740,
+        "x": 310,
+        "y": 620,
         "wires": [
             [
                 "0eb8197c646f6918"
@@ -621,8 +622,8 @@
         "syntax": "mustache",
         "template": "Pour the coffee from the fridge",
         "output": "str",
-        "x": 220,
-        "y": 800,
+        "x": 320,
+        "y": 660,
         "wires": [
             [
                 "a7d5a4f05d6917dc"
@@ -753,7 +754,7 @@
         "syntax": "mustache",
         "template": "Here is a dark quiet room you can use \nfor conference calls and meetings.\nSometimes we play VR in here.",
         "output": "str",
-        "x": 460,
+        "x": 440,
         "y": 460,
         "wires": [
             [
@@ -796,7 +797,9 @@
         "x": 810,
         "y": 460,
         "wires": [
-            []
+            [
+                "4cd95aa1054bcd64"
+            ]
         ],
         "icon": "node-red/comment.svg"
     },
