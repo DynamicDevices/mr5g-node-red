@@ -298,7 +298,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "Welcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\n",
+        "template": "Welcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\n\n\nNextButtonDef: make,Yes,coffee_maker\n",
         "output": "str",
         "x": 80,
         "y": 100,
@@ -359,7 +359,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "This is the coffee pot.\nCoffee is free to the members and visitors of the hackspace.\nIf it is empty, would you like to go through the instructions to fill it?\n\nNextButtonDef: donations,no,\nNextButtonDef: make,Yes,coffee_maker\n",
+        "template": "Finally we reach the coffee station.\n\nCoffee is free to the members and visitors of the hackspace.\nIf the coffee has run out, would you like to go through the instructions to fill it?\n\nNextButtonDef: donations,no,\nNextButtonDef: make,Yes,coffee_maker\n",
         "output": "str",
         "x": 150,
         "y": 600,
@@ -422,8 +422,8 @@
         "syntax": "mustache",
         "template": "You are at the end\nThank you for participating\nWe hope you enjoyed this adventure\n",
         "output": "str",
-        "x": 630,
-        "y": 780,
+        "x": 730,
+        "y": 800,
         "wires": [
             []
         ],
@@ -539,7 +539,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "The laser cutting is all done in this room\nbecause the machines are noisy.\nIt's boring work because you are not allowed\nto leave them unattended due to fire risk.\nIf they are in use, go in and ask the people\nwhat they are making.",
+        "template": "The laser cutting is all done in this room\nbecause the machines are noisy.\nIt can be boring work because you are not allowed\nto leave them unattended in case they catch fire.\n\nSo don't be shy.  Go on in and ask what they are making.",
         "output": "str",
         "x": 730,
         "y": 200,
@@ -559,7 +559,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "We do all our soldering at this desk.\nThere probably isn't much to see here.",
+        "template": "We do all our soldering at this desk.\nThere probably isn't much to see here.\nThere are free components scattered around \neverywhere if you know where to look.",
         "output": "str",
         "x": 930,
         "y": 200,
@@ -579,13 +579,13 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "Go in here for the sewing room.\nWe don't have time to give a proper\ntour of it right now.",
+        "template": "This way leads to the sewing room. \nThere's an embroidery machine and some \nother stuff we don't have time to explain right now.",
         "output": "str",
-        "x": 690,
-        "y": 420,
+        "x": 250,
+        "y": 460,
         "wires": [
             [
-                "4cd95aa1054bcd64"
+                "03a5bc30e3965d6f"
             ]
         ],
         "icon": "node-red/comment.svg"
@@ -739,6 +739,64 @@
                 "333eeaeea0cde9fa",
                 "9f848a9a817387d0"
             ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "03a5bc30e3965d6f",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "quietroom",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Here is a dark quiet room you can use \nfor conference calls and meetings.\nSometimes we play VR in here.",
+        "output": "str",
+        "x": 460,
+        "y": 460,
+        "wires": [
+            [
+                "b58c680d5bb79a8f"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "b58c680d5bb79a8f",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "toilets",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "There are two toilets, \nhere and across the step.\nIf they are in use and you can't wait, \nthere's another couple downstairs.",
+        "output": "str",
+        "x": 630,
+        "y": 460,
+        "wires": [
+            [
+                "a7d27095ca859ced"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "a7d27095ca859ced",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "nook",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "The nook used to be a light well in \nthis building, which is why the bricks \nlook like they belong to the outside.\n\nSee through the windows into Room 36 \nwhich is the main co-working area. ",
+        "output": "str",
+        "x": 810,
+        "y": 460,
+        "wires": [
+            []
         ],
         "icon": "node-red/comment.svg"
     },
