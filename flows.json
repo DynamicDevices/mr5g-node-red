@@ -318,13 +318,14 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "This is the display case of stuff \npeople in DoESLiverpool have built.",
+        "template": "This is the display case of stuff \nthat has been made by members.\n\nPress skip if you would like to \nmove on to the next area.\n\nNextButtonDef: heat,Skip,\nNextButtonDef: display,Yes,",
         "output": "str",
-        "x": 260,
-        "y": 240,
+        "x": 140,
+        "y": 200,
         "wires": [
             [
-                "d517ae3da0719d94"
+                "d517ae3da0719d94",
+                "9f848a9a817387d0"
             ]
         ],
         "icon": "node-red/comment.svg"
@@ -340,8 +341,8 @@
         "syntax": "mustache",
         "template": "Here is the heat press for making T-shirt designs\nThere is also a mug press.  It uses sublimation\nprinting to transfer the ink from the paper to\nthe product.\n\n\n",
         "output": "str",
-        "x": 530,
-        "y": 220,
+        "x": 490,
+        "y": 200,
         "wires": [
             [
                 "c84ee1c2efc3550a"
@@ -360,8 +361,8 @@
         "syntax": "mustache",
         "template": "This is the coffee pot.\nCoffee is free to the members and visitors of the hackspace.\nIf it is empty, would you like to go through the instructions to fill it?\n\nNextButtonDef: donations,no,\nNextButtonDef: make,Yes,coffee_maker\n",
         "output": "str",
-        "x": 110,
-        "y": 500,
+        "x": 150,
+        "y": 600,
         "wires": [
             [
                 "5ad57becefdc770b",
@@ -381,8 +382,8 @@
         "syntax": "mustache",
         "template": "make coffee\n",
         "output": "str",
-        "x": 210,
-        "y": 620,
+        "x": 150,
+        "y": 680,
         "wires": [
             [
                 "03a83ed978fa2ca7"
@@ -401,8 +402,8 @@
         "syntax": "mustache",
         "template": "This is the donations box\n",
         "output": "str",
-        "x": 420,
-        "y": 520,
+        "x": 460,
+        "y": 780,
         "wires": [
             [
                 "4b17b99690fd021d"
@@ -421,8 +422,8 @@
         "syntax": "mustache",
         "template": "You are at the end\nThank you for participating\nWe hope you enjoyed this adventure\n",
         "output": "str",
-        "x": 650,
-        "y": 520,
+        "x": 630,
+        "y": 780,
         "wires": [
             []
         ],
@@ -437,14 +438,14 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "This, for example, is a piece of machined\naluminium that is used to hold the nose wires\nof a hang-glider\n\nPress Next2 to skip to next area",
+        "template": "This an aluminium piece for the \nnose wires of a hang-glider.  \nIt was machined on the router in the next room,\n\nNextButtonDef: heat,Skip,",
         "output": "str",
-        "x": 260,
-        "y": 300,
+        "x": 140,
+        "y": 240,
         "wires": [
             [
-                "333eeaeea0cde9fa",
-                "9f848a9a817387d0"
+                "9f848a9a817387d0",
+                "858f51d8bd0c1b47"
             ]
         ],
         "icon": "node-red/comment.svg"
@@ -458,9 +459,9 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "During the pandemic DoESLiverpool produced\nvisors for local health care institutes",
+        "template": "During the pandemic DoESLiverpool produced\nvisors for local health care establishments.",
         "output": "str",
-        "x": 260,
+        "x": 140,
         "y": 360,
         "wires": [
             [
@@ -478,10 +479,10 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "If you have a 2D design, this machine can cut\nit out of vinyl that you can stick onto things\n\n\n",
+        "template": "If you have a 2D design, this machine can cut\nit out of vinyl which you can transfer onto any hard surface\nlike a laptop or a filing cabinet.\n\n\n",
         "output": "str",
-        "x": 510,
-        "y": 280,
+        "x": 490,
+        "y": 240,
         "wires": [
             [
                 "305346dd7244f151"
@@ -500,8 +501,8 @@
         "syntax": "mustache",
         "template": "One of the many 3D printers working in the\nspace.  We charge only the cost of materials.",
         "output": "str",
-        "x": 500,
-        "y": 340,
+        "x": 480,
+        "y": 280,
         "wires": [
             [
                 "bcd8091c5e630e4e"
@@ -520,8 +521,8 @@
         "syntax": "mustache",
         "template": "Stay out.  This place is dangerous.\nYou might suffocate from the lack of\noxygen or be shredded by the machines.",
         "output": "str",
-        "x": 520,
-        "y": 400,
+        "x": 500,
+        "y": 320,
         "wires": [
             [
                 "d2732b7c26e95524"
@@ -540,8 +541,8 @@
         "syntax": "mustache",
         "template": "The laser cutting is all done in this room\nbecause the machines are noisy.\nIt's boring work because you are not allowed\nto leave them unattended due to fire risk.\nIf they are in use, go in and ask the people\nwhat they are making.",
         "output": "str",
-        "x": 530,
-        "y": 460,
+        "x": 730,
+        "y": 200,
         "wires": [
             [
                 "621febc928390def"
@@ -560,8 +561,8 @@
         "syntax": "mustache",
         "template": "We do all our soldering at this desk.\nThere probably isn't much to see here.",
         "output": "str",
-        "x": 730,
-        "y": 220,
+        "x": 930,
+        "y": 200,
         "wires": [
             [
                 "8e98e6478f02be05"
@@ -580,8 +581,8 @@
         "syntax": "mustache",
         "template": "Go in here for the sewing room.\nWe don't have time to give a proper\ntour of it right now.",
         "output": "str",
-        "x": 750,
-        "y": 300,
+        "x": 690,
+        "y": 420,
         "wires": [
             [
                 "4cd95aa1054bcd64"
@@ -600,8 +601,8 @@
         "syntax": "mustache",
         "template": "the filters are in this cupboard\n",
         "output": "str",
-        "x": 390,
-        "y": 660,
+        "x": 190,
+        "y": 740,
         "wires": [
             [
                 "0eb8197c646f6918"
@@ -620,8 +621,8 @@
         "syntax": "mustache",
         "template": "Pour the coffee from the fridge",
         "output": "str",
-        "x": 600,
-        "y": 660,
+        "x": 220,
+        "y": 800,
         "wires": [
             [
                 "a7d5a4f05d6917dc"
@@ -675,7 +676,7 @@
         "z": "1fc7b0190a9c731d",
         "name": "Intro Script",
         "info": "Cue: Press Button to Start \n(just out of reach) \n\n***Video: Komal Madar wearing a Quest3 headset\n\nWelcome to DoESLiverpool, a community maker and \ncoworking space at the heart of Liverpool.\n\n(Komal takes headset off and looks at camera)\n\nHi, I'm Komal Madar, and I am inviting you to \nparticipate in our new experimental tour of our \nspace using the power of Augmented Reality technology.\n\nIf you feel uncomfortable at any time, simply \nstop and take the headset off.\n\nNow please step forward to click on the next button \nand advance to the next Slide\n\n\n***Video: Voice of Komal, but cut between the different items\n\nAt DoESLiverpool you can rent desks, or pay to \nbe a workshop member and use any of our shared \nequipment including laser cutters, 3D printers, \nand sewing machines.\n\n(panning shot of busy evening)\n\nEvery Thursday night and one Saturday a month we\nhave an open event when everything is free to use.\n\n\n***Video: Voice of Komal, another panning down shot \nto show the place on the floor.\n\nBefore we begin we need to check that the room is \naligned properly.  Look down at the floor ahead of \nyou and check if the yellow rectangle is properly \nframing the masking tape on the carpet.\n\nAnswer Yes to continue, or No to call for help to get \nit straightened out.\n\n\"Does this look right?  (Yes)(No)\"\n\n\n***Video: Komal again\n\nGreat.  This tour will lead you through a series of \ncheck points one at a time.  At each place there will be \na sign to explain the location or piece of equipment \nthat is in front of you.  \n\nPlease take your time and take care not trip or bump into \nanything along the way.  Most importantly, enjoy yourself.\nI will see you near the end of the tour.\n\n------\n\n",
-        "x": 720,
+        "x": 80,
         "y": 60,
         "wires": []
     },
@@ -695,6 +696,48 @@
         "wires": [
             [
                 "09fa3d523675e490"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "858f51d8bd0c1b47",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "displaymuseum",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is Museum-in-a-Box.\nIf you place one of the 3D printed itens on top\nit will tell you what it is.\n\nNextButtonDef: heat,Skip,",
+        "output": "str",
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "9f848a9a817387d0",
+                "631b7182757da827"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "631b7182757da827",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "displaymuseum",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is an example of the sort of \nthing you can make with a laser cutter.\nPick it up and take a closer look.\n\nNextButtonDef: heat,Skip,",
+        "output": "str",
+        "x": 160,
+        "y": 320,
+        "wires": [
+            [
+                "333eeaeea0cde9fa",
+                "9f848a9a817387d0"
             ]
         ],
         "icon": "node-red/comment.svg"
