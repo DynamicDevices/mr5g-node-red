@@ -360,7 +360,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "Finally we reach the coffee station.\n\nCoffee is free to the members and visitors of the hackspace.\nIf the coffee has run out, would you like to go through the instructions to fill it?\n\nNextButtonDef: donations,no,\nNextButtonDef: make,Yes,coffee_maker\n",
+        "template": "Finally we reach the coffee station.\n\nCoffee is free to the members and visitors of the hackspace.\n\nIf the coffee has run out, would you like to be instructed on how to refill it?\n\nNextButtonDef: donations,No,\nNextButtonDef: make,Yes,coffee_maker\n",
         "output": "str",
         "x": 170,
         "y": 540,
@@ -381,13 +381,13 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "make coffee\n",
+        "template": "First take the glass coffee pot and \nthe filter above it to the sink on your left.",
         "output": "str",
         "x": 330,
         "y": 580,
         "wires": [
             [
-                "03a83ed978fa2ca7"
+                "c4f7e90f3a0870dc"
             ]
         ],
         "icon": "node-red/comment.svg"
@@ -401,7 +401,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "This is the donations box\n",
+        "template": "This is the donations box to pay for crisps \ncans of coke and other sundries.\n",
         "output": "str",
         "x": 560,
         "y": 540,
@@ -421,7 +421,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "You are at the end\nThank you for participating\nWe hope you enjoyed this adventure\n",
+        "template": "You are at the end of the Augmented Reality DoESTour.\n\nThank you for participating.\n\nWe hope you enjoyed this adventure.\n\nPlease click Start to begin again for the next person.\n\nNextButtonDef: start,Start,\n",
         "output": "str",
         "x": 730,
         "y": 540,
@@ -600,13 +600,13 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "the filters are in this cupboard\n",
+        "template": "Take a single paper filter from the stack in \nthis this cupboard and put it in the filter tray.\nThere should be a small plastic measuring cup with it.\n",
         "output": "str",
         "x": 310,
-        "y": 620,
+        "y": 660,
         "wires": [
             [
-                "0eb8197c646f6918"
+                "86b22b0aa0a8e93f"
             ]
         ],
         "icon": "node-red/comment.svg"
@@ -615,18 +615,18 @@
         "id": "0eb8197c646f6918",
         "type": "template",
         "z": "1fc7b0190a9c731d",
-        "name": "Fill Coffee",
+        "name": "Pour water",
         "field": "payload",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "Pour the coffee from the fridge",
+        "template": "Lift the lid here and pour the jug of water through \ninto the hatch through the plastic grill.\nThen replace the jug onto hot plate.",
         "output": "str",
-        "x": 320,
-        "y": 660,
+        "x": 330,
+        "y": 820,
         "wires": [
             [
-                "a7d5a4f05d6917dc"
+                "ac7f102063c6665e"
             ]
         ],
         "icon": "node-red/comment.svg"
@@ -799,6 +799,106 @@
         "wires": [
             [
                 "4cd95aa1054bcd64"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "c4f7e90f3a0870dc",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "compost",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Put the old mucky filter in the \nblack compost bucket with the screw lid on top.",
+        "output": "str",
+        "x": 320,
+        "y": 620,
+        "wires": [
+            [
+                "03a83ed978fa2ca7"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "86b22b0aa0a8e93f",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "measure",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Find a large coffee packet in the fridge, \nmeasure a heaped serving of coffee into \nthe small plastic cup and tip it into the filter.",
+        "output": "str",
+        "x": 320,
+        "y": 700,
+        "wires": [
+            [
+                "01b0cdf042ad93be"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "01b0cdf042ad93be",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "replace filter",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Replace the filter tray into the coffee machine \nwhere you took it from.",
+        "output": "str",
+        "x": 330,
+        "y": 740,
+        "wires": [
+            [
+                "66a5deae80feae29"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "66a5deae80feae29",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "fill water",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "After you have returned the coffee to the fridge and the cup to the filters \nyou can fill up the glass coffee jug with water from the tap.",
+        "output": "str",
+        "x": 320,
+        "y": 780,
+        "wires": [
+            [
+                "0eb8197c646f6918"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "ac7f102063c6665e",
+        "type": "template",
+        "z": "1fc7b0190a9c731d",
+        "name": "coffee on",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "If the coffee machine is on there will be an \norange light and the water will start to boil.\n\nCheck the push button switch behind the jug or on the \n3D printer to the left.\n\nA bell will ring when the coffee is made.",
+        "output": "str",
+        "x": 320,
+        "y": 860,
+        "wires": [
+            [
+                "a7d5a4f05d6917dc"
             ]
         ],
         "icon": "node-red/comment.svg"
