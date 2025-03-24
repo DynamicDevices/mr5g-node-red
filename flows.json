@@ -1003,8 +1003,126 @@
         "syntax": "mustache",
         "template": "Before we continue with the rest of the tour, let's go over the building wardens. Your first point of contact if anything goes wrong during your time here.\n\nThere are 3 building wardens:\n- Jack Hogarth\n- Sean Youd\n- Reda Šimbelytė\n\nOne of these should be available to help you with any present problems.",
         "output": "str",
-        "x": 590,
+        "x": 130,
         "y": 100,
+        "wires": [
+            [
+                "c48de73fc5dabfbf"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "c48de73fc5dabfbf",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "toilets - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "The main toilets for the floor are located here",
+        "output": "str",
+        "x": 360,
+        "y": 100,
+        "wires": [
+            [
+                "2e510ad4f14532dc"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "f78319fe52a14d0e",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "accessible toilets - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "The accessible toilets are also located here. The accessible toilets are open to anyone who may need them.",
+        "output": "str",
+        "x": 750,
+        "y": 100,
+        "wires": [
+            [
+                "31fbe888940992c0"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "2e510ad4f14532dc",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "lift - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "The lift up to the next floor is located here.\n\nDo not use this in the case of a fire.",
+        "output": "str",
+        "x": 540,
+        "y": 100,
+        "wires": [
+            [
+                "f78319fe52a14d0e"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "31fbe888940992c0",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "stairs - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "The stairs up to the next floor are located here, use these in the case of a fire.\n\nThere is a fire exit located here.",
+        "output": "str",
+        "x": 970,
+        "y": 100,
+        "wires": [
+            [
+                "e2d49b5250b1a786"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "8c9150cbe8d87b7e",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "stairs fire exit - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the fire exit for the stairs",
+        "output": "str",
+        "x": 1000,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "e2d49b5250b1a786",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "kitchen - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the kitchen on this floor.\n\nPlease make sure you keep it tidy, out of respect for our residents and for health and safety reasons.",
+        "output": "str",
+        "x": 100,
+        "y": 160,
         "wires": [
             []
         ],
