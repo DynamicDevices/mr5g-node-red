@@ -944,8 +944,8 @@
         "syntax": "mustache",
         "template": "You are at the end of the Augmented Reality STFC Tour.\n\nThank you for participating!\n\nWe hope you enjoyed this adventure.\n\nPlease click Start to begin again for the next person.\n\nNextButtonDef: start,Start,\n",
         "output": "str",
-        "x": 450,
-        "y": 340,
+        "x": 290,
+        "y": 280,
         "wires": [
             [
                 "36f69f35adb854bb"
@@ -1224,7 +1224,69 @@
         "x": 380,
         "y": 220,
         "wires": [
-            []
+            [
+                "ee6738ab48453f8e"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "ee6738ab48453f8e",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "first aider offices - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "In this hallway you'll find the offices of the first aiders.",
+        "output": "str",
+        "x": 630,
+        "y": 220,
+        "wires": [
+            [
+                "9f21cd371f3f64c0"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "9f21cd371f3f64c0",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "jack office - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is Jack Hogarth's office, one of the first aiders. \n\nYou can also contact Jack for help with booking meeting rooms.",
+        "output": "str",
+        "x": 870,
+        "y": 220,
+        "wires": [
+            [
+                "2ec487284399354c"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "2ec487284399354c",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "reda office - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is Reda Šimbelytė's office, another one of the first aiders.\n\nReda was involved in the creation of this app!",
+        "output": "str",
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "6c4c498fca77244a"
+            ]
         ],
         "icon": "node-red/comment.svg"
     },
