@@ -942,10 +942,10 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "You are at the end of the Augmented Reality DoESTour.\n\nThank you for participating.\n\nWe hope you enjoyed this adventure.\n\nPlease click Start to begin again for the next person.\n\nNextButtonDef: start,Start,\n",
+        "template": "You are at the end of the Augmented Reality STFC Tour.\n\nThank you for participating!\n\nWe hope you enjoyed this adventure.\n\nPlease click Start to begin again for the next person.\n\nNextButtonDef: start,Start,\n",
         "output": "str",
-        "x": 830,
-        "y": 360,
+        "x": 450,
+        "y": 340,
         "wires": [
             [
                 "36f69f35adb854bb"
@@ -1103,7 +1103,7 @@
         "syntax": "mustache",
         "template": "This is the fire exit for the stairs",
         "output": "str",
-        "x": 1000,
+        "x": 880,
         "y": 40,
         "wires": [
             []
@@ -1123,6 +1123,106 @@
         "output": "str",
         "x": 100,
         "y": 160,
+        "wires": [
+            [
+                "4461d7df5abadb85"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "4461d7df5abadb85",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "project area - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the door to the project area.\n\nThis is the main co-working space of the building.",
+        "output": "str",
+        "x": 310,
+        "y": 160,
+        "wires": [
+            [
+                "e1ef74b59a1d2057"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "e1ef74b59a1d2057",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "project area fire escape - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the fire escape for the project area.\n\nIf there is a fire in the project area, please exfiltrate through this door.",
+        "output": "str",
+        "x": 570,
+        "y": 160,
+        "wires": [
+            [
+                "bc453c2983e6c280"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "bc453c2983e6c280",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "entrance 1 - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is Entrance 1, there is a fire call point and a power shut off button here.",
+        "output": "str",
+        "x": 830,
+        "y": 160,
+        "wires": [
+            [
+                "3b4982e97b0edacc"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "3b4982e97b0edacc",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "prototyping area - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the prototyping room.\n\nThis room is access controlled.\n\nBe aware that this room is a low oxygen hazard. If the oxygen gets too low in this room, the alarm should sound.\n\nThere is also a possible caustic acid hazard in this room.",
+        "output": "str",
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "b54c49be50de3bcc"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "b54c49be50de3bcc",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "first aid point - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the first aid point.\n\nIt is recommended to come here for any first aid needs. The first aid point contains:\n\n- A first aid box\n- A list of the current first aiders\n- An Eye wash station\n- The emergency stop switch\n- The relevant emergency number",
+        "output": "str",
+        "x": 380,
+        "y": 220,
         "wires": [
             []
         ],
