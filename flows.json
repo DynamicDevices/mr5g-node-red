@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "186aa6ef56bf872c",
+        "type": "tab",
+        "label": "STFC",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "3b09bd15e699321e",
         "type": "tab",
         "label": "Programatic",
@@ -426,7 +434,9 @@
         "x": 730,
         "y": 540,
         "wires": [
-            []
+            [
+                "eb8e2330d2479177"
+            ]
         ],
         "icon": "node-red/comment.svg"
     },
@@ -900,6 +910,103 @@
             [
                 "a7d5a4f05d6917dc"
             ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "36f69f35adb854bb",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "start here - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Welcome to the first station of your QuestTour\nThis will guide you around the STFC Facility.\n\nPoke the Start button with your index \nfinger to move on. \n\nNextButtonDef: intro,Start,\n\n\n",
+        "output": "str",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "2dff72250dc7bbe7"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "6c4c498fca77244a",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "end",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "You are at the end of the Augmented Reality DoESTour.\n\nThank you for participating.\n\nWe hope you enjoyed this adventure.\n\nPlease click Start to begin again for the next person.\n\nNextButtonDef: start,Start,\n",
+        "output": "str",
+        "x": 830,
+        "y": 360,
+        "wires": [
+            [
+                "36f69f35adb854bb"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "2dff72250dc7bbe7",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "entrance 2 - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "We are currently at Entrance 2. This is where our tour will begin.\n\nThe next stage is to visit the muster station outside, if conditions outside are not suitable, you can skip this step with the skip button.\n\nNextButtonDef: muster,Start,\n\nNextButtonDef: building,Skip,",
+        "output": "str",
+        "x": 350,
+        "y": 40,
+        "wires": [
+            [
+                "1a121fb6d6bba610",
+                "300ddf222c48db30"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "1a121fb6d6bba610",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "muster point - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Here is Muster Point 3. In the case of an emergency evacuation, such as a fire, please congregate here.\n",
+        "output": "str",
+        "x": 580,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "300ddf222c48db30",
+        "type": "template",
+        "z": "186aa6ef56bf872c",
+        "name": "building wardens - STFC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Before we continue with the rest of the tour, let's go over the building wardens. Your first point of contact if anything goes wrong during your time here.\n\nThere are 3 building wardens:\n- Jack Hogarth\n- Sean Youd\n- Reda Šimbelytė\n\nOne of these should be available to help you with any present problems.",
+        "output": "str",
+        "x": 590,
+        "y": 100,
+        "wires": [
+            []
         ],
         "icon": "node-red/comment.svg"
     },
