@@ -8,6 +8,22 @@
         "env": []
     },
     {
+        "id": "6446a538ec67ed6a",
+        "type": "tab",
+        "label": "QWBeer",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4c8d6de6577322fb",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "186aa6ef56bf872c",
         "type": "tab",
         "label": "STFC",
@@ -19,14 +35,6 @@
         "id": "3b09bd15e699321e",
         "type": "tab",
         "label": "Programatic",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "4c8d6de6577322fb",
-        "type": "tab",
-        "label": "Flow 1",
         "disabled": false,
         "info": "",
         "env": []
@@ -912,6 +920,990 @@
             ]
         ],
         "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "d3af75ebc97f6970",
+        "type": "template",
+        "z": "6446a538ec67ed6a",
+        "name": "changebarrel",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is to change the barrel.\nGo into the room",
+        "output": "str",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "47ecf0449fc572ec"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "47ecf0449fc572ec",
+        "type": "template",
+        "z": "6446a538ec67ed6a",
+        "name": "entercellar",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Go into beer cellar (not underground)\nswitch on the light",
+        "output": "str",
+        "x": 310,
+        "y": 80,
+        "wires": [
+            [
+                "6df53b0ec5621530"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "6df53b0ec5621530",
+        "type": "template",
+        "z": "6446a538ec67ed6a",
+        "name": "identifyempty",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Look along the float chambers on the wall \nand identify the empty beer barrel.",
+        "output": "str",
+        "x": 330,
+        "y": 120,
+        "wires": [
+            [
+                "abfe3e757d41626b"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "abfe3e757d41626b",
+        "type": "template",
+        "z": "6446a538ec67ed6a",
+        "name": "switchoffgas",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Switch off the gas tap (blue) by rotating 90 degrees",
+        "output": "str",
+        "x": 310,
+        "y": 160,
+        "wires": [
+            [
+                "ed6384c797682bf1"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "ddd06c85118e4f14",
+        "type": "template",
+        "z": "6446a538ec67ed6a",
+        "name": "reconnectbarrel",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Remove plastic cap off new barrel.\nInsert connector, twist down and push handle to lock",
+        "output": "str",
+        "x": 360,
+        "y": 320,
+        "wires": [
+            [
+                "342045bbea43d3eb"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "7a315a30a24fbae3",
+        "type": "template",
+        "z": "6446a538ec67ed6a",
+        "name": "changebarrel",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Remove and replace empty barrel with same beer",
+        "output": "str",
+        "x": 350,
+        "y": 280,
+        "wires": [
+            [
+                "ddd06c85118e4f14"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "342045bbea43d3eb",
+        "type": "template",
+        "z": "6446a538ec67ed6a",
+        "name": "switchongas",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Switch the gas back on at blue tap to pressurise the system",
+        "output": "str",
+        "x": 390,
+        "y": 360,
+        "wires": [
+            [
+                "ab8ba62c79669b39"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "ab8ba62c79669b39",
+        "type": "template",
+        "z": "6446a538ec67ed6a",
+        "name": "refillfloat",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Press button on top of float chamber to refill the float chamber.\n\nPress black release button at bottom to release the float ball.",
+        "output": "str",
+        "x": 400,
+        "y": 400,
+        "wires": [
+            [
+                "c8d2de703141e8ae"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "c8d2de703141e8ae",
+        "type": "template",
+        "z": "6446a538ec67ed6a",
+        "name": "done",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "All done.  Turn off the light and leave the room",
+        "output": "str",
+        "x": 410,
+        "y": 460,
+        "wires": [
+            []
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "ed6384c797682bf1",
+        "type": "template",
+        "z": "6446a538ec67ed6a",
+        "name": "followline",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Follow the gas/beer line to the barrel that needs to be changed",
+        "output": "str",
+        "x": 320,
+        "y": 200,
+        "wires": [
+            [
+                "264d955429db58f3"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "264d955429db58f3",
+        "type": "template",
+        "z": "6446a538ec67ed6a",
+        "name": "disconnectbarrel",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Lift handle in centre of barrel and twist to remove the connector\n(this opens to the liquid)",
+        "output": "str",
+        "x": 260,
+        "y": 240,
+        "wires": [
+            [
+                "7a315a30a24fbae3"
+            ]
+        ],
+        "icon": "node-red/comment.svg"
+    },
+    {
+        "id": "f3f3fafed626ed19",
+        "type": "mqtt out",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "topic": "doesliverpool/coffeemessage",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "28f999c6149902c4",
+        "x": 740,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "8b475f325107ceb4",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "YepYep",
+        "payloadType": "str",
+        "x": 90,
+        "y": 1160,
+        "wires": [
+            [
+                "48b46f40e4ff3876"
+            ]
+        ]
+    },
+    {
+        "id": "48b46f40e4ff3876",
+        "type": "function",
+        "z": "4c8d6de6577322fb",
+        "name": "append count",
+        "func": "var c = flow.get(\"msgcount\")|0;\nmsg.payload = msg.payload + String(c);\nflow.set(\"msgcount\", c + 1);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 1180,
+        "wires": [
+            [
+                "f3f3fafed626ed19"
+            ]
+        ]
+    },
+    {
+        "id": "ca30d4dd0d957dde",
+        "type": "ha-button",
+        "z": "4c8d6de6577322fb",
+        "name": "AlexButtonName",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "26ec5cd84cdf971f",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "x": 160,
+        "y": 1360,
+        "wires": [
+            [
+                "64c4ed4efb6dd61d"
+            ]
+        ]
+    },
+    {
+        "id": "373b59702f4f13a7",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "64c4ed4efb6dd61d",
+        "type": "change",
+        "z": "4c8d6de6577322fb",
+        "name": "AlexButtonPressed",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "AlexButtonPressed",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 250,
+        "y": 1280,
+        "wires": [
+            [
+                "373b59702f4f13a7",
+                "48b46f40e4ff3876"
+            ]
+        ]
+    },
+    {
+        "id": "015cec314d84f62b",
+        "type": "ha-text",
+        "z": "4c8d6de6577322fb",
+        "name": "texttestt",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 1,
+        "entityConfig": "a0413381ff7cd93f",
+        "exposeAsEntityConfig": "",
+        "mode": "set",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "previousValue",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "previousValue"
+            }
+        ],
+        "x": 590,
+        "y": 1280,
+        "wires": [
+            [
+                "c529e9e965507cb4"
+            ]
+        ]
+    },
+    {
+        "id": "c529e9e965507cb4",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "eaee9700f5216543",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 1180,
+        "wires": [
+            [
+                "495a6d57ecb867f8"
+            ]
+        ]
+    },
+    {
+        "id": "495a6d57ecb867f8",
+        "type": "template",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !\n\nHere is a a few more lines of text\nand so it goes",
+        "output": "str",
+        "x": 260,
+        "y": 1220,
+        "wires": [
+            [
+                "b12ffd84a9ed4032",
+                "015cec314d84f62b"
+            ]
+        ]
+    },
+    {
+        "id": "b12ffd84a9ed4032",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "da5b2202abb78551",
+        "type": "change",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e5fd23dd2b866eb2",
+        "type": "ha-api",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"id\":21,\t   \"component\": \"text\",\t   \"node_id\": msg.name,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"config\": {\t       \"name\": msg.name\t   }\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 470,
+        "y": 360,
+        "wires": [
+            [
+                "5ef8cab97ae23409"
+            ]
+        ]
+    },
+    {
+        "id": "69dbdbb6b5c021e6",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "name",
+                "v": "yourthing",
+                "vt": "str"
+            },
+            {
+                "p": "state",
+                "v": "abc",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 340,
+        "wires": [
+            [
+                "5387a835de2d1089"
+            ]
+        ]
+    },
+    {
+        "id": "5ef8cab97ae23409",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b141d7dbcc7fe4b9",
+        "type": "ha-api",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t  \"id\": 19,\t  \"type\": \"get_config\"\t}",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 980,
+        "y": 1200,
+        "wires": [
+            [
+                "560f10e926f43592"
+            ]
+        ]
+    },
+    {
+        "id": "4121ca3ec5ac8250",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 840,
+        "y": 1200,
+        "wires": [
+            [
+                "b141d7dbcc7fe4b9"
+            ]
+        ]
+    },
+    {
+        "id": "560f10e926f43592",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "4fabddfd2a5ed381",
+        "type": "ha-api",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 1,
+        "debugenabled": false,
+        "protocol": "websocket",
+        "method": "get",
+        "path": "",
+        "data": "{\t   \"type\":\"nodered/entity\",\t   \"id\":21,\t   \"node_id\": msg.name,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"state\": msg.state\t}\t",
+        "dataType": "jsonata",
+        "responseType": "json",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "results"
+            }
+        ],
+        "x": 530,
+        "y": 400,
+        "wires": [
+            [
+                "4b5ef42cb984ee1f"
+            ]
+        ]
+    },
+    {
+        "id": "4b5ef42cb984ee1f",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "977291ab5f4140bd",
+        "type": "change",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "server_id",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 290,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab74e40d12569d55",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "whatever",
+        "payloadType": "str",
+        "x": 100,
+        "y": 280,
+        "wires": [
+            [
+                "977291ab5f4140bd"
+            ]
+        ]
+    },
+    {
+        "id": "b29da85209585bac",
+        "type": "delay",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 400,
+        "wires": [
+            [
+                "4fabddfd2a5ed381",
+                "f5744a9b8f92af7c"
+            ]
+        ]
+    },
+    {
+        "id": "c401c67fd7944867",
+        "type": "ha-fire-event",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "server": "e0f05cf68b19d533",
+        "version": 0,
+        "event": "station_text",
+        "data": "{\"text\":msg.payload, \"name\":msg.name, \"entityConfig\":msg.name }",
+        "dataType": "jsonata",
+        "x": 730,
+        "y": 440,
+        "wires": [
+            [
+                "0cf97ed270a5e35d"
+            ]
+        ]
+    },
+    {
+        "id": "5387a835de2d1089",
+        "type": "template",
+        "z": "4c8d6de6577322fb",
+        "name": "S1",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Welcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\n",
+        "output": "str",
+        "x": 130,
+        "y": 380,
+        "wires": [
+            [
+                "b29da85209585bac",
+                "e5fd23dd2b866eb2"
+            ]
+        ]
+    },
+    {
+        "id": "f5744a9b8f92af7c",
+        "type": "delay",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 550,
+        "y": 440,
+        "wires": [
+            [
+                "c401c67fd7944867"
+            ]
+        ]
+    },
+    {
+        "id": "0cf97ed270a5e35d",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "f529f2ee40816b2b",
+        "type": "change",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "name",
+                "pt": "msg",
+                "to": "S1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 700,
+        "wires": [
+            [
+                "41d0fca1cd675a00"
+            ]
+        ]
+    },
+    {
+        "id": "41d0fca1cd675a00",
+        "type": "change",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb6269f3d0909f43",
+        "type": "function",
+        "z": "4c8d6de6577322fb",
+        "name": "function 1",
+        "func": "\nmsg.payload = flow.keys();\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 500,
+        "wires": [
+            [
+                "952b3aa724846f6b"
+            ]
+        ]
+    },
+    {
+        "id": "952b3aa724846f6b",
+        "type": "debug",
+        "z": "4c8d6de6577322fb",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "5b14169c841ac7fa",
+        "type": "inject",
+        "z": "4c8d6de6577322fb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 500,
+        "wires": [
+            [
+                "cb6269f3d0909f43"
+            ]
+        ]
     },
     {
         "id": "36f69f35adb854bb",
@@ -2823,772 +3815,6 @@
         "x": 480,
         "y": 40,
         "wires": []
-    },
-    {
-        "id": "f3f3fafed626ed19",
-        "type": "mqtt out",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "topic": "doesliverpool/coffeemessage",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "28f999c6149902c4",
-        "x": 740,
-        "y": 1120,
-        "wires": []
-    },
-    {
-        "id": "8b475f325107ceb4",
-        "type": "inject",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "YepYep",
-        "payloadType": "str",
-        "x": 90,
-        "y": 1160,
-        "wires": [
-            [
-                "48b46f40e4ff3876"
-            ]
-        ]
-    },
-    {
-        "id": "48b46f40e4ff3876",
-        "type": "function",
-        "z": "4c8d6de6577322fb",
-        "name": "append count",
-        "func": "var c = flow.get(\"msgcount\")|0;\nmsg.payload = msg.payload + String(c);\nflow.set(\"msgcount\", c + 1);\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 460,
-        "y": 1180,
-        "wires": [
-            [
-                "f3f3fafed626ed19"
-            ]
-        ]
-    },
-    {
-        "id": "ca30d4dd0d957dde",
-        "type": "ha-button",
-        "z": "4c8d6de6577322fb",
-        "name": "AlexButtonName",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "26ec5cd84cdf971f",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 160,
-        "y": 1360,
-        "wires": [
-            [
-                "64c4ed4efb6dd61d"
-            ]
-        ]
-    },
-    {
-        "id": "373b59702f4f13a7",
-        "type": "debug",
-        "z": "4c8d6de6577322fb",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 1200,
-        "wires": []
-    },
-    {
-        "id": "64c4ed4efb6dd61d",
-        "type": "change",
-        "z": "4c8d6de6577322fb",
-        "name": "AlexButtonPressed",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "AlexButtonPressed",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 250,
-        "y": 1280,
-        "wires": [
-            [
-                "373b59702f4f13a7",
-                "48b46f40e4ff3876"
-            ]
-        ]
-    },
-    {
-        "id": "015cec314d84f62b",
-        "type": "ha-text",
-        "z": "4c8d6de6577322fb",
-        "name": "texttestt",
-        "version": 1,
-        "debugenabled": false,
-        "inputs": 1,
-        "outputs": 1,
-        "entityConfig": "a0413381ff7cd93f",
-        "exposeAsEntityConfig": "",
-        "mode": "set",
-        "value": "payload",
-        "valueType": "msg",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "value"
-            },
-            {
-                "property": "previousValue",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "previousValue"
-            }
-        ],
-        "x": 590,
-        "y": 1280,
-        "wires": [
-            [
-                "c529e9e965507cb4"
-            ]
-        ]
-    },
-    {
-        "id": "c529e9e965507cb4",
-        "type": "debug",
-        "z": "4c8d6de6577322fb",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 770,
-        "y": 1260,
-        "wires": []
-    },
-    {
-        "id": "eaee9700f5216543",
-        "type": "inject",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 90,
-        "y": 1180,
-        "wires": [
-            [
-                "495a6d57ecb867f8"
-            ]
-        ]
-    },
-    {
-        "id": "495a6d57ecb867f8",
-        "type": "template",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !\n\nHere is a a few more lines of text\nand so it goes",
-        "output": "str",
-        "x": 260,
-        "y": 1220,
-        "wires": [
-            [
-                "b12ffd84a9ed4032",
-                "015cec314d84f62b"
-            ]
-        ]
-    },
-    {
-        "id": "b12ffd84a9ed4032",
-        "type": "debug",
-        "z": "4c8d6de6577322fb",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 500,
-        "y": 1140,
-        "wires": []
-    },
-    {
-        "id": "da5b2202abb78551",
-        "type": "change",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 200,
-        "y": 1080,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e5fd23dd2b866eb2",
-        "type": "ha-api",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "server": "e0f05cf68b19d533",
-        "version": 1,
-        "debugenabled": false,
-        "protocol": "websocket",
-        "method": "get",
-        "path": "",
-        "data": "{\t   \"type\":\"nodered/discovery\",\t   \"id\":21,\t   \"component\": \"text\",\t   \"node_id\": msg.name,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"config\": {\t       \"name\": msg.name\t   }\t}",
-        "dataType": "jsonata",
-        "responseType": "json",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "results"
-            }
-        ],
-        "x": 470,
-        "y": 360,
-        "wires": [
-            [
-                "5ef8cab97ae23409"
-            ]
-        ]
-    },
-    {
-        "id": "69dbdbb6b5c021e6",
-        "type": "inject",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "props": [
-            {
-                "p": "name",
-                "v": "yourthing",
-                "vt": "str"
-            },
-            {
-                "p": "state",
-                "v": "abc",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 110,
-        "y": 340,
-        "wires": [
-            [
-                "5387a835de2d1089"
-            ]
-        ]
-    },
-    {
-        "id": "5ef8cab97ae23409",
-        "type": "debug",
-        "z": "4c8d6de6577322fb",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "b141d7dbcc7fe4b9",
-        "type": "ha-api",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "server": "e0f05cf68b19d533",
-        "version": 1,
-        "debugenabled": false,
-        "protocol": "websocket",
-        "method": "get",
-        "path": "",
-        "data": "{\t  \"id\": 19,\t  \"type\": \"get_config\"\t}",
-        "dataType": "jsonata",
-        "responseType": "json",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "results"
-            }
-        ],
-        "x": 980,
-        "y": 1200,
-        "wires": [
-            [
-                "560f10e926f43592"
-            ]
-        ]
-    },
-    {
-        "id": "4121ca3ec5ac8250",
-        "type": "inject",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 840,
-        "y": 1200,
-        "wires": [
-            [
-                "b141d7dbcc7fe4b9"
-            ]
-        ]
-    },
-    {
-        "id": "560f10e926f43592",
-        "type": "debug",
-        "z": "4c8d6de6577322fb",
-        "name": "debug 10",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 1200,
-        "wires": []
-    },
-    {
-        "id": "4fabddfd2a5ed381",
-        "type": "ha-api",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "server": "e0f05cf68b19d533",
-        "version": 1,
-        "debugenabled": false,
-        "protocol": "websocket",
-        "method": "get",
-        "path": "",
-        "data": "{\t   \"type\":\"nodered/entity\",\t   \"id\":21,\t   \"node_id\": msg.name,\t   \"server_id\":$globalContext(\"server_id\"),\t   \"state\": msg.state\t}\t",
-        "dataType": "jsonata",
-        "responseType": "json",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "results"
-            }
-        ],
-        "x": 530,
-        "y": 400,
-        "wires": [
-            [
-                "4b5ef42cb984ee1f"
-            ]
-        ]
-    },
-    {
-        "id": "4b5ef42cb984ee1f",
-        "type": "debug",
-        "z": "4c8d6de6577322fb",
-        "name": "debug 11",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 680,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "977291ab5f4140bd",
-        "type": "change",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "server_id",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 290,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ab74e40d12569d55",
-        "type": "inject",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "whatever",
-        "payloadType": "str",
-        "x": 100,
-        "y": 280,
-        "wires": [
-            [
-                "977291ab5f4140bd"
-            ]
-        ]
-    },
-    {
-        "id": "b29da85209585bac",
-        "type": "delay",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "500",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 330,
-        "y": 400,
-        "wires": [
-            [
-                "4fabddfd2a5ed381",
-                "f5744a9b8f92af7c"
-            ]
-        ]
-    },
-    {
-        "id": "c401c67fd7944867",
-        "type": "ha-fire-event",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "server": "e0f05cf68b19d533",
-        "version": 0,
-        "event": "station_text",
-        "data": "{\"text\":msg.payload, \"name\":msg.name, \"entityConfig\":msg.name }",
-        "dataType": "jsonata",
-        "x": 730,
-        "y": 440,
-        "wires": [
-            [
-                "0cf97ed270a5e35d"
-            ]
-        ]
-    },
-    {
-        "id": "5387a835de2d1089",
-        "type": "template",
-        "z": "4c8d6de6577322fb",
-        "name": "S1",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "Welcome to the first station of your QuestTour\nThis will guide you around the DoESLiverpool \nhackspace.\n\n",
-        "output": "str",
-        "x": 130,
-        "y": 380,
-        "wires": [
-            [
-                "b29da85209585bac",
-                "e5fd23dd2b866eb2"
-            ]
-        ]
-    },
-    {
-        "id": "f5744a9b8f92af7c",
-        "type": "delay",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "500",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 550,
-        "y": 440,
-        "wires": [
-            [
-                "c401c67fd7944867"
-            ]
-        ]
-    },
-    {
-        "id": "0cf97ed270a5e35d",
-        "type": "debug",
-        "z": "4c8d6de6577322fb",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 900,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "f529f2ee40816b2b",
-        "type": "change",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "name",
-                "pt": "msg",
-                "to": "S1",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 220,
-        "y": 700,
-        "wires": [
-            [
-                "41d0fca1cd675a00"
-            ]
-        ]
-    },
-    {
-        "id": "41d0fca1cd675a00",
-        "type": "change",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 500,
-        "y": 700,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "cb6269f3d0909f43",
-        "type": "function",
-        "z": "4c8d6de6577322fb",
-        "name": "function 1",
-        "func": "\nmsg.payload = flow.keys();\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 380,
-        "y": 500,
-        "wires": [
-            [
-                "952b3aa724846f6b"
-            ]
-        ]
-    },
-    {
-        "id": "952b3aa724846f6b",
-        "type": "debug",
-        "z": "4c8d6de6577322fb",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "5b14169c841ac7fa",
-        "type": "inject",
-        "z": "4c8d6de6577322fb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 170,
-        "y": 500,
-        "wires": [
-            [
-                "cb6269f3d0909f43"
-            ]
-        ]
     },
     {
         "id": "7156f3b5a3e57b15",
