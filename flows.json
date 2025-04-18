@@ -3868,23 +3868,6 @@
         ]
     },
     {
-        "id": "3ae36d13f5b52f05",
-        "type": "debug",
-        "z": "3b09bd15e699321e",
-        "name": "debug 39",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1060,
-        "y": 100,
-        "wires": []
-    },
-    {
         "id": "9f8f0fb62b63b598",
         "type": "http request",
         "z": "3b09bd15e699321e",
@@ -3975,7 +3958,7 @@
         "id": "fb40dde176efa5b0",
         "type": "function",
         "z": "3b09bd15e699321e",
-        "name": "function 2",
+        "name": "filter",
         "func": "\nfor (var o of msg.payload) {\n    if ((o[\"type\"] == \"tab\") && (o[\"label\"] == flow.get(\"tab_name\")))\n        return { \"payload\":o[\"id\"] }; \n}\nreturn null;",
         "outputs": 1,
         "timeout": 0,
@@ -3983,12 +3966,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 900,
+        "x": 850,
         "y": 100,
         "wires": [
             [
-                "3ae36d13f5b52f05",
-                "43dc4973dceb6aba"
+                "605f1d5e7fb49a74"
             ]
         ]
     },
@@ -4004,26 +3986,9 @@
         "y": 100,
         "wires": [
             [
-                "fb40dde176efa5b0",
-                "2dd1a181f3cfd484"
+                "fb40dde176efa5b0"
             ]
         ]
-    },
-    {
-        "id": "2dd1a181f3cfd484",
-        "type": "debug",
-        "z": "3b09bd15e699321e",
-        "name": "debug 40",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1020,
-        "y": 200,
-        "wires": []
     },
     {
         "id": "43dc4973dceb6aba",
@@ -4037,9 +4002,36 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1040,
-        "y": 140,
+        "x": 1160,
+        "y": 100,
         "wires": []
+    },
+    {
+        "id": "605f1d5e7fb49a74",
+        "type": "change",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tab_id",
+                "pt": "flow",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 100,
+        "wires": [
+            [
+                "43dc4973dceb6aba"
+            ]
+        ]
     },
     {
         "id": "7156f3b5a3e57b15",
