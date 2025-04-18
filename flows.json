@@ -3891,7 +3891,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://localhost:1880/flow/1fc7b0190a9c731d",
+        "url": "http://localhost:1880/flows",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -3923,8 +3923,8 @@
         "authType": "basic",
         "senderr": false,
         "headers": [],
-        "x": 970,
-        "y": 240,
+        "x": 950,
+        "y": 260,
         "wires": [
             []
         ]
