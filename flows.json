@@ -3975,14 +3975,14 @@
         "type": "function",
         "z": "3b09bd15e699321e",
         "name": "function 2",
-        "func": "return msg.payload[0];\n\nfor (var o in msg.payload) {\n    if ((o[\"type\"] == \"tab\") && (o[\"label\"] == flow.get(\"tab_name\")))\n        return { \"payload\":o[\"id\"] }; \n}\nreturn null;",
+        "func": "return msg.payload;\n\nfor (var o in msg.payload) {\n    if ((o[\"type\"] == \"tab\") && (o[\"label\"] == flow.get(\"tab_name\")))\n        return { \"payload\":o[\"id\"] }; \n}\nreturn null;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 880,
+        "x": 920,
         "y": 100,
         "wires": [
             [
