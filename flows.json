@@ -3919,7 +3919,7 @@
                 "p": "tab_name",
                 "pt": "flow",
                 "to": "payload",
-                "tot": "str"
+                "tot": "msg"
             },
             {
                 "t": "set",
