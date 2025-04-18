@@ -3859,7 +3859,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 760,
+        "x": 660,
         "y": 180,
         "wires": [
             [
@@ -3879,7 +3879,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1140,
+        "x": 1160,
         "y": 180,
         "wires": []
     },
@@ -3899,34 +3899,28 @@
         "authType": "basic",
         "senderr": false,
         "headers": [],
-        "x": 960,
+        "x": 860,
+        "y": 180,
+        "wires": [
+            [
+                "60d73c1f52503df9"
+            ]
+        ]
+    },
+    {
+        "id": "60d73c1f52503df9",
+        "type": "json",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1030,
         "y": 180,
         "wires": [
             [
                 "3ae36d13f5b52f05"
             ]
-        ]
-    },
-    {
-        "id": "765bc4a02d07092e",
-        "type": "http request",
-        "z": "3b09bd15e699321e",
-        "name": "QuestWalk",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "http://localhost:1880/flow/6446a538ec67ed6a",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "basic",
-        "senderr": false,
-        "headers": [],
-        "x": 950,
-        "y": 260,
-        "wires": [
-            []
         ]
     },
     {
