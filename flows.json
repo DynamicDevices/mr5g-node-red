@@ -3975,7 +3975,7 @@
         "type": "function",
         "z": "3b09bd15e699321e",
         "name": "function 2",
-        "func": "for (var o in msg.payload) {\n    if ((o[\"type\"] == \"tab\") && (o[\"label\"] == flow.get(\"tab_name\")))\n        return { \"payload\":o[\"id\"] }; \n}\nreturn null;",
+        "func": "return msg.payload[0];\n\nfor (var o in msg.payload) {\n    if ((o[\"type\"] == \"tab\") && (o[\"label\"] == flow.get(\"tab_name\")))\n        return { \"payload\":o[\"id\"] }; \n}\nreturn null;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
