@@ -776,7 +776,7 @@
         "type": "debug",
         "z": "3b09bd15e699321e",
         "name": "immersivehome",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
