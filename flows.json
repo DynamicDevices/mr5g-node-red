@@ -2213,7 +2213,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "Remove and replace empty barrel with same beer",
+        "template": "Remove and replace empty barrel with same beer...\n\nVideoPlaceRight: SafeARDoESFacilities\n",
         "output": "str",
         "x": 350,
         "y": 280,
