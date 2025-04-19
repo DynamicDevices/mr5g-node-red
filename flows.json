@@ -1411,6 +1411,41 @@
         ]
     },
     {
+        "id": "6b7c87c7046d1cfa",
+        "type": "ha-button",
+        "z": "3b09bd15e699321e",
+        "name": "QuestWalkTrigger3",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "26ec5cd84cdf971f",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "x": 470,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "eb8e2330d2479177",
         "type": "template",
         "z": "1fc7b0190a9c731d",
