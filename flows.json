@@ -2115,7 +2115,7 @@
                 "t": "set",
                 "p": "url",
                 "pt": "msg",
-                "to": "$flowContext('tab_name')",
+                "to": "$join([\"http://localhost:1880/flow/\", $flowContext(\"tab_id\")], \"\")",
                 "tot": "jsonata"
             }
         ],
