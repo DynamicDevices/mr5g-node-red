@@ -2039,8 +2039,8 @@
                 "t": "set",
                 "p": "tab_id",
                 "pt": "flow",
-                "to": "",
-                "tot": "str"
+                "to": "payload",
+                "tot": "msg"
             }
         ],
         "action": "",
