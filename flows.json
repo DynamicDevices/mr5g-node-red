@@ -2115,7 +2115,7 @@
                 "t": "set",
                 "p": "url",
                 "pt": "msg",
-                "to": "$flowContext('tab_id')",
+                "to": "$flowContext('tab_name')",
                 "tot": "jsonata"
             }
         ],
