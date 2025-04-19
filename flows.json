@@ -2113,7 +2113,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "This is to change the barrel.\nGo into the room\n\nVideoPlaceRight: SafeARDoESFacilities\n",
+        "template": "This is to change the barrel.\nGo into the room...\n\nVideoPlaceRight: SafeARDoESFacilities\n",
         "output": "str",
         "x": 130,
         "y": 80,
