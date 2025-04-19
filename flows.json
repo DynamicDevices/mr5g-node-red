@@ -2133,7 +2133,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "Go into beer cellar (not underground)\nswitch on the light",
+        "template": "Go into beer cellar (not underground)\nswitch on the light\n\nVideoPlaceRight: universitysystemburning\n",
         "output": "str",
         "x": 310,
         "y": 80,
