@@ -306,6 +306,39 @@
         "debugEnabled": false
     },
     {
+        "id": "8957b2a23e7704b9",
+        "type": "ha-entity-config",
+        "server": "e0f05cf68b19d533",
+        "deviceConfig": "1278838c849816cb",
+        "name": "QuestWalkTrigger4",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
         "id": "5077c02accb21025",
         "type": "http request",
         "z": "3b09bd15e699321e",
@@ -1404,7 +1437,7 @@
                 "valueType": "entity"
             }
         ],
-        "x": 410,
+        "x": 450,
         "y": 560,
         "wires": [
             []
@@ -1414,11 +1447,11 @@
         "id": "6b7c87c7046d1cfa",
         "type": "ha-button",
         "z": "3b09bd15e699321e",
-        "name": "QuestWalkTrigger3",
+        "name": "QuestWalkTrigger4",
         "version": 0,
         "debugenabled": false,
         "outputs": 1,
-        "entityConfig": "26ec5cd84cdf971f",
+        "entityConfig": "8957b2a23e7704b9",
         "outputProperties": [
             {
                 "property": "payload",
@@ -1439,9 +1472,42 @@
                 "valueType": "entity"
             }
         ],
-        "x": 470,
+        "x": 430,
         "y": 520,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5a4ea64d01f91d22",
+        "type": "ha-switch",
+        "z": "3b09bd15e699321e",
+        "name": "",
+        "version": 0,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 2,
+        "entityConfig": "",
+        "enableInput": false,
+        "outputOnStateChange": false,
+        "outputProperties": [
+            {
+                "property": "outputType",
+                "propertyType": "msg",
+                "value": "state change",
+                "valueType": "str"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 710,
+        "y": 540,
+        "wires": [
+            [],
             []
         ]
     },
