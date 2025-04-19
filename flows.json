@@ -336,7 +336,7 @@
         "name": "Start",
         "props": [
             {
-                "p": "URL",
+                "p": "url",
                 "v": "http://localhost:1880/flow/6446a538ec67ed6a",
                 "vt": "str"
             },
