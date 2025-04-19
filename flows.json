@@ -516,7 +516,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 380,
+        "x": 360,
         "y": 280,
         "wires": [
             [
@@ -545,7 +545,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 190,
+        "x": 170,
         "y": 280,
         "wires": [
             [
@@ -565,7 +565,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 510,
+        "x": 490,
         "y": 280,
         "wires": [
             [
@@ -590,7 +590,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 670,
+        "x": 650,
         "y": 280,
         "wires": [
             [
@@ -637,7 +637,7 @@
                 "valueType": "results"
             }
         ],
-        "x": 860,
+        "x": 960,
         "y": 280,
         "wires": [
             [
@@ -753,7 +753,7 @@
         "y": 420,
         "wires": [
             [
-                "195ce6e45abd46e7"
+                "0b216514beab670a"
             ],
             [
                 "9ca51bcaf1a6bf3d"
@@ -1377,7 +1377,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1020,
+        "x": 1100,
         "y": 280,
         "wires": []
     },
@@ -1409,41 +1409,6 @@
         "wires": []
     },
     {
-        "id": "f79c21a39ff15eda",
-        "type": "ha-button",
-        "z": "3b09bd15e699321e",
-        "name": "QuestWalkTrigger2",
-        "version": 0,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityConfig": "26ec5cd84cdf971f",
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 450,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "6b7c87c7046d1cfa",
         "type": "ha-button",
         "z": "3b09bd15e699321e",
@@ -1473,42 +1438,34 @@
             }
         ],
         "x": 430,
-        "y": 520,
+        "y": 540,
         "wires": [
             []
         ]
     },
     {
-        "id": "5a4ea64d01f91d22",
-        "type": "ha-switch",
+        "id": "0b216514beab670a",
+        "type": "switch",
         "z": "3b09bd15e699321e",
         "name": "",
-        "version": 0,
-        "debugenabled": false,
-        "inputs": 0,
-        "outputs": 2,
-        "entityConfig": "",
-        "enableInput": false,
-        "outputOnStateChange": false,
-        "outputProperties": [
+        "property": "area_id",
+        "propertyType": "msg",
+        "rules": [
             {
-                "property": "outputType",
-                "propertyType": "msg",
-                "value": "state change",
-                "valueType": "str"
-            },
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
+                "t": "neq",
+                "v": "questwalkarea",
+                "vt": "str"
             }
         ],
-        "x": 710,
-        "y": 540,
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 400,
         "wires": [
-            [],
-            []
+            [
+                "195ce6e45abd46e7"
+            ]
         ]
     },
     {
